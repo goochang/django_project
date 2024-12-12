@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="/product/create_product_action/" method="post">
+    {% csrf_token %}
+    <label for="name">카드 이름:</label><br>
+    <input type="text" id="name" name="name" required><br>
+    <label for="price">카드 가격:</label><br>
+    <input type="text" id="price" name="price" required><br>
+    <label for="type">카드 타입:</label><br>
+    <input type="text" id="type" name="type" required><br>
+    
+    <input type="submit" value="등록하기">
+</form>
+{% endblock content %}

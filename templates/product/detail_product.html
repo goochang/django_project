@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>카드 상세 페이지</h2>
+<p>이름: {{ product.name }}</p>
+<p>가격: {{ product.price }}</p>
+<p>타입: {{ product.type }}</p>
+<p>작성일시: {{ product.created_at }}</p>
+<p>수정일시: {{ product.updated_at }}</p>
+
+<a href="{% url 'index' %}">목록 보기</a>
+{% endblock content %}

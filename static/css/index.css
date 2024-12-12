@@ -1,0 +1,29 @@
+.banner > div{
+    width: 80%;
+    margin: 0 auto;
+}
+.banner img{
+    width: 100%;
+    height: auto;
+}
+
+.card_wrap {
+    display: flex;          /* Flexbox 활성화 */
+    flex-wrap: wrap;        /* 줄바꿈 허용 */
+    justify-content: left; /* 카드 전체 가운데 정렬 */
+    gap: 20px;              /* 카드 간격 */
+}
+
+/* 카드 스타일 */
+.card {
+    flex: 1 1 calc(20% - 20px); /* 너비 20% - 간격을 고려 */
+    max-width: 240px;           /* 카드의 최대 너비 */
+    box-sizing: border-box;     /* 패딩/마진 계산 포함 */
+    text-align: center;         /* 카드 콘텐츠 가운데 정렬 */
+}
+
+.card img {
+    width: 100%;     /* 이미지가 카드 안에 맞도록 조정 */
+    height: auto;    /* 비율 유지 */
+    display: block;  /* 이미지가 블록 요소처럼 동작 */
+}
