@@ -7,11 +7,7 @@ from accounts.models import Account
 from products.models import Product
 from .forms import SignupForm
 from django.contrib.auth import authenticate
-import logging
 from django.contrib.auth.hashers import make_password  # 비밀번호 해싱
-
-logger = logging.getLogger(__name__)
-logger.debug("--message--")
 
 
 def index(request):

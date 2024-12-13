@@ -7,6 +7,7 @@
 <p>타입: {{ product.type }}</p>
 <p>작성일시: {{ product.created_at }}</p>
 <p>수정일시: {{ product.updated_at }}</p>
+<img src="/media/{{ product.photo }}" alt="Product 1">
 
 <a href="{% url 'index' %}">목록 보기</a>
 {% endblock content %}
