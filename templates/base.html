@@ -7,9 +7,9 @@
         {% load static %}
         <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'css/navbar.css' %}">
+        <script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+        <script src="{% static 'js/index.js' %}"></script>
         {% block extrahead %}{% endblock %}
-
-        {% comment %} <link rel="stylesheet" type="text/css" href="{% static '/css/styles.css' %}"> {% endcomment %}
 
     </head>
     <body>
@@ -19,7 +19,6 @@
                     <a href="/" class="logo">
                         <img src="{% static "images/card_main_logo.png" %}" alt="MyShop">
                     </a>
-
                     <ul class="menu">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Products</a></li>
@@ -27,17 +26,25 @@
                         <li><a href="#">Contact</a></li>
                     </ul>
                     <div class="nav_auth">
-                    {% if request.user.is_authenticated %}
-                        <h3>안녕하세요, {{ user }}님</h3>
+                        {% if request.user.is_authenticated %}
+                        <div class="user_photo">
+                            {% if user.photo %}
+                            <img src="/media/{{user.photo}}" />
+                            {% else %}
+                            <img src="/static/images/default_profile.png" />
+                            {% endif %}
+                        </div>
+                        <h3>{{ user }}님</h3>
                         <form action="{% url 'accounts:logout' %}" method="POST">
                             {% csrf_token %}
                             <input type="submit" value="로그아웃">
                         </form>
+                        <a href="{% url 'accounts:mypage'%}">마이페이지</a>
                         <a href="{% url 'products:create_product'%}">상품 등록</a>
-                    {% else %}
+                        {% else %}
                         <a href="{% url 'accounts:signin'%}">로그인</a>
                         <a href="{% url 'accounts:signup'%}">회원가입</a>
-                    {% endif %}                    
+                        {% endif %}                    
                     </div>
                 </div>
             </nav>

@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extrahead %}
+<link rel="stylesheet" type="text/css" href="{% static "css/account/mypage.css" %}">
+{% endblock %}
+
+{% block content %}
+<div class="mypageContainer">
+    <div class="mypage_wrap" id="wrap1">
+        <div class="user_photo">
+            {% if user.photo %}
+            <img src="/media/{{user.photo}}" />
+            {% else %}
+            <img src="/static/images/default_profile.png" />
+            {% endif %}
+        </div>
+        <div class="user_info">
+            {% if user.username %}
+            <div>닉네임 : {{ user.username }}</div>
+            {% else %}
+            <div>닉네임을 설정해주세요.</div>
+            {% endif %}
+            <div>게시글 19</div>
+            <div>찜 19</div>
+            <div>팔로우 19</div>
+        </div>
+    </div>
+    <div>
+        <div>
+            <ul class="menu">
+                <li><a href="#">게시물</a></li>
+                <li><a href="#">찜함</a></li>
+                <li><a href="#">...</a></li>
+            </ul>
+        </div>
+        <div>
+            <div class="card_wrap">
+                {% if products %}
+                {% for product in products %}
+                <div class="card">
+                    <a href="{% url 'products:detail_product' pk=product.id %}">
+                    <img src="/media/{{ product.photo }}" alt="Product 3">
+                    </a>
+                </div>
+                {% endfor %}
+                {% else %}
+                <div>
+                    <h3>등록 된 카드가 없습니다.</h3>
+                </div>
+                {% endif %}
+            </div>
+            <div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

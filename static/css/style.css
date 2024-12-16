@@ -2,6 +2,8 @@
     box-sizing: border-box;
 }
 body {
+    width: 100%;
+    height: 100%;
     margin: 0;
 }
 
@@ -13,9 +15,109 @@ ul {
     list-style-type: none;
     padding:0;
 }
+main {
+    height: calc(100vh - 100px);
 
+}
 .container {
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
+}
+
+.signContainer {
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.signForm {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    width: 50vw;
+    padding: 100px 30px;
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.signForm form {
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.signForm input[type="text"], .signForm input[type="password"] {
+    border: none;
+    padding: 10px;
+    border-bottom: 1px solid black;
+    min-width: 300px;
+}
+
+.signForm input[type="submit"]{
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: #ffc833;
+    color: #086aaf;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.signForm input[type="file"] {
+    display: none;
+}
+
+.signForm h2 {
+    margin-bottom: 50px;
+}
+.signForm .user_photo_wrap {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.signForm .user_photo_wrap img{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.signForm .user_photo_wrap label#id_photo{
+    cursor: pointer;
+}
+.signForm .user_photo {
+    width: 150px;
+    height: 150px;
+}
+
+
+.card_wrap {
+    display: flex;          /* Flexbox 활성화 */
+    flex-wrap: wrap;        /* 줄바꿈 허용 */
+    justify-content: left; /* 카드 전체 가운데 정렬 */
+    gap: 20px;              /* 카드 간격 */
+}
+
+/* 카드 스타일 */
+.card_wrap .card {
+    flex: 1 1 calc(20% - 20px); /* 너비 20% - 간격을 고려 */
+    max-width: 240px;           /* 카드의 최대 너비 */
+    box-sizing: border-box;     /* 패딩/마진 계산 포함 */
+    text-align: center;         /* 카드 콘텐츠 가운데 정렬 */
+}
+
+.card_wrap .card img {
+    width: 100%;     /* 이미지가 카드 안에 맞도록 조정 */
+    height: auto;    /* 비율 유지 */
+    display: block;  /* 이미지가 블록 요소처럼 동작 */
 }

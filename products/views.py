@@ -7,7 +7,6 @@ from .forms import CreateForm
 
 def detail_product(request, pk):
     product = Product.objects.get(pk=pk)
-    print("product", product.photo)
     context = {
         "product": product,
     }

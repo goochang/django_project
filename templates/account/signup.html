@@ -1,13 +1,35 @@
 {% extends "base.html" %}
 
 {% block content %}
-<form action="{% url 'accounts:signup' %}" method="post">
-    {% csrf_token %}
-    <label for="username">사용자 이름:</label><br>
-    <input type="text" id="username" name="username" required><br>
-    <label for="password">비밀번호:</label><br>
-    <input type="password" id="password" name="password" required><br>
-    
-    <input type="submit" value="가입하기">
-</form>
+<div class="signContainer">
+    <div class="signForm signinForm">
+        <h2>회원가입</h2>
+        <form action="{% url 'accounts:signup' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="user_photo_wrap">
+                <div class="user_photo">
+                    <img id="user_photo" src="{{"/static/images/default_profile.png"}}" alt="사용자 프로필">
+                </div>
+                <label for="id_photo">📸 프로필 사진 올리기</label>
+                <input type="file" name="photo" accept="image/*" id="id_photo">
+            </div>
+            <p>
+                <input type="text" id="user_id" name="user_id" required placeholder="아이디를 입력해주세요">
+            </p>
+            {% if form.user_id.errors %}
+                <div class="field-errors">
+                    {% for error in form.user_id.errors %}
+                        <p>{{ error }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            <p>
+                <input type="password" id="password" name="password" required placeholder="비밀번호를 입력해주세요">
+            </p>
+            
+            
+            <input type="submit" value="회원가입">
+        </form>
+    </div>
+</div>
 {% endblock content %}
