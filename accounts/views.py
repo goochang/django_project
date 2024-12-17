@@ -5,7 +5,7 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.views.decorators.csrf import csrf_exempt
 from accounts.models import Account
 from products.models import Product
-from .forms import SignupForm, SigninForm
+from .forms import SignupForm, SigninForm, EditAccountForm
 from django.contrib.auth import authenticate
 from django.contrib.auth.hashers import make_password  # 비밀번호 해싱
 from django.contrib import messages
@@ -49,12 +49,10 @@ def logout(request):
 def signup(request):
     if request.method == "POST":
         form = SignupForm(request.POST, request.FILES)
-        print(request.FILES)
         if form.is_valid():
             user = form.save(commit=False)
             user.password = make_password(form.cleaned_data["password"])
             user.save()
-            print(user.photo)
             auth_login(request, user)
             return redirect("index")
         else:
@@ -75,3 +73,29 @@ def mypage(request):
         return render(request, "account/mypage.html", context)
     else:
         redirect("index")
+
+
+def edit_account(request):
+    _user = request.user
+    context = {
+        "user": _user,
+    }
+    if _user.is_authenticated and request.method == "POST":
+        form = EditAccountForm(request.POST, request.FILES, instance=request.user)
+        if form.is_valid():
+            user = form.save(commit=False)
+            user.username = request.POST.get("username")
+            user.introduce = request.POST.get("introduce")
+            if request.FILES.get("photo") is None:
+                user.save()
+            else:
+                user.save(isFile=True)
+
+            return redirect("accounts:mypage")
+        else:
+            return render(request, "account/edit_account.html", context, status=400)
+    else:
+        if _user.is_authenticated:
+            return render(request, "account/edit_account.html", context)
+        else:
+            redirect("index")

@@ -1,20 +1,29 @@
 .mypageContainer {
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
-.mypage_wrap#wrap1 {
+.mypageContainer .mypage_wrap#wrap1 {
     display: flex;
     justify-content: flex-start;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     gap: 40px;
 }
+.mypageContainer .mypage_wrap#wrap1 form {
+    display: flex;
+    justify-content: flex-start;
+    gap: 40px;
+}
 
+.mypageContainer .user_photo_wrap {
+    gap: 20px;
+
+}
 .mypageContainer .user_photo {
-    width: 300px;
-    height: 300px;
+    width: 100px;
+    height: 100px;
 }
 .mypageContainer .user_photo img{
     width: 100%;
@@ -22,4 +31,39 @@
     border: 1px solid black;
     border-radius: 50%;
     object-fit: cover;
+}
+
+input#id_photo {
+    display: none;
+}
+
+.mypageContainer .mypage_wrap .user_info .info_wrap {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+}
+.mypageContainer .mypage_wrap .user_info .info_wrap h5{
+    width: 120px;
+}
+.mypageContainer .mypage_wrap .user_info .info_wrap p{
+    margin: 0;    
+    font-size: 14px;
+    text-align: right;
+}
+.mypageContainer .mypage_wrap .user_info input[type='text'] {
+    border-radius: 2px;
+    border: 1px solid rgb(221, 221, 221);
+    padding: 10px;
+    width: 250px;
+}
+
+.mypageContainer .edit_wrap#wrap1 {
+    margin-top: 150px;
+    justify-content: center !important;
+}
+
+.mypageContainer .edit_wrap .user_photo{
+    width: 300px;
+    height: 300px;
+
 }

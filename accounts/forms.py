@@ -50,3 +50,9 @@ class SigninForm(forms.ModelForm):
         "invalid_login": "올바른 사용자 이름과 비밀번호를 입력하십시오. 두 필드 모두 대소문자를 구분할 수 있습니다.",
         "inactive": "활성화되지 않은 사용자입니다.",
     }
+
+
+class EditAccountForm(forms.ModelForm):
+    class Meta:
+        model = Account
+        fields = ["photo", "username", "introduce"]

@@ -34,7 +34,11 @@
                             <img src="/static/images/default_profile.png" />
                             {% endif %}
                         </div>
-                        <h3>{{ user }}님</h3>
+                        {% if user.username %}
+                        <h3>{{ user.username }}님</h3>
+                        {% else %}
+                        <h3>{{ user.user_id }}님</h3>
+                        {% endif %}
                         <form action="{% url 'accounts:logout' %}" method="POST">
                             {% csrf_token %}
                             <input type="submit" value="로그아웃">

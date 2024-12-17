@@ -15,14 +15,26 @@
             {% endif %}
         </div>
         <div class="user_info">
-            {% if user.username %}
-            <div>닉네임 : {{ user.username }}</div>
-            {% else %}
-            <div>닉네임을 설정해주세요.</div>
-            {% endif %}
-            <div>게시글 19</div>
-            <div>찜 19</div>
-            <div>팔로우 19</div>
+            <div>
+                {% if user.username %}
+                <span>닉네임 : {{ user.username }}</span>
+                {% else %}
+                <span>닉네임을 설정해주세요.</span>
+                {% endif %}
+                <a href="{% url 'accounts:edit_account' %}">
+                    <button>편집하기</button>
+                </a>
+            </div>
+            <div>
+                <ul class="menu">
+                    <li><a href="#">게시글 19</a></li>
+                    <li><a href="#">찜 19</a></li>
+                    <li><a href="#">팔로우 19</a></li>
+                </ul>
+            </div>
+            <div>
+                <span>{{ user.introduce }}</span>
+            </div>
         </div>
     </div>
     <div>

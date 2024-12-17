@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extrahead %}
+<link rel="stylesheet" type="text/css" href="{% static "css/account/mypage.css" %}">
+{% endblock %}
+
+{% block content %}
+<div class="mypageContainer">
+    <div class="mypage_wrap edit_wrap" id="wrap1">
+        <form action="{% url 'accounts:edit_account' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="user_photo_wrap cflex wCenter">
+                <div class="user_photo">
+                    {% if user.photo %}
+                    <img id="user_photo" src="/media/{{user.photo}}" />
+                    {% else %}
+                    <img id="user_photo" src="/static/images/default_profile.png" />
+                    {% endif %}
+                </div>
+                <div>
+                    <label for="id_photo">📸 프로필 사진 올리기</label>
+                    <input type="file" name="photo" accept="image/*" id="id_photo">
+                </div>
+            </div>
+            <div class="user_info">
+                <div>
+                    <div class="info_wrap">
+                        <h5>닉네임</h5>
+                        <span>
+                            <input type="text" id="username" name="username" value="{{ user.username }}" placeholder="닉네임을 입력해주세요">
+                        </span>
+                    </div>
+                    <div class="info_wrap">
+                        <h5>내소개</h5>
+                        <span>
+                            <input type="text" id="introduce" name="introduce" value="{{ user.introduce }}" placeholder="안녕하세요">
+                            <p class="limit-intro-num">
+                                <span>0/20</span>
+                            </p>
+                        </span>
+                    </div>
+                </div>
+                <div>
+                    <input type="submit" value="수정하기">
+                </div>
+            </div>
+        </form>
+        
+    </div>
+</div>
+
+{% endblock content %}
