@@ -1,13 +1,46 @@
 {% extends "base.html" %}
-
+{% load static %}
+{% block extrahead %}
+<link rel="stylesheet" type="text/css" href="{% static "css/product/detail.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static "css/product/poke_icon.css" %}">
+{% endblock %}
 {% block content %}
-<h2>카드 상세 페이지</h2>
-<p>이름: {{ product.name }}</p>
-<p>가격: {{ product.price }}</p>
-<p>타입: {{ product.type }}</p>
-<p>작성일시: {{ product.created_at }}</p>
-<p>수정일시: {{ product.updated_at }}</p>
-<img src="/media/{{ product.photo }}" alt="Product 1">
+<div class="detailContainer">
+    <div class="detailMainWrap">
+        <div class="img_wrap">
+            <img src="/media/{{ product.photo }}" alt="Product 1">
+        </div>
+        <div class="info_wrap {{ meta.main_type }}">
+            <div class="card_name">
+                <h2>{{ product.name }}</h2>
+                <div class="poke_types">
+                    {% if meta.poke_types  %}
+                        {% for poke_type in meta.poke_types %}
+                        <div class="icon {{ poke_type }}">
+                            <img src="{% get_static_prefix %}icons/{{poke_type}}.svg"/>
+                            {% comment %} <img src="icons/{{ poke_type }}.svg"/> {% endcomment %}
+                        </div>
+                        {% endfor %}
+                    {% else %}
+                    <span>타입 </span>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="card_type">
+                <span>카드 종류 : 기본 포켓몬</span>
+            </div>
+            <div class="card_abilities">
+                <span class="title"><b>{{ product.name }}</b>의 특성</span>
+                {% for ability in meta.abilities %}
+                <div>
+                    <span><b>{{ ability.name }}</b> : {{ ability.content }}</span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <input type="hidden" name="poke_id" value="{{ meta.poke_id }}" />
+    <a href="{% url 'index' %}">목록 보기</a>
+</div>
 
-<a href="{% url 'index' %}">목록 보기</a>
 {% endblock content %}

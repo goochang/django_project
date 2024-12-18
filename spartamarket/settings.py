@@ -174,3 +174,24 @@ LOGGING = {
 }
 AUTH_USER_MODEL = "accounts.Account"
 AUTHENTICATION_BACKENDS = ["accounts.backends.AuthBackend"]
+
+POKETYPE = {
+    "bug": "벌레",
+    "dark": "악",
+    "dragon": "용",
+    "eletric": "전기",
+    "fairy": "페어리",
+    "fighting": "격투",
+    "fire": "불",
+    "flying": "비행",
+    "ghost": "고스트",
+    "grass": "풀",
+    "ground": "땅",
+    "ice": "얼음",
+    "normal": "노말",
+    "poison": "독",
+    "psychic": "에스퍼",
+    "rock": "바위",
+    "steel": "강철",
+    "water": "물",
+}

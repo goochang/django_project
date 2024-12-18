@@ -14,31 +14,7 @@
 <section class="product-list">
     <div class="container">
         <div class="card_wrap">
-            <div class="card">
-                <a href="{% url 'products:detail_product' pk=1 %}">
-                <img src="{{"/media/images/photo/SV8_026.png"}}" alt="Product 1">
-                </a>
-            </div>
-            <div class="card">
-                <a href="{% url 'products:detail_product' pk=1 %}">
-                <img src="{{"/media/images/photo/SV8_033.png"}}" alt="Product 2">
-                </a>
-            </div>
-            <div class="card">
-                <a href="{% url 'products:detail_product' pk=1 %}">
-                <img src="{{"/media/images/photo/SV8_047.png"}}" alt="Product 3">
-                </a>
-            </div>
-            <div class="card">
-                <a href="{% url 'products:detail_product' pk=1 %}">
-                <img src="{{"/media/images/photo/SV8_026.png"}}" alt="Product 1">
-                </a>
-            </div>
-            <div class="card">
-                <a href="{% url 'products:detail_product' pk=1 %}">
-                <img src="{{"/media/images/photo/SV8_033.png"}}" alt="Product 2">
-                </a>
-            </div>
+            {% if products %}
             {% for product in products %}
             <div class="card">
                 <a href="{% url 'products:detail_product' pk=product.id %}">
@@ -46,6 +22,11 @@
                 </a>
             </div>
             {% endfor %}
+            {% else %}
+            <div>
+                <h3>등록된 카드가 없습니다.</h3>
+            </div>
+            {% endif %}
         </div>
     </div>
 </section>

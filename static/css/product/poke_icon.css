@@ -1,0 +1,235 @@
+.icon {
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+    margin:0;
+    transition: 200ms all;
+}
+
+.icon:hover{
+    filter: saturate(200%);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.icon img {
+    height: 60%;
+    width: 60%;
+    margin: 20%;
+}
+
+.poke_types .icon.bug {
+    background: #92BC2C;
+    box-shadow: 0 0 20px #92BC2C;
+}
+
+.poke_types .icon.dark {
+    background: #595761;
+    box-shadow: 0 0 20px #595761;
+}
+
+.poke_types .icon.dragon {
+    background: #0C69C8;
+    box-shadow: 0 0 20px #0C69C8;
+}
+
+.poke_types .icon.electric {
+    background: #F2D94E;
+    box-shadow: 0 0 20px #F2D94E;
+}
+
+.poke_types .icon.fire {
+    background: #FBA54C;
+    box-shadow: 0 0 20px #FBA54C;
+}
+
+.poke_types .icon.fairy {
+    background: #EE90E6;
+    box-shadow: 0 0 20px #EE90E6;
+}
+
+.poke_types .icon.fighting {
+    background: #D3425F;
+    box-shadow: 0 0 20px #D3425F;
+}
+
+.poke_types .icon.flying {
+    background: #A1BBEC;
+    box-shadow: 0 0 20px #A1BBEC;
+}
+
+.poke_types .icon.ghost {
+    background: #5F6DBC;
+    box-shadow: 0 0 20px #5F6DBC;
+}
+
+.poke_types .icon.grass {
+    background: #5FBD58;
+    box-shadow: 0 0 20px #5FBD58;
+}
+
+.poke_types .icon.ground {
+    background: #DA7C4D;
+    box-shadow: 0 0 20px #DA7C4D;
+}
+
+.poke_types .icon.ice {
+    background: #75D0C1;
+    box-shadow: 0 0 20px #75D0C1;
+}
+
+.poke_types .icon.normal {
+    background: #A0A29F;
+    box-shadow: 0 0 20px #A0A29F;
+}
+
+.poke_types .icon.poison {
+    background: #B763CF;
+    box-shadow: 0 0 20px #B763CF;
+}
+
+.poke_types .icon.psychic {
+    background: #FA8581;
+    box-shadow: 0 0 20px #FA8581;
+}
+
+.poke_types .icon.rock {
+    background: #C9BB8A;
+    box-shadow: 0 0 20px #C9BB8A;
+}
+
+.poke_types .icon.steel {
+    background: #5695A3;
+    box-shadow: 0 0 20px #5695A3;
+}
+
+.poke_types .icon.water {
+    background: #539DDF;
+    box-shadow: 0 0 20px #539DDF;
+}
+/* wrap */
+.info_wrap.bug .card_name{
+    background-color: #5E6910;
+}
+.info_wrap.bug .card_type{
+    background-color: #91A119;
+}
+
+.info_wrap.dark .card_name{
+    background-color: #257A87;
+}
+.info_wrap.dark .card_type{
+    background-color: #11313A;
+}
+
+.info_wrap.dragon .card_name{
+    background-color: #5060E1;
+}
+.info_wrap.dragon .card_type{
+    background-color: #343E92;
+}
+
+.info_wrap.electric .card_name{
+    background-color: #FFD403;
+}
+.info_wrap.electric .card_type{
+    background-color: #F8BB06;
+}
+
+.info_wrap.fire .card_name{
+    background-color: #ED193A;
+}
+.info_wrap.fire .card_type{
+    background-color: #DA232A;
+}
+
+.info_wrap.fairy .card_name{
+    background-color: #E64B8B;
+}
+.info_wrap.fairy .card_type{
+    background-color: #D95D8C;
+}
+
+.info_wrap.fighting .card_name{
+    background-color: #C3682E;
+}
+.info_wrap.fighting .card_type{
+    background-color: #CA4513;
+}
+
+.info_wrap.flying .card_name{
+    background-color: #81B9EF;
+}
+.info_wrap.flying .card_type{
+    background-color: #54789B;
+}
+
+.info_wrap.ghost .card_name{
+    background-color: #704170;
+}
+.info_wrap.ghost .card_type{
+    background-color: #492A49;
+}
+
+.info_wrap.grass .card_name{
+    background-color: #1FA536;
+}
+.info_wrap.grass .card_type{
+    background-color: #22B24B;
+}
+
+.info_wrap.ground .card_name{
+    background-color: #915121;
+}
+.info_wrap.ground .card_type{
+    background-color: #5E3515;
+}
+
+.info_wrap.ice .card_name{
+    background-color: #3DCEF3;
+}
+.info_wrap.ice .card_type{
+    background-color: #28869E;
+}
+
+.info_wrap.normal .card_name{
+    background-color: #D6D5D8;
+}
+.info_wrap.normal .card_type{
+    background-color: #C1B6B1;
+}
+
+.info_wrap.poison .card_name{
+    background-color: #994dcf;
+}
+.info_wrap.poison .card_type{
+    background-color: #994dcf;
+}
+
+.info_wrap.psychic .card_name{
+    background-color: #EF4179;
+}
+.info_wrap.psychic .card_type{
+    background-color: #9B2A4F;
+}
+
+.info_wrap.rock .card_name{
+    background-color: #BF8232;
+}
+.info_wrap.rock .card_type{
+    background-color: #BF8232;
+}
+
+.info_wrap.steel .card_name{
+    background-color: #B6BAA7;
+}
+.info_wrap.steel .card_type{
+    background-color: #A09785;
+}
+
+.info_wrap.water .card_name{
+    background-color: #00B2EB;
+}
+.info_wrap.water .card_type{
+    background-color: #0786C8;
+}

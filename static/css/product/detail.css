@@ -1,0 +1,57 @@
+.detailContainer {
+    margin-top: 100px;
+}
+
+.detailMainWrap {
+    display: flex;
+
+}
+
+.detailMainWrap img {
+    width: 300px;
+    height: auto;
+}
+
+.detailMainWrap .img_wrap{
+    margin-right: 50px;
+}
+.detailMainWrap .info_wrap{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.detailMainWrap .info_wrap > div{
+}
+
+.detailMainWrap .info_wrap .card_name {
+    color: white;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    padding: 20px;
+    background-color: #22B24B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.detailMainWrap .info_wrap .card_name .poke_types {
+    width: auto;
+    min-width: 50px;
+    max-width: 110px;
+    display: flex;
+    gap: 10px;
+}
+
+.detailMainWrap .info_wrap .card_type {
+    color: white;
+    /* background-color: #1FA536; */
+    padding: 10px 20px;
+    display: flex;
+    gap: 20px;
+}
+.detailMainWrap .info_wrap .card_abilities {
+    padding: 20px;
+}
+
+.card_abilities span.title {
+    font-size: 17px;
+}

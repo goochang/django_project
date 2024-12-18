@@ -10,8 +10,6 @@ class CreateForm(forms.ModelForm):
         exclude = ["author"]
         labels = {
             "name": "카드 이름",
-            "price": "가격",
-            "type": "타입",
             "photo": "카드 사진",
         }
 

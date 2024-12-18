@@ -1,0 +1,4047 @@
+[
+    {
+        "poke_id": 1,
+        "eng_name": "bulbasaur",
+        "ko_name": "이상해씨"
+    },
+    {
+        "poke_id": 2,
+        "eng_name": "ivysaur",
+        "ko_name": "이상해풀"
+    },
+    {
+        "poke_id": 3,
+        "eng_name": "venusaur",
+        "ko_name": "이상해꽃"
+    },
+    {
+        "poke_id": 4,
+        "eng_name": "charmander",
+        "ko_name": "파이리"
+    },
+    {
+        "poke_id": 5,
+        "eng_name": "charmeleon",
+        "ko_name": "리자드"
+    },
+    {
+        "poke_id": 6,
+        "eng_name": "charizard",
+        "ko_name": "리자몽"
+    },
+    {
+        "poke_id": 7,
+        "eng_name": "squirtle",
+        "ko_name": "꼬부기"
+    },
+    {
+        "poke_id": 8,
+        "eng_name": "wartortle",
+        "ko_name": "어니부기"
+    },
+    {
+        "poke_id": 9,
+        "eng_name": "blastoise",
+        "ko_name": "거북왕"
+    },
+    {
+        "poke_id": 10,
+        "eng_name": "caterpie",
+        "ko_name": "캐터피"
+    },
+    {
+        "poke_id": 11,
+        "eng_name": "metapod",
+        "ko_name": "단데기"
+    },
+    {
+        "poke_id": 12,
+        "eng_name": "butterfree",
+        "ko_name": "버터플"
+    },
+    {
+        "poke_id": 13,
+        "eng_name": "weedle",
+        "ko_name": "뿔충이"
+    },
+    {
+        "poke_id": 14,
+        "eng_name": "kakuna",
+        "ko_name": "딱충이"
+    },
+    {
+        "poke_id": 15,
+        "eng_name": "beedrill",
+        "ko_name": "독침붕"
+    },
+    {
+        "poke_id": 16,
+        "eng_name": "pidgey",
+        "ko_name": "구구"
+    },
+    {
+        "poke_id": 17,
+        "eng_name": "pidgeotto",
+        "ko_name": "피죤"
+    },
+    {
+        "poke_id": 18,
+        "eng_name": "pidgeot",
+        "ko_name": "피죤투"
+    },
+    {
+        "poke_id": 19,
+        "eng_name": "rattata",
+        "ko_name": "꼬렛"
+    },
+    {
+        "poke_id": 20,
+        "eng_name": "raticate",
+        "ko_name": "레트라"
+    },
+    {
+        "poke_id": 21,
+        "eng_name": "spearow",
+        "ko_name": "깨비참"
+    },
+    {
+        "poke_id": 22,
+        "eng_name": "fearow",
+        "ko_name": "깨비드릴조"
+    },
+    {
+        "poke_id": 23,
+        "eng_name": "ekans",
+        "ko_name": "아보"
+    },
+    {
+        "poke_id": 24,
+        "eng_name": "arbok",
+        "ko_name": "아보크"
+    },
+    {
+        "poke_id": 25,
+        "eng_name": "pikachu",
+        "ko_name": "피카츄"
+    },
+    {
+        "poke_id": 26,
+        "eng_name": "raichu",
+        "ko_name": "라이츄"
+    },
+    {
+        "poke_id": 27,
+        "eng_name": "sandshrew",
+        "ko_name": "모래두지"
+    },
+    {
+        "poke_id": 28,
+        "eng_name": "sandslash",
+        "ko_name": "고지"
+    },
+    {
+        "poke_id": 29,
+        "eng_name": "nidoran-f",
+        "ko_name": "니드런♀"
+    },
+    {
+        "poke_id": 30,
+        "eng_name": "nidorina",
+        "ko_name": "니드리나"
+    },
+    {
+        "poke_id": 31,
+        "eng_name": "nidoqueen",
+        "ko_name": "니드퀸"
+    },
+    {
+        "poke_id": 32,
+        "eng_name": "nidoran-m",
+        "ko_name": "니드런♂"
+    },
+    {
+        "poke_id": 33,
+        "eng_name": "nidorino",
+        "ko_name": "니드리노"
+    },
+    {
+        "poke_id": 34,
+        "eng_name": "nidoking",
+        "ko_name": "니드킹"
+    },
+    {
+        "poke_id": 35,
+        "eng_name": "clefairy",
+        "ko_name": "삐삐"
+    },
+    {
+        "poke_id": 36,
+        "eng_name": "clefable",
+        "ko_name": "픽시"
+    },
+    {
+        "poke_id": 37,
+        "eng_name": "vulpix",
+        "ko_name": "식스테일"
+    },
+    {
+        "poke_id": 38,
+        "eng_name": "ninetales",
+        "ko_name": "나인테일"
+    },
+    {
+        "poke_id": 39,
+        "eng_name": "jigglypuff",
+        "ko_name": "푸린"
+    },
+    {
+        "poke_id": 40,
+        "eng_name": "wigglytuff",
+        "ko_name": "푸크린"
+    },
+    {
+        "poke_id": 41,
+        "eng_name": "zubat",
+        "ko_name": "주뱃"
+    },
+    {
+        "poke_id": 42,
+        "eng_name": "golbat",
+        "ko_name": "골뱃"
+    },
+    {
+        "poke_id": 43,
+        "eng_name": "oddish",
+        "ko_name": "뚜벅쵸"
+    },
+    {
+        "poke_id": 44,
+        "eng_name": "gloom",
+        "ko_name": "냄새꼬"
+    },
+    {
+        "poke_id": 45,
+        "eng_name": "vileplume",
+        "ko_name": "라플레시아"
+    },
+    {
+        "poke_id": 46,
+        "eng_name": "paras",
+        "ko_name": "파라스"
+    },
+    {
+        "poke_id": 47,
+        "eng_name": "parasect",
+        "ko_name": "파라섹트"
+    },
+    {
+        "poke_id": 48,
+        "eng_name": "venonat",
+        "ko_name": "콘팡"
+    },
+    {
+        "poke_id": 49,
+        "eng_name": "venomoth",
+        "ko_name": "도나리"
+    },
+    {
+        "poke_id": 50,
+        "eng_name": "diglett",
+        "ko_name": "디그다"
+    },
+    {
+        "poke_id": 51,
+        "eng_name": "dugtrio",
+        "ko_name": "닥트리오"
+    },
+    {
+        "poke_id": 52,
+        "eng_name": "meowth",
+        "ko_name": "나옹"
+    },
+    {
+        "poke_id": 53,
+        "eng_name": "persian",
+        "ko_name": "페르시온"
+    },
+    {
+        "poke_id": 54,
+        "eng_name": "psyduck",
+        "ko_name": "고라파덕"
+    },
+    {
+        "poke_id": 55,
+        "eng_name": "golduck",
+        "ko_name": "골덕"
+    },
+    {
+        "poke_id": 56,
+        "eng_name": "mankey",
+        "ko_name": "망키"
+    },
+    {
+        "poke_id": 57,
+        "eng_name": "primeape",
+        "ko_name": "성원숭"
+    },
+    {
+        "poke_id": 58,
+        "eng_name": "growlithe",
+        "ko_name": "가디"
+    },
+    {
+        "poke_id": 59,
+        "eng_name": "arcanine",
+        "ko_name": "윈디"
+    },
+    {
+        "poke_id": 60,
+        "eng_name": "poliwag",
+        "ko_name": "발챙이"
+    },
+    {
+        "poke_id": 61,
+        "eng_name": "poliwhirl",
+        "ko_name": "슈륙챙이"
+    },
+    {
+        "poke_id": 62,
+        "eng_name": "poliwrath",
+        "ko_name": "강챙이"
+    },
+    {
+        "poke_id": 63,
+        "eng_name": "abra",
+        "ko_name": "캐이시"
+    },
+    {
+        "poke_id": 64,
+        "eng_name": "kadabra",
+        "ko_name": "윤겔라"
+    },
+    {
+        "poke_id": 65,
+        "eng_name": "alakazam",
+        "ko_name": "후딘"
+    },
+    {
+        "poke_id": 66,
+        "eng_name": "machop",
+        "ko_name": "알통몬"
+    },
+    {
+        "poke_id": 67,
+        "eng_name": "machoke",
+        "ko_name": "근육몬"
+    },
+    {
+        "poke_id": 68,
+        "eng_name": "machamp",
+        "ko_name": "괴력몬"
+    },
+    {
+        "poke_id": 69,
+        "eng_name": "bellsprout",
+        "ko_name": "모다피"
+    },
+    {
+        "poke_id": 70,
+        "eng_name": "weepinbell",
+        "ko_name": "우츠동"
+    },
+    {
+        "poke_id": 71,
+        "eng_name": "victreebel",
+        "ko_name": "우츠보트"
+    },
+    {
+        "poke_id": 72,
+        "eng_name": "tentacool",
+        "ko_name": "왕눈해"
+    },
+    {
+        "poke_id": 73,
+        "eng_name": "tentacruel",
+        "ko_name": "독파리"
+    },
+    {
+        "poke_id": 74,
+        "eng_name": "geodude",
+        "ko_name": "꼬마돌"
+    },
+    {
+        "poke_id": 75,
+        "eng_name": "graveler",
+        "ko_name": "데구리"
+    },
+    {
+        "poke_id": 76,
+        "eng_name": "golem",
+        "ko_name": "딱구리"
+    },
+    {
+        "poke_id": 77,
+        "eng_name": "ponyta",
+        "ko_name": "포니타"
+    },
+    {
+        "poke_id": 78,
+        "eng_name": "rapidash",
+        "ko_name": "날쌩마"
+    },
+    {
+        "poke_id": 79,
+        "eng_name": "slowpoke",
+        "ko_name": "야돈"
+    },
+    {
+        "poke_id": 80,
+        "eng_name": "slowbro",
+        "ko_name": "야도란"
+    },
+    {
+        "poke_id": 81,
+        "eng_name": "magnemite",
+        "ko_name": "코일"
+    },
+    {
+        "poke_id": 82,
+        "eng_name": "magneton",
+        "ko_name": "레어코일"
+    },
+    {
+        "poke_id": 83,
+        "eng_name": "farfetchd",
+        "ko_name": "파오리"
+    },
+    {
+        "poke_id": 84,
+        "eng_name": "doduo",
+        "ko_name": "두두"
+    },
+    {
+        "poke_id": 85,
+        "eng_name": "dodrio",
+        "ko_name": "두트리오"
+    },
+    {
+        "poke_id": 86,
+        "eng_name": "seel",
+        "ko_name": "쥬쥬"
+    },
+    {
+        "poke_id": 87,
+        "eng_name": "dewgong",
+        "ko_name": "쥬레곤"
+    },
+    {
+        "poke_id": 88,
+        "eng_name": "grimer",
+        "ko_name": "질퍽이"
+    },
+    {
+        "poke_id": 89,
+        "eng_name": "muk",
+        "ko_name": "질뻐기"
+    },
+    {
+        "poke_id": 90,
+        "eng_name": "shellder",
+        "ko_name": "셀러"
+    },
+    {
+        "poke_id": 91,
+        "eng_name": "cloyster",
+        "ko_name": "파르셀"
+    },
+    {
+        "poke_id": 92,
+        "eng_name": "gastly",
+        "ko_name": "고오스"
+    },
+    {
+        "poke_id": 93,
+        "eng_name": "haunter",
+        "ko_name": "고우스트"
+    },
+    {
+        "poke_id": 94,
+        "eng_name": "gengar",
+        "ko_name": "팬텀"
+    },
+    {
+        "poke_id": 95,
+        "eng_name": "onix",
+        "ko_name": "롱스톤"
+    },
+    {
+        "poke_id": 96,
+        "eng_name": "drowzee",
+        "ko_name": "슬리프"
+    },
+    {
+        "poke_id": 97,
+        "eng_name": "hypno",
+        "ko_name": "슬리퍼"
+    },
+    {
+        "poke_id": 98,
+        "eng_name": "krabby",
+        "ko_name": "크랩"
+    },
+    {
+        "poke_id": 99,
+        "eng_name": "kingler",
+        "ko_name": "킹크랩"
+    },
+    {
+        "poke_id": 100,
+        "eng_name": "voltorb",
+        "ko_name": "찌리리공"
+    },
+    {
+        "poke_id": 101,
+        "eng_name": "electrode",
+        "ko_name": "붐볼"
+    },
+    {
+        "poke_id": 102,
+        "eng_name": "exeggcute",
+        "ko_name": "아라리"
+    },
+    {
+        "poke_id": 103,
+        "eng_name": "exeggutor",
+        "ko_name": "나시"
+    },
+    {
+        "poke_id": 104,
+        "eng_name": "cubone",
+        "ko_name": "탕구리"
+    },
+    {
+        "poke_id": 105,
+        "eng_name": "marowak",
+        "ko_name": "텅구리"
+    },
+    {
+        "poke_id": 106,
+        "eng_name": "hitmonlee",
+        "ko_name": "시라소몬"
+    },
+    {
+        "poke_id": 107,
+        "eng_name": "hitmonchan",
+        "ko_name": "홍수몬"
+    },
+    {
+        "poke_id": 108,
+        "eng_name": "lickitung",
+        "ko_name": "내루미"
+    },
+    {
+        "poke_id": 109,
+        "eng_name": "koffing",
+        "ko_name": "또가스"
+    },
+    {
+        "poke_id": 110,
+        "eng_name": "weezing",
+        "ko_name": "또도가스"
+    },
+    {
+        "poke_id": 111,
+        "eng_name": "rhyhorn",
+        "ko_name": "뿔카노"
+    },
+    {
+        "poke_id": 112,
+        "eng_name": "rhydon",
+        "ko_name": "코뿌리"
+    },
+    {
+        "poke_id": 113,
+        "eng_name": "chansey",
+        "ko_name": "럭키"
+    },
+    {
+        "poke_id": 114,
+        "eng_name": "tangela",
+        "ko_name": "덩쿠리"
+    },
+    {
+        "poke_id": 115,
+        "eng_name": "kangaskhan",
+        "ko_name": "캥카"
+    },
+    {
+        "poke_id": 116,
+        "eng_name": "horsea",
+        "ko_name": "쏘드라"
+    },
+    {
+        "poke_id": 117,
+        "eng_name": "seadra",
+        "ko_name": "시드라"
+    },
+    {
+        "poke_id": 118,
+        "eng_name": "goldeen",
+        "ko_name": "콘치"
+    },
+    {
+        "poke_id": 119,
+        "eng_name": "seaking",
+        "ko_name": "왕콘치"
+    },
+    {
+        "poke_id": 120,
+        "eng_name": "staryu",
+        "ko_name": "별가사리"
+    },
+    {
+        "poke_id": 121,
+        "eng_name": "starmie",
+        "ko_name": "아쿠스타"
+    },
+    {
+        "poke_id": 122,
+        "eng_name": "mr-mime",
+        "ko_name": "마임맨"
+    },
+    {
+        "poke_id": 123,
+        "eng_name": "scyther",
+        "ko_name": "스라크"
+    },
+    {
+        "poke_id": 124,
+        "eng_name": "jynx",
+        "ko_name": "루주라"
+    },
+    {
+        "poke_id": 125,
+        "eng_name": "electabuzz",
+        "ko_name": "에레브"
+    },
+    {
+        "poke_id": 126,
+        "eng_name": "magmar",
+        "ko_name": "마그마"
+    },
+    {
+        "poke_id": 127,
+        "eng_name": "pinsir",
+        "ko_name": "쁘사이저"
+    },
+    {
+        "poke_id": 128,
+        "eng_name": "tauros",
+        "ko_name": "켄타로스"
+    },
+    {
+        "poke_id": 129,
+        "eng_name": "magikarp",
+        "ko_name": "잉어킹"
+    },
+    {
+        "poke_id": 130,
+        "eng_name": "gyarados",
+        "ko_name": "갸라도스"
+    },
+    {
+        "poke_id": 131,
+        "eng_name": "lapras",
+        "ko_name": "라프라스"
+    },
+    {
+        "poke_id": 132,
+        "eng_name": "ditto",
+        "ko_name": "메타몽"
+    },
+    {
+        "poke_id": 133,
+        "eng_name": "eevee",
+        "ko_name": "이브이"
+    },
+    {
+        "poke_id": 134,
+        "eng_name": "vaporeon",
+        "ko_name": "샤미드"
+    },
+    {
+        "poke_id": 135,
+        "eng_name": "jolteon",
+        "ko_name": "쥬피썬더"
+    },
+    {
+        "poke_id": 136,
+        "eng_name": "flareon",
+        "ko_name": "부스터"
+    },
+    {
+        "poke_id": 137,
+        "eng_name": "porygon",
+        "ko_name": "폴리곤"
+    },
+    {
+        "poke_id": 138,
+        "eng_name": "omanyte",
+        "ko_name": "암나이트"
+    },
+    {
+        "poke_id": 139,
+        "eng_name": "omastar",
+        "ko_name": "암스타"
+    },
+    {
+        "poke_id": 140,
+        "eng_name": "kabuto",
+        "ko_name": "투구"
+    },
+    {
+        "poke_id": 141,
+        "eng_name": "kabutops",
+        "ko_name": "투구푸스"
+    },
+    {
+        "poke_id": 142,
+        "eng_name": "aerodactyl",
+        "ko_name": "프테라"
+    },
+    {
+        "poke_id": 143,
+        "eng_name": "snorlax",
+        "ko_name": "잠만보"
+    },
+    {
+        "poke_id": 144,
+        "eng_name": "articuno",
+        "ko_name": "프리져"
+    },
+    {
+        "poke_id": 145,
+        "eng_name": "zapdos",
+        "ko_name": "썬더"
+    },
+    {
+        "poke_id": 146,
+        "eng_name": "moltres",
+        "ko_name": "파이어"
+    },
+    {
+        "poke_id": 147,
+        "eng_name": "dratini",
+        "ko_name": "미뇽"
+    },
+    {
+        "poke_id": 148,
+        "eng_name": "dragonair",
+        "ko_name": "신뇽"
+    },
+    {
+        "poke_id": 149,
+        "eng_name": "dragonite",
+        "ko_name": "망나뇽"
+    },
+    {
+        "poke_id": 150,
+        "eng_name": "mewtwo",
+        "ko_name": "뮤츠"
+    },
+    {
+        "poke_id": 151,
+        "eng_name": "mew",
+        "ko_name": "뮤"
+    },
+    {
+        "poke_id": 152,
+        "eng_name": "chikorita",
+        "ko_name": "치코리타"
+    },
+    {
+        "poke_id": 153,
+        "eng_name": "bayleef",
+        "ko_name": "베이리프"
+    },
+    {
+        "poke_id": 154,
+        "eng_name": "meganium",
+        "ko_name": "메가니움"
+    },
+    {
+        "poke_id": 155,
+        "eng_name": "cyndaquil",
+        "ko_name": "브케인"
+    },
+    {
+        "poke_id": 156,
+        "eng_name": "quilava",
+        "ko_name": "마그케인"
+    },
+    {
+        "poke_id": 157,
+        "eng_name": "typhlosion",
+        "ko_name": "블레이범"
+    },
+    {
+        "poke_id": 158,
+        "eng_name": "totodile",
+        "ko_name": "리아코"
+    },
+    {
+        "poke_id": 159,
+        "eng_name": "croconaw",
+        "ko_name": "엘리게이"
+    },
+    {
+        "poke_id": 160,
+        "eng_name": "feraligatr",
+        "ko_name": "장크로다일"
+    },
+    {
+        "poke_id": 161,
+        "eng_name": "sentret",
+        "ko_name": "꼬리선"
+    },
+    {
+        "poke_id": 162,
+        "eng_name": "furret",
+        "ko_name": "다꼬리"
+    },
+    {
+        "poke_id": 163,
+        "eng_name": "hoothoot",
+        "ko_name": "부우부"
+    },
+    {
+        "poke_id": 164,
+        "eng_name": "noctowl",
+        "ko_name": "야부엉"
+    },
+    {
+        "poke_id": 165,
+        "eng_name": "ledyba",
+        "ko_name": "레디바"
+    },
+    {
+        "poke_id": 166,
+        "eng_name": "ledian",
+        "ko_name": "레디안"
+    },
+    {
+        "poke_id": 167,
+        "eng_name": "spinarak",
+        "ko_name": "페이검"
+    },
+    {
+        "poke_id": 168,
+        "eng_name": "ariados",
+        "ko_name": "아리아도스"
+    },
+    {
+        "poke_id": 169,
+        "eng_name": "crobat",
+        "ko_name": "크로뱃"
+    },
+    {
+        "poke_id": 170,
+        "eng_name": "chinchou",
+        "ko_name": "초라기"
+    },
+    {
+        "poke_id": 171,
+        "eng_name": "lanturn",
+        "ko_name": "랜턴"
+    },
+    {
+        "poke_id": 172,
+        "eng_name": "pichu",
+        "ko_name": "피츄"
+    },
+    {
+        "poke_id": 173,
+        "eng_name": "cleffa",
+        "ko_name": "삐"
+    },
+    {
+        "poke_id": 174,
+        "eng_name": "igglybuff",
+        "ko_name": "푸푸린"
+    },
+    {
+        "poke_id": 175,
+        "eng_name": "togepi",
+        "ko_name": "토게피"
+    },
+    {
+        "poke_id": 176,
+        "eng_name": "togetic",
+        "ko_name": "토게틱"
+    },
+    {
+        "poke_id": 177,
+        "eng_name": "natu",
+        "ko_name": "네이티"
+    },
+    {
+        "poke_id": 178,
+        "eng_name": "xatu",
+        "ko_name": "네이티오"
+    },
+    {
+        "poke_id": 179,
+        "eng_name": "mareep",
+        "ko_name": "메리프"
+    },
+    {
+        "poke_id": 180,
+        "eng_name": "flaaffy",
+        "ko_name": "보송송"
+    },
+    {
+        "poke_id": 181,
+        "eng_name": "ampharos",
+        "ko_name": "전룡"
+    },
+    {
+        "poke_id": 182,
+        "eng_name": "bellossom",
+        "ko_name": "아르코"
+    },
+    {
+        "poke_id": 183,
+        "eng_name": "marill",
+        "ko_name": "마릴"
+    },
+    {
+        "poke_id": 184,
+        "eng_name": "azumarill",
+        "ko_name": "마릴리"
+    },
+    {
+        "poke_id": 185,
+        "eng_name": "sudowoodo",
+        "ko_name": "꼬지모"
+    },
+    {
+        "poke_id": 186,
+        "eng_name": "politoed",
+        "ko_name": "왕구리"
+    },
+    {
+        "poke_id": 187,
+        "eng_name": "hoppip",
+        "ko_name": "통통코"
+    },
+    {
+        "poke_id": 188,
+        "eng_name": "skiploom",
+        "ko_name": "두코"
+    },
+    {
+        "poke_id": 189,
+        "eng_name": "jumpluff",
+        "ko_name": "솜솜코"
+    },
+    {
+        "poke_id": 190,
+        "eng_name": "aipom",
+        "ko_name": "에이팜"
+    },
+    {
+        "poke_id": 191,
+        "eng_name": "sunkern",
+        "ko_name": "해너츠"
+    },
+    {
+        "poke_id": 192,
+        "eng_name": "sunflora",
+        "ko_name": "해루미"
+    },
+    {
+        "poke_id": 193,
+        "eng_name": "yanma",
+        "ko_name": "왕자리"
+    },
+    {
+        "poke_id": 194,
+        "eng_name": "wooper",
+        "ko_name": "우파"
+    },
+    {
+        "poke_id": 195,
+        "eng_name": "quagsire",
+        "ko_name": "누오"
+    },
+    {
+        "poke_id": 196,
+        "eng_name": "espeon",
+        "ko_name": "에브이"
+    },
+    {
+        "poke_id": 197,
+        "eng_name": "umbreon",
+        "ko_name": "블래키"
+    },
+    {
+        "poke_id": 198,
+        "eng_name": "murkrow",
+        "ko_name": "니로우"
+    },
+    {
+        "poke_id": 199,
+        "eng_name": "slowking",
+        "ko_name": "야도킹"
+    },
+    {
+        "poke_id": 200,
+        "eng_name": "misdreavus",
+        "ko_name": "무우마"
+    },
+    {
+        "poke_id": 201,
+        "eng_name": "unown",
+        "ko_name": "안농"
+    },
+    {
+        "poke_id": 202,
+        "eng_name": "wobbuffet",
+        "ko_name": "마자용"
+    },
+    {
+        "poke_id": 203,
+        "eng_name": "girafarig",
+        "ko_name": "키링키"
+    },
+    {
+        "poke_id": 204,
+        "eng_name": "pineco",
+        "ko_name": "피콘"
+    },
+    {
+        "poke_id": 205,
+        "eng_name": "forretress",
+        "ko_name": "쏘콘"
+    },
+    {
+        "poke_id": 206,
+        "eng_name": "dunsparce",
+        "ko_name": "노고치"
+    },
+    {
+        "poke_id": 207,
+        "eng_name": "gligar",
+        "ko_name": "글라이거"
+    },
+    {
+        "poke_id": 208,
+        "eng_name": "steelix",
+        "ko_name": "강철톤"
+    },
+    {
+        "poke_id": 209,
+        "eng_name": "snubbull",
+        "ko_name": "블루"
+    },
+    {
+        "poke_id": 210,
+        "eng_name": "granbull",
+        "ko_name": "그랑블루"
+    },
+    {
+        "poke_id": 211,
+        "eng_name": "qwilfish",
+        "ko_name": "침바루"
+    },
+    {
+        "poke_id": 212,
+        "eng_name": "scizor",
+        "ko_name": "핫삼"
+    },
+    {
+        "poke_id": 213,
+        "eng_name": "shuckle",
+        "ko_name": "단단지"
+    },
+    {
+        "poke_id": 214,
+        "eng_name": "heracross",
+        "ko_name": "헤라크로스"
+    },
+    {
+        "poke_id": 215,
+        "eng_name": "sneasel",
+        "ko_name": "포푸니"
+    },
+    {
+        "poke_id": 216,
+        "eng_name": "teddiursa",
+        "ko_name": "깜지곰"
+    },
+    {
+        "poke_id": 217,
+        "eng_name": "ursaring",
+        "ko_name": "링곰"
+    },
+    {
+        "poke_id": 218,
+        "eng_name": "slugma",
+        "ko_name": "마그마그"
+    },
+    {
+        "poke_id": 219,
+        "eng_name": "magcargo",
+        "ko_name": "마그카르고"
+    },
+    {
+        "poke_id": 220,
+        "eng_name": "swinub",
+        "ko_name": "꾸꾸리"
+    },
+    {
+        "poke_id": 221,
+        "eng_name": "piloswine",
+        "ko_name": "메꾸리"
+    },
+    {
+        "poke_id": 222,
+        "eng_name": "corsola",
+        "ko_name": "코산호"
+    },
+    {
+        "poke_id": 223,
+        "eng_name": "remoraid",
+        "ko_name": "총어"
+    },
+    {
+        "poke_id": 224,
+        "eng_name": "octillery",
+        "ko_name": "대포무노"
+    },
+    {
+        "poke_id": 225,
+        "eng_name": "delibird",
+        "ko_name": "딜리버드"
+    },
+    {
+        "poke_id": 226,
+        "eng_name": "mantine",
+        "ko_name": "만타인"
+    },
+    {
+        "poke_id": 227,
+        "eng_name": "skarmory",
+        "ko_name": "무장조"
+    },
+    {
+        "poke_id": 228,
+        "eng_name": "houndour",
+        "ko_name": "델빌"
+    },
+    {
+        "poke_id": 229,
+        "eng_name": "houndoom",
+        "ko_name": "헬가"
+    },
+    {
+        "poke_id": 230,
+        "eng_name": "kingdra",
+        "ko_name": "킹드라"
+    },
+    {
+        "poke_id": 231,
+        "eng_name": "phanpy",
+        "ko_name": "코코리"
+    },
+    {
+        "poke_id": 232,
+        "eng_name": "donphan",
+        "ko_name": "코리갑"
+    },
+    {
+        "poke_id": 233,
+        "eng_name": "porygon2",
+        "ko_name": "폴리곤2"
+    },
+    {
+        "poke_id": 234,
+        "eng_name": "stantler",
+        "ko_name": "노라키"
+    },
+    {
+        "poke_id": 235,
+        "eng_name": "smeargle",
+        "ko_name": "루브도"
+    },
+    {
+        "poke_id": 236,
+        "eng_name": "tyrogue",
+        "ko_name": "배루키"
+    },
+    {
+        "poke_id": 237,
+        "eng_name": "hitmontop",
+        "ko_name": "카포에라"
+    },
+    {
+        "poke_id": 238,
+        "eng_name": "smoochum",
+        "ko_name": "뽀뽀라"
+    },
+    {
+        "poke_id": 239,
+        "eng_name": "elekid",
+        "ko_name": "에레키드"
+    },
+    {
+        "poke_id": 240,
+        "eng_name": "magby",
+        "ko_name": "마그비"
+    },
+    {
+        "poke_id": 241,
+        "eng_name": "miltank",
+        "ko_name": "밀탱크"
+    },
+    {
+        "poke_id": 242,
+        "eng_name": "blissey",
+        "ko_name": "해피너스"
+    },
+    {
+        "poke_id": 243,
+        "eng_name": "raikou",
+        "ko_name": "라이코"
+    },
+    {
+        "poke_id": 244,
+        "eng_name": "entei",
+        "ko_name": "앤테이"
+    },
+    {
+        "poke_id": 245,
+        "eng_name": "suicune",
+        "ko_name": "스이쿤"
+    },
+    {
+        "poke_id": 246,
+        "eng_name": "larvitar",
+        "ko_name": "애버라스"
+    },
+    {
+        "poke_id": 247,
+        "eng_name": "pupitar",
+        "ko_name": "데기라스"
+    },
+    {
+        "poke_id": 248,
+        "eng_name": "tyranitar",
+        "ko_name": "마기라스"
+    },
+    {
+        "poke_id": 249,
+        "eng_name": "lugia",
+        "ko_name": "루기아"
+    },
+    {
+        "poke_id": 250,
+        "eng_name": "ho-oh",
+        "ko_name": "칠색조"
+    },
+    {
+        "poke_id": 251,
+        "eng_name": "celebi",
+        "ko_name": "세레비"
+    },
+    {
+        "poke_id": 252,
+        "eng_name": "treecko",
+        "ko_name": "나무지기"
+    },
+    {
+        "poke_id": 253,
+        "eng_name": "grovyle",
+        "ko_name": "나무돌이"
+    },
+    {
+        "poke_id": 254,
+        "eng_name": "sceptile",
+        "ko_name": "나무킹"
+    },
+    {
+        "poke_id": 255,
+        "eng_name": "torchic",
+        "ko_name": "아차모"
+    },
+    {
+        "poke_id": 256,
+        "eng_name": "combusken",
+        "ko_name": "영치코"
+    },
+    {
+        "poke_id": 257,
+        "eng_name": "blaziken",
+        "ko_name": "번치코"
+    },
+    {
+        "poke_id": 258,
+        "eng_name": "mudkip",
+        "ko_name": "물짱이"
+    },
+    {
+        "poke_id": 259,
+        "eng_name": "marshtomp",
+        "ko_name": "늪짱이"
+    },
+    {
+        "poke_id": 260,
+        "eng_name": "swampert",
+        "ko_name": "대짱이"
+    },
+    {
+        "poke_id": 261,
+        "eng_name": "poochyena",
+        "ko_name": "포챠나"
+    },
+    {
+        "poke_id": 262,
+        "eng_name": "mightyena",
+        "ko_name": "그라에나"
+    },
+    {
+        "poke_id": 263,
+        "eng_name": "zigzagoon",
+        "ko_name": "지그제구리"
+    },
+    {
+        "poke_id": 264,
+        "eng_name": "linoone",
+        "ko_name": "직구리"
+    },
+    {
+        "poke_id": 265,
+        "eng_name": "wurmple",
+        "ko_name": "개무소"
+    },
+    {
+        "poke_id": 266,
+        "eng_name": "silcoon",
+        "ko_name": "실쿤"
+    },
+    {
+        "poke_id": 267,
+        "eng_name": "beautifly",
+        "ko_name": "뷰티플라이"
+    },
+    {
+        "poke_id": 268,
+        "eng_name": "cascoon",
+        "ko_name": "카스쿤"
+    },
+    {
+        "poke_id": 269,
+        "eng_name": "dustox",
+        "ko_name": "독케일"
+    },
+    {
+        "poke_id": 270,
+        "eng_name": "lotad",
+        "ko_name": "연꽃몬"
+    },
+    {
+        "poke_id": 271,
+        "eng_name": "lombre",
+        "ko_name": "로토스"
+    },
+    {
+        "poke_id": 272,
+        "eng_name": "ludicolo",
+        "ko_name": "로파파"
+    },
+    {
+        "poke_id": 273,
+        "eng_name": "seedot",
+        "ko_name": "도토링"
+    },
+    {
+        "poke_id": 274,
+        "eng_name": "nuzleaf",
+        "ko_name": "잎새코"
+    },
+    {
+        "poke_id": 275,
+        "eng_name": "shiftry",
+        "ko_name": "다탱구"
+    },
+    {
+        "poke_id": 276,
+        "eng_name": "taillow",
+        "ko_name": "테일로"
+    },
+    {
+        "poke_id": 277,
+        "eng_name": "swellow",
+        "ko_name": "스왈로"
+    },
+    {
+        "poke_id": 278,
+        "eng_name": "wingull",
+        "ko_name": "갈모매"
+    },
+    {
+        "poke_id": 279,
+        "eng_name": "pelipper",
+        "ko_name": "패리퍼"
+    },
+    {
+        "poke_id": 280,
+        "eng_name": "ralts",
+        "ko_name": "랄토스"
+    },
+    {
+        "poke_id": 281,
+        "eng_name": "kirlia",
+        "ko_name": "킬리아"
+    },
+    {
+        "poke_id": 282,
+        "eng_name": "gardevoir",
+        "ko_name": "가디안"
+    },
+    {
+        "poke_id": 283,
+        "eng_name": "surskit",
+        "ko_name": "비구술"
+    },
+    {
+        "poke_id": 284,
+        "eng_name": "masquerain",
+        "ko_name": "비나방"
+    },
+    {
+        "poke_id": 285,
+        "eng_name": "shroomish",
+        "ko_name": "버섯꼬"
+    },
+    {
+        "poke_id": 286,
+        "eng_name": "breloom",
+        "ko_name": "버섯모"
+    },
+    {
+        "poke_id": 287,
+        "eng_name": "slakoth",
+        "ko_name": "게을로"
+    },
+    {
+        "poke_id": 288,
+        "eng_name": "vigoroth",
+        "ko_name": "발바로"
+    },
+    {
+        "poke_id": 289,
+        "eng_name": "slaking",
+        "ko_name": "게을킹"
+    },
+    {
+        "poke_id": 290,
+        "eng_name": "nincada",
+        "ko_name": "토중몬"
+    },
+    {
+        "poke_id": 291,
+        "eng_name": "ninjask",
+        "ko_name": "아이스크"
+    },
+    {
+        "poke_id": 292,
+        "eng_name": "shedinja",
+        "ko_name": "껍질몬"
+    },
+    {
+        "poke_id": 293,
+        "eng_name": "whismur",
+        "ko_name": "소곤룡"
+    },
+    {
+        "poke_id": 294,
+        "eng_name": "loudred",
+        "ko_name": "노공룡"
+    },
+    {
+        "poke_id": 295,
+        "eng_name": "exploud",
+        "ko_name": "폭음룡"
+    },
+    {
+        "poke_id": 296,
+        "eng_name": "makuhita",
+        "ko_name": "마크탕"
+    },
+    {
+        "poke_id": 297,
+        "eng_name": "hariyama",
+        "ko_name": "하리뭉"
+    },
+    {
+        "poke_id": 298,
+        "eng_name": "azurill",
+        "ko_name": "루리리"
+    },
+    {
+        "poke_id": 299,
+        "eng_name": "nosepass",
+        "ko_name": "코코파스"
+    },
+    {
+        "poke_id": 300,
+        "eng_name": "skitty",
+        "ko_name": "에나비"
+    },
+    {
+        "poke_id": 301,
+        "eng_name": "delcatty",
+        "ko_name": "델케티"
+    },
+    {
+        "poke_id": 302,
+        "eng_name": "sableye",
+        "ko_name": "깜까미"
+    },
+    {
+        "poke_id": 303,
+        "eng_name": "mawile",
+        "ko_name": "입치트"
+    },
+    {
+        "poke_id": 304,
+        "eng_name": "aron",
+        "ko_name": "가보리"
+    },
+    {
+        "poke_id": 305,
+        "eng_name": "lairon",
+        "ko_name": "갱도라"
+    },
+    {
+        "poke_id": 306,
+        "eng_name": "aggron",
+        "ko_name": "보스로라"
+    },
+    {
+        "poke_id": 307,
+        "eng_name": "meditite",
+        "ko_name": "요가랑"
+    },
+    {
+        "poke_id": 308,
+        "eng_name": "medicham",
+        "ko_name": "요가램"
+    },
+    {
+        "poke_id": 309,
+        "eng_name": "electrike",
+        "ko_name": "썬더라이"
+    },
+    {
+        "poke_id": 310,
+        "eng_name": "manectric",
+        "ko_name": "썬더볼트"
+    },
+    {
+        "poke_id": 311,
+        "eng_name": "plusle",
+        "ko_name": "플러시"
+    },
+    {
+        "poke_id": 312,
+        "eng_name": "minun",
+        "ko_name": "마이농"
+    },
+    {
+        "poke_id": 313,
+        "eng_name": "volbeat",
+        "ko_name": "볼비트"
+    },
+    {
+        "poke_id": 314,
+        "eng_name": "illumise",
+        "ko_name": "네오비트"
+    },
+    {
+        "poke_id": 315,
+        "eng_name": "roselia",
+        "ko_name": "로젤리아"
+    },
+    {
+        "poke_id": 316,
+        "eng_name": "gulpin",
+        "ko_name": "꼴깍몬"
+    },
+    {
+        "poke_id": 317,
+        "eng_name": "swalot",
+        "ko_name": "꿀꺽몬"
+    },
+    {
+        "poke_id": 318,
+        "eng_name": "carvanha",
+        "ko_name": "샤프니아"
+    },
+    {
+        "poke_id": 319,
+        "eng_name": "sharpedo",
+        "ko_name": "샤크니아"
+    },
+    {
+        "poke_id": 320,
+        "eng_name": "wailmer",
+        "ko_name": "고래왕자"
+    },
+    {
+        "poke_id": 321,
+        "eng_name": "wailord",
+        "ko_name": "고래왕"
+    },
+    {
+        "poke_id": 322,
+        "eng_name": "numel",
+        "ko_name": "둔타"
+    },
+    {
+        "poke_id": 323,
+        "eng_name": "camerupt",
+        "ko_name": "폭타"
+    },
+    {
+        "poke_id": 324,
+        "eng_name": "torkoal",
+        "ko_name": "코터스"
+    },
+    {
+        "poke_id": 325,
+        "eng_name": "spoink",
+        "ko_name": "피그점프"
+    },
+    {
+        "poke_id": 326,
+        "eng_name": "grumpig",
+        "ko_name": "피그킹"
+    },
+    {
+        "poke_id": 327,
+        "eng_name": "spinda",
+        "ko_name": "얼루기"
+    },
+    {
+        "poke_id": 328,
+        "eng_name": "trapinch",
+        "ko_name": "톱치"
+    },
+    {
+        "poke_id": 329,
+        "eng_name": "vibrava",
+        "ko_name": "비브라바"
+    },
+    {
+        "poke_id": 330,
+        "eng_name": "flygon",
+        "ko_name": "플라이곤"
+    },
+    {
+        "poke_id": 331,
+        "eng_name": "cacnea",
+        "ko_name": "선인왕"
+    },
+    {
+        "poke_id": 332,
+        "eng_name": "cacturne",
+        "ko_name": "밤선인"
+    },
+    {
+        "poke_id": 333,
+        "eng_name": "swablu",
+        "ko_name": "파비코"
+    },
+    {
+        "poke_id": 334,
+        "eng_name": "altaria",
+        "ko_name": "파비코리"
+    },
+    {
+        "poke_id": 335,
+        "eng_name": "zangoose",
+        "ko_name": "쟝고"
+    },
+    {
+        "poke_id": 336,
+        "eng_name": "seviper",
+        "ko_name": "세비퍼"
+    },
+    {
+        "poke_id": 337,
+        "eng_name": "lunatone",
+        "ko_name": "루나톤"
+    },
+    {
+        "poke_id": 338,
+        "eng_name": "solrock",
+        "ko_name": "솔록"
+    },
+    {
+        "poke_id": 339,
+        "eng_name": "barboach",
+        "ko_name": "미꾸리"
+    },
+    {
+        "poke_id": 340,
+        "eng_name": "whiscash",
+        "ko_name": "메깅"
+    },
+    {
+        "poke_id": 341,
+        "eng_name": "corphish",
+        "ko_name": "가재군"
+    },
+    {
+        "poke_id": 342,
+        "eng_name": "crawdaunt",
+        "ko_name": "가재장군"
+    },
+    {
+        "poke_id": 343,
+        "eng_name": "baltoy",
+        "ko_name": "오뚝군"
+    },
+    {
+        "poke_id": 344,
+        "eng_name": "claydol",
+        "ko_name": "점토도리"
+    },
+    {
+        "poke_id": 345,
+        "eng_name": "lileep",
+        "ko_name": "릴링"
+    },
+    {
+        "poke_id": 346,
+        "eng_name": "cradily",
+        "ko_name": "릴리요"
+    },
+    {
+        "poke_id": 347,
+        "eng_name": "anorith",
+        "ko_name": "아노딥스"
+    },
+    {
+        "poke_id": 348,
+        "eng_name": "armaldo",
+        "ko_name": "아말도"
+    },
+    {
+        "poke_id": 349,
+        "eng_name": "feebas",
+        "ko_name": "빈티나"
+    },
+    {
+        "poke_id": 350,
+        "eng_name": "milotic",
+        "ko_name": "밀로틱"
+    },
+    {
+        "poke_id": 351,
+        "eng_name": "castform",
+        "ko_name": "캐스퐁"
+    },
+    {
+        "poke_id": 352,
+        "eng_name": "kecleon",
+        "ko_name": "켈리몬"
+    },
+    {
+        "poke_id": 353,
+        "eng_name": "shuppet",
+        "ko_name": "어둠대신"
+    },
+    {
+        "poke_id": 354,
+        "eng_name": "banette",
+        "ko_name": "다크펫"
+    },
+    {
+        "poke_id": 355,
+        "eng_name": "duskull",
+        "ko_name": "해골몽"
+    },
+    {
+        "poke_id": 356,
+        "eng_name": "dusclops",
+        "ko_name": "미라몽"
+    },
+    {
+        "poke_id": 357,
+        "eng_name": "tropius",
+        "ko_name": "트로피우스"
+    },
+    {
+        "poke_id": 358,
+        "eng_name": "chimecho",
+        "ko_name": "치렁"
+    },
+    {
+        "poke_id": 359,
+        "eng_name": "absol",
+        "ko_name": "앱솔"
+    },
+    {
+        "poke_id": 360,
+        "eng_name": "wynaut",
+        "ko_name": "마자"
+    },
+    {
+        "poke_id": 361,
+        "eng_name": "snorunt",
+        "ko_name": "눈꼬마"
+    },
+    {
+        "poke_id": 362,
+        "eng_name": "glalie",
+        "ko_name": "얼음귀신"
+    },
+    {
+        "poke_id": 363,
+        "eng_name": "spheal",
+        "ko_name": "대굴레오"
+    },
+    {
+        "poke_id": 364,
+        "eng_name": "sealeo",
+        "ko_name": "씨레오"
+    },
+    {
+        "poke_id": 365,
+        "eng_name": "walrein",
+        "ko_name": "씨카이저"
+    },
+    {
+        "poke_id": 366,
+        "eng_name": "clamperl",
+        "ko_name": "진주몽"
+    },
+    {
+        "poke_id": 367,
+        "eng_name": "huntail",
+        "ko_name": "헌테일"
+    },
+    {
+        "poke_id": 368,
+        "eng_name": "gorebyss",
+        "ko_name": "분홍장이"
+    },
+    {
+        "poke_id": 369,
+        "eng_name": "relicanth",
+        "ko_name": "시라칸"
+    },
+    {
+        "poke_id": 370,
+        "eng_name": "luvdisc",
+        "ko_name": "사랑동이"
+    },
+    {
+        "poke_id": 371,
+        "eng_name": "bagon",
+        "ko_name": "아공이"
+    },
+    {
+        "poke_id": 372,
+        "eng_name": "shelgon",
+        "ko_name": "쉘곤"
+    },
+    {
+        "poke_id": 373,
+        "eng_name": "salamence",
+        "ko_name": "보만다"
+    },
+    {
+        "poke_id": 374,
+        "eng_name": "beldum",
+        "ko_name": "메탕"
+    },
+    {
+        "poke_id": 375,
+        "eng_name": "metang",
+        "ko_name": "메탕구"
+    },
+    {
+        "poke_id": 376,
+        "eng_name": "metagross",
+        "ko_name": "메타그로스"
+    },
+    {
+        "poke_id": 377,
+        "eng_name": "regirock",
+        "ko_name": "레지락"
+    },
+    {
+        "poke_id": 378,
+        "eng_name": "regice",
+        "ko_name": "레지아이스"
+    },
+    {
+        "poke_id": 379,
+        "eng_name": "registeel",
+        "ko_name": "레지스틸"
+    },
+    {
+        "poke_id": 380,
+        "eng_name": "latias",
+        "ko_name": "라티아스"
+    },
+    {
+        "poke_id": 381,
+        "eng_name": "latios",
+        "ko_name": "라티오스"
+    },
+    {
+        "poke_id": 382,
+        "eng_name": "kyogre",
+        "ko_name": "가이오가"
+    },
+    {
+        "poke_id": 383,
+        "eng_name": "groudon",
+        "ko_name": "그란돈"
+    },
+    {
+        "poke_id": 384,
+        "eng_name": "rayquaza",
+        "ko_name": "레쿠쟈"
+    },
+    {
+        "poke_id": 385,
+        "eng_name": "jirachi",
+        "ko_name": "지라치"
+    },
+    {
+        "poke_id": 386,
+        "eng_name": "deoxys",
+        "ko_name": "테오키스"
+    },
+    {
+        "poke_id": 387,
+        "eng_name": "turtwig",
+        "ko_name": "모부기"
+    },
+    {
+        "poke_id": 388,
+        "eng_name": "grotle",
+        "ko_name": "수풀부기"
+    },
+    {
+        "poke_id": 389,
+        "eng_name": "torterra",
+        "ko_name": "토대부기"
+    },
+    {
+        "poke_id": 390,
+        "eng_name": "chimchar",
+        "ko_name": "불꽃숭이"
+    },
+    {
+        "poke_id": 391,
+        "eng_name": "monferno",
+        "ko_name": "파이숭이"
+    },
+    {
+        "poke_id": 392,
+        "eng_name": "infernape",
+        "ko_name": "초염몽"
+    },
+    {
+        "poke_id": 393,
+        "eng_name": "piplup",
+        "ko_name": "팽도리"
+    },
+    {
+        "poke_id": 394,
+        "eng_name": "prinplup",
+        "ko_name": "팽태자"
+    },
+    {
+        "poke_id": 395,
+        "eng_name": "empoleon",
+        "ko_name": "엠페르트"
+    },
+    {
+        "poke_id": 396,
+        "eng_name": "starly",
+        "ko_name": "찌르꼬"
+    },
+    {
+        "poke_id": 397,
+        "eng_name": "staravia",
+        "ko_name": "찌르버드"
+    },
+    {
+        "poke_id": 398,
+        "eng_name": "staraptor",
+        "ko_name": "찌르호크"
+    },
+    {
+        "poke_id": 399,
+        "eng_name": "bidoof",
+        "ko_name": "비버니"
+    },
+    {
+        "poke_id": 400,
+        "eng_name": "bibarel",
+        "ko_name": "비버통"
+    },
+    {
+        "poke_id": 401,
+        "eng_name": "kricketot",
+        "ko_name": "귀뚤뚜기"
+    },
+    {
+        "poke_id": 402,
+        "eng_name": "kricketune",
+        "ko_name": "귀뚤톡크"
+    },
+    {
+        "poke_id": 403,
+        "eng_name": "shinx",
+        "ko_name": "꼬링크"
+    },
+    {
+        "poke_id": 404,
+        "eng_name": "luxio",
+        "ko_name": "럭시오"
+    },
+    {
+        "poke_id": 405,
+        "eng_name": "luxray",
+        "ko_name": "렌트라"
+    },
+    {
+        "poke_id": 406,
+        "eng_name": "budew",
+        "ko_name": "꼬몽울"
+    },
+    {
+        "poke_id": 407,
+        "eng_name": "roserade",
+        "ko_name": "로즈레이드"
+    },
+    {
+        "poke_id": 408,
+        "eng_name": "cranidos",
+        "ko_name": "두개도스"
+    },
+    {
+        "poke_id": 409,
+        "eng_name": "rampardos",
+        "ko_name": "램펄드"
+    },
+    {
+        "poke_id": 410,
+        "eng_name": "shieldon",
+        "ko_name": "방패톱스"
+    },
+    {
+        "poke_id": 411,
+        "eng_name": "bastiodon",
+        "ko_name": "바리톱스"
+    },
+    {
+        "poke_id": 412,
+        "eng_name": "burmy",
+        "ko_name": "도롱충이"
+    },
+    {
+        "poke_id": 413,
+        "eng_name": "wormadam",
+        "ko_name": "도롱마담"
+    },
+    {
+        "poke_id": 414,
+        "eng_name": "mothim",
+        "ko_name": "나메일"
+    },
+    {
+        "poke_id": 415,
+        "eng_name": "combee",
+        "ko_name": "세꿀버리"
+    },
+    {
+        "poke_id": 416,
+        "eng_name": "vespiquen",
+        "ko_name": "비퀸"
+    },
+    {
+        "poke_id": 417,
+        "eng_name": "pachirisu",
+        "ko_name": "파치리스"
+    },
+    {
+        "poke_id": 418,
+        "eng_name": "buizel",
+        "ko_name": "브이젤"
+    },
+    {
+        "poke_id": 419,
+        "eng_name": "floatzel",
+        "ko_name": "플로젤"
+    },
+    {
+        "poke_id": 420,
+        "eng_name": "cherubi",
+        "ko_name": "체리버"
+    },
+    {
+        "poke_id": 421,
+        "eng_name": "cherrim",
+        "ko_name": "체리꼬"
+    },
+    {
+        "poke_id": 422,
+        "eng_name": "shellos",
+        "ko_name": "깝질무"
+    },
+    {
+        "poke_id": 423,
+        "eng_name": "gastrodon",
+        "ko_name": "트리토돈"
+    },
+    {
+        "poke_id": 424,
+        "eng_name": "ambipom",
+        "ko_name": "겟핸보숭"
+    },
+    {
+        "poke_id": 425,
+        "eng_name": "drifloon",
+        "ko_name": "흔들풍손"
+    },
+    {
+        "poke_id": 426,
+        "eng_name": "drifblim",
+        "ko_name": "둥실라이드"
+    },
+    {
+        "poke_id": 427,
+        "eng_name": "buneary",
+        "ko_name": "이어롤"
+    },
+    {
+        "poke_id": 428,
+        "eng_name": "lopunny",
+        "ko_name": "이어롭"
+    },
+    {
+        "poke_id": 429,
+        "eng_name": "mismagius",
+        "ko_name": "무우마직"
+    },
+    {
+        "poke_id": 430,
+        "eng_name": "honchkrow",
+        "ko_name": "돈크로우"
+    },
+    {
+        "poke_id": 431,
+        "eng_name": "glameow",
+        "ko_name": "나옹마"
+    },
+    {
+        "poke_id": 432,
+        "eng_name": "purugly",
+        "ko_name": "몬냥이"
+    },
+    {
+        "poke_id": 433,
+        "eng_name": "chingling",
+        "ko_name": "랑딸랑"
+    },
+    {
+        "poke_id": 434,
+        "eng_name": "stunky",
+        "ko_name": "스컹뿡"
+    },
+    {
+        "poke_id": 435,
+        "eng_name": "skuntank",
+        "ko_name": "스컹탱크"
+    },
+    {
+        "poke_id": 436,
+        "eng_name": "bronzor",
+        "ko_name": "동미러"
+    },
+    {
+        "poke_id": 437,
+        "eng_name": "bronzong",
+        "ko_name": "동탁군"
+    },
+    {
+        "poke_id": 438,
+        "eng_name": "bonsly",
+        "ko_name": "꼬지지"
+    },
+    {
+        "poke_id": 439,
+        "eng_name": "mime-jr",
+        "ko_name": "흉내내"
+    },
+    {
+        "poke_id": 440,
+        "eng_name": "happiny",
+        "ko_name": "핑복"
+    },
+    {
+        "poke_id": 441,
+        "eng_name": "chatot",
+        "ko_name": "페라페"
+    },
+    {
+        "poke_id": 442,
+        "eng_name": "spiritomb",
+        "ko_name": "화강돌"
+    },
+    {
+        "poke_id": 443,
+        "eng_name": "gible",
+        "ko_name": "딥상어동"
+    },
+    {
+        "poke_id": 444,
+        "eng_name": "gabite",
+        "ko_name": "한바이트"
+    },
+    {
+        "poke_id": 445,
+        "eng_name": "garchomp",
+        "ko_name": "한카리아스"
+    },
+    {
+        "poke_id": 446,
+        "eng_name": "munchlax",
+        "ko_name": "먹고자"
+    },
+    {
+        "poke_id": 447,
+        "eng_name": "riolu",
+        "ko_name": "리오르"
+    },
+    {
+        "poke_id": 448,
+        "eng_name": "lucario",
+        "ko_name": "루카리오"
+    },
+    {
+        "poke_id": 449,
+        "eng_name": "hippopotas",
+        "ko_name": "히포포타스"
+    },
+    {
+        "poke_id": 450,
+        "eng_name": "hippowdon",
+        "ko_name": "하마돈"
+    },
+    {
+        "poke_id": 451,
+        "eng_name": "skorupi",
+        "ko_name": "스콜피"
+    },
+    {
+        "poke_id": 452,
+        "eng_name": "drapion",
+        "ko_name": "드래피온"
+    },
+    {
+        "poke_id": 453,
+        "eng_name": "croagunk",
+        "ko_name": "삐딱구리"
+    },
+    {
+        "poke_id": 454,
+        "eng_name": "toxicroak",
+        "ko_name": "독개굴"
+    },
+    {
+        "poke_id": 455,
+        "eng_name": "carnivine",
+        "ko_name": "무스틈니"
+    },
+    {
+        "poke_id": 456,
+        "eng_name": "finneon",
+        "ko_name": "형광어"
+    },
+    {
+        "poke_id": 457,
+        "eng_name": "lumineon",
+        "ko_name": "네오라이트"
+    },
+    {
+        "poke_id": 458,
+        "eng_name": "mantyke",
+        "ko_name": "타만타"
+    },
+    {
+        "poke_id": 459,
+        "eng_name": "snover",
+        "ko_name": "눈쓰개"
+    },
+    {
+        "poke_id": 460,
+        "eng_name": "abomasnow",
+        "ko_name": "눈설왕"
+    },
+    {
+        "poke_id": 461,
+        "eng_name": "weavile",
+        "ko_name": "포푸니라"
+    },
+    {
+        "poke_id": 462,
+        "eng_name": "magnezone",
+        "ko_name": "자포코일"
+    },
+    {
+        "poke_id": 463,
+        "eng_name": "lickilicky",
+        "ko_name": "내룸벨트"
+    },
+    {
+        "poke_id": 464,
+        "eng_name": "rhyperior",
+        "ko_name": "거대코뿌리"
+    },
+    {
+        "poke_id": 465,
+        "eng_name": "tangrowth",
+        "ko_name": "덩쿠림보"
+    },
+    {
+        "poke_id": 466,
+        "eng_name": "electivire",
+        "ko_name": "에레키블"
+    },
+    {
+        "poke_id": 467,
+        "eng_name": "magmortar",
+        "ko_name": "마그마번"
+    },
+    {
+        "poke_id": 468,
+        "eng_name": "togekiss",
+        "ko_name": "토게키스"
+    },
+    {
+        "poke_id": 469,
+        "eng_name": "yanmega",
+        "ko_name": "메가자리"
+    },
+    {
+        "poke_id": 470,
+        "eng_name": "leafeon",
+        "ko_name": "리피아"
+    },
+    {
+        "poke_id": 471,
+        "eng_name": "glaceon",
+        "ko_name": "글레이시아"
+    },
+    {
+        "poke_id": 472,
+        "eng_name": "gliscor",
+        "ko_name": "글라이온"
+    },
+    {
+        "poke_id": 473,
+        "eng_name": "mamoswine",
+        "ko_name": "맘모꾸리"
+    },
+    {
+        "poke_id": 474,
+        "eng_name": "porygon-z",
+        "ko_name": "폴리곤Z"
+    },
+    {
+        "poke_id": 475,
+        "eng_name": "gallade",
+        "ko_name": "엘레이드"
+    },
+    {
+        "poke_id": 476,
+        "eng_name": "probopass",
+        "ko_name": "대코파스"
+    },
+    {
+        "poke_id": 477,
+        "eng_name": "dusknoir",
+        "ko_name": "야느와르몽"
+    },
+    {
+        "poke_id": 478,
+        "eng_name": "froslass",
+        "ko_name": "눈여아"
+    },
+    {
+        "poke_id": 479,
+        "eng_name": "rotom",
+        "ko_name": "로토무"
+    },
+    {
+        "poke_id": 480,
+        "eng_name": "uxie",
+        "ko_name": "유크시"
+    },
+    {
+        "poke_id": 481,
+        "eng_name": "mesprit",
+        "ko_name": "엠라이트"
+    },
+    {
+        "poke_id": 482,
+        "eng_name": "azelf",
+        "ko_name": "아그놈"
+    },
+    {
+        "poke_id": 483,
+        "eng_name": "dialga",
+        "ko_name": "디아루가"
+    },
+    {
+        "poke_id": 484,
+        "eng_name": "palkia",
+        "ko_name": "펄기아"
+    },
+    {
+        "poke_id": 485,
+        "eng_name": "heatran",
+        "ko_name": "히드런"
+    },
+    {
+        "poke_id": 486,
+        "eng_name": "regigigas",
+        "ko_name": "레지기가스"
+    },
+    {
+        "poke_id": 487,
+        "eng_name": "giratina",
+        "ko_name": "기라티나"
+    },
+    {
+        "poke_id": 488,
+        "eng_name": "cresselia",
+        "ko_name": "크레세리아"
+    },
+    {
+        "poke_id": 489,
+        "eng_name": "phione",
+        "ko_name": "피오네"
+    },
+    {
+        "poke_id": 490,
+        "eng_name": "manaphy",
+        "ko_name": "마나피"
+    },
+    {
+        "poke_id": 491,
+        "eng_name": "darkrai",
+        "ko_name": "다크라이"
+    },
+    {
+        "poke_id": 492,
+        "eng_name": "shaymin",
+        "ko_name": "쉐이미"
+    },
+    {
+        "poke_id": 493,
+        "eng_name": "arceus",
+        "ko_name": "아르세우스"
+    },
+    {
+        "poke_id": 494,
+        "eng_name": "victini",
+        "ko_name": "비크티니"
+    },
+    {
+        "poke_id": 495,
+        "eng_name": "snivy",
+        "ko_name": "주리비얀"
+    },
+    {
+        "poke_id": 496,
+        "eng_name": "servine",
+        "ko_name": "샤비"
+    },
+    {
+        "poke_id": 497,
+        "eng_name": "serperior",
+        "ko_name": "샤로다"
+    },
+    {
+        "poke_id": 498,
+        "eng_name": "tepig",
+        "ko_name": "뚜꾸리"
+    },
+    {
+        "poke_id": 499,
+        "eng_name": "pignite",
+        "ko_name": "차오꿀"
+    },
+    {
+        "poke_id": 500,
+        "eng_name": "emboar",
+        "ko_name": "염무왕"
+    },
+    {
+        "poke_id": 501,
+        "eng_name": "oshawott",
+        "ko_name": "수댕이"
+    },
+    {
+        "poke_id": 502,
+        "eng_name": "dewott",
+        "ko_name": "쌍검자비"
+    },
+    {
+        "poke_id": 503,
+        "eng_name": "samurott",
+        "ko_name": "대검귀"
+    },
+    {
+        "poke_id": 504,
+        "eng_name": "patrat",
+        "ko_name": "보르쥐"
+    },
+    {
+        "poke_id": 505,
+        "eng_name": "watchog",
+        "ko_name": "보르그"
+    },
+    {
+        "poke_id": 506,
+        "eng_name": "lillipup",
+        "ko_name": "요테리"
+    },
+    {
+        "poke_id": 507,
+        "eng_name": "herdier",
+        "ko_name": "하데리어"
+    },
+    {
+        "poke_id": 508,
+        "eng_name": "stoutland",
+        "ko_name": "바랜드"
+    },
+    {
+        "poke_id": 509,
+        "eng_name": "purrloin",
+        "ko_name": "쌔비냥"
+    },
+    {
+        "poke_id": 510,
+        "eng_name": "liepard",
+        "ko_name": "레파르다스"
+    },
+    {
+        "poke_id": 511,
+        "eng_name": "pansage",
+        "ko_name": "야나프"
+    },
+    {
+        "poke_id": 512,
+        "eng_name": "simisage",
+        "ko_name": "야나키"
+    },
+    {
+        "poke_id": 513,
+        "eng_name": "pansear",
+        "ko_name": "바오프"
+    },
+    {
+        "poke_id": 514,
+        "eng_name": "simisear",
+        "ko_name": "바오키"
+    },
+    {
+        "poke_id": 515,
+        "eng_name": "panpour",
+        "ko_name": "앗차프"
+    },
+    {
+        "poke_id": 516,
+        "eng_name": "simipour",
+        "ko_name": "앗차키"
+    },
+    {
+        "poke_id": 517,
+        "eng_name": "munna",
+        "ko_name": "몽나"
+    },
+    {
+        "poke_id": 518,
+        "eng_name": "musharna",
+        "ko_name": "몽얌나"
+    },
+    {
+        "poke_id": 519,
+        "eng_name": "pidove",
+        "ko_name": "콩둘기"
+    },
+    {
+        "poke_id": 520,
+        "eng_name": "tranquill",
+        "ko_name": "유토브"
+    },
+    {
+        "poke_id": 521,
+        "eng_name": "unfezant",
+        "ko_name": "켄호로우"
+    },
+    {
+        "poke_id": 522,
+        "eng_name": "blitzle",
+        "ko_name": "줄뮤마"
+    },
+    {
+        "poke_id": 523,
+        "eng_name": "zebstrika",
+        "ko_name": "제브라이카"
+    },
+    {
+        "poke_id": 524,
+        "eng_name": "roggenrola",
+        "ko_name": "단굴"
+    },
+    {
+        "poke_id": 525,
+        "eng_name": "boldore",
+        "ko_name": "암트르"
+    },
+    {
+        "poke_id": 526,
+        "eng_name": "gigalith",
+        "ko_name": "기가이어스"
+    },
+    {
+        "poke_id": 527,
+        "eng_name": "woobat",
+        "ko_name": "또르박쥐"
+    },
+    {
+        "poke_id": 528,
+        "eng_name": "swoobat",
+        "ko_name": "맘박쥐"
+    },
+    {
+        "poke_id": 529,
+        "eng_name": "drilbur",
+        "ko_name": "두더류"
+    },
+    {
+        "poke_id": 530,
+        "eng_name": "excadrill",
+        "ko_name": "몰드류"
+    },
+    {
+        "poke_id": 531,
+        "eng_name": "audino",
+        "ko_name": "다부니"
+    },
+    {
+        "poke_id": 532,
+        "eng_name": "timburr",
+        "ko_name": "으랏차"
+    },
+    {
+        "poke_id": 533,
+        "eng_name": "gurdurr",
+        "ko_name": "토쇠골"
+    },
+    {
+        "poke_id": 534,
+        "eng_name": "conkeldurr",
+        "ko_name": "노보청"
+    },
+    {
+        "poke_id": 535,
+        "eng_name": "tympole",
+        "ko_name": "동챙이"
+    },
+    {
+        "poke_id": 536,
+        "eng_name": "palpitoad",
+        "ko_name": "두까비"
+    },
+    {
+        "poke_id": 537,
+        "eng_name": "seismitoad",
+        "ko_name": "두빅굴"
+    },
+    {
+        "poke_id": 538,
+        "eng_name": "throh",
+        "ko_name": "던지미"
+    },
+    {
+        "poke_id": 539,
+        "eng_name": "sawk",
+        "ko_name": "타격귀"
+    },
+    {
+        "poke_id": 540,
+        "eng_name": "sewaddle",
+        "ko_name": "두르보"
+    },
+    {
+        "poke_id": 541,
+        "eng_name": "swadloon",
+        "ko_name": "두르쿤"
+    },
+    {
+        "poke_id": 542,
+        "eng_name": "leavanny",
+        "ko_name": "모아머"
+    },
+    {
+        "poke_id": 543,
+        "eng_name": "venipede",
+        "ko_name": "마디네"
+    },
+    {
+        "poke_id": 544,
+        "eng_name": "whirlipede",
+        "ko_name": "휠구"
+    },
+    {
+        "poke_id": 545,
+        "eng_name": "scolipede",
+        "ko_name": "펜드라"
+    },
+    {
+        "poke_id": 546,
+        "eng_name": "cottonee",
+        "ko_name": "소미안"
+    },
+    {
+        "poke_id": 547,
+        "eng_name": "whimsicott",
+        "ko_name": "엘풍"
+    },
+    {
+        "poke_id": 548,
+        "eng_name": "petilil",
+        "ko_name": "치릴리"
+    },
+    {
+        "poke_id": 549,
+        "eng_name": "lilligant",
+        "ko_name": "드레디어"
+    },
+    {
+        "poke_id": 550,
+        "eng_name": "basculin",
+        "ko_name": "배쓰나이"
+    },
+    {
+        "poke_id": 551,
+        "eng_name": "sandile",
+        "ko_name": "깜눈크"
+    },
+    {
+        "poke_id": 552,
+        "eng_name": "krokorok",
+        "ko_name": "악비르"
+    },
+    {
+        "poke_id": 553,
+        "eng_name": "krookodile",
+        "ko_name": "악비아르"
+    },
+    {
+        "poke_id": 554,
+        "eng_name": "darumaka",
+        "ko_name": "달막화"
+    },
+    {
+        "poke_id": 555,
+        "eng_name": "darmanitan",
+        "ko_name": "불비달마"
+    },
+    {
+        "poke_id": 556,
+        "eng_name": "maractus",
+        "ko_name": "마라카치"
+    },
+    {
+        "poke_id": 557,
+        "eng_name": "dwebble",
+        "ko_name": "돌살이"
+    },
+    {
+        "poke_id": 558,
+        "eng_name": "crustle",
+        "ko_name": "암팰리스"
+    },
+    {
+        "poke_id": 559,
+        "eng_name": "scraggy",
+        "ko_name": "곤율랭"
+    },
+    {
+        "poke_id": 560,
+        "eng_name": "scrafty",
+        "ko_name": "곤율거니"
+    },
+    {
+        "poke_id": 561,
+        "eng_name": "sigilyph",
+        "ko_name": "심보러"
+    },
+    {
+        "poke_id": 562,
+        "eng_name": "yamask",
+        "ko_name": "데스마스"
+    },
+    {
+        "poke_id": 563,
+        "eng_name": "cofagrigus",
+        "ko_name": "데스니칸"
+    },
+    {
+        "poke_id": 564,
+        "eng_name": "tirtouga",
+        "ko_name": "프로토가"
+    },
+    {
+        "poke_id": 565,
+        "eng_name": "carracosta",
+        "ko_name": "늑골라"
+    },
+    {
+        "poke_id": 566,
+        "eng_name": "archen",
+        "ko_name": "아켄"
+    },
+    {
+        "poke_id": 567,
+        "eng_name": "archeops",
+        "ko_name": "아케오스"
+    },
+    {
+        "poke_id": 568,
+        "eng_name": "trubbish",
+        "ko_name": "깨봉이"
+    },
+    {
+        "poke_id": 569,
+        "eng_name": "garbodor",
+        "ko_name": "더스트나"
+    },
+    {
+        "poke_id": 570,
+        "eng_name": "zorua",
+        "ko_name": "조로아"
+    },
+    {
+        "poke_id": 571,
+        "eng_name": "zoroark",
+        "ko_name": "조로아크"
+    },
+    {
+        "poke_id": 572,
+        "eng_name": "minccino",
+        "ko_name": "치라미"
+    },
+    {
+        "poke_id": 573,
+        "eng_name": "cinccino",
+        "ko_name": "치라치노"
+    },
+    {
+        "poke_id": 574,
+        "eng_name": "gothita",
+        "ko_name": "고디탱"
+    },
+    {
+        "poke_id": 575,
+        "eng_name": "gothorita",
+        "ko_name": "고디보미"
+    },
+    {
+        "poke_id": 576,
+        "eng_name": "gothitelle",
+        "ko_name": "고디모아젤"
+    },
+    {
+        "poke_id": 577,
+        "eng_name": "solosis",
+        "ko_name": "유니란"
+    },
+    {
+        "poke_id": 578,
+        "eng_name": "duosion",
+        "ko_name": "듀란"
+    },
+    {
+        "poke_id": 579,
+        "eng_name": "reuniclus",
+        "ko_name": "란쿨루스"
+    },
+    {
+        "poke_id": 580,
+        "eng_name": "ducklett",
+        "ko_name": "꼬지보리"
+    },
+    {
+        "poke_id": 581,
+        "eng_name": "swanna",
+        "ko_name": "스완나"
+    },
+    {
+        "poke_id": 582,
+        "eng_name": "vanillite",
+        "ko_name": "바닐프티"
+    },
+    {
+        "poke_id": 583,
+        "eng_name": "vanillish",
+        "ko_name": "바닐리치"
+    },
+    {
+        "poke_id": 584,
+        "eng_name": "vanilluxe",
+        "ko_name": "배바닐라"
+    },
+    {
+        "poke_id": 585,
+        "eng_name": "deerling",
+        "ko_name": "사철록"
+    },
+    {
+        "poke_id": 586,
+        "eng_name": "sawsbuck",
+        "ko_name": "바라철록"
+    },
+    {
+        "poke_id": 587,
+        "eng_name": "emolga",
+        "ko_name": "에몽가"
+    },
+    {
+        "poke_id": 588,
+        "eng_name": "karrablast",
+        "ko_name": "딱정곤"
+    },
+    {
+        "poke_id": 589,
+        "eng_name": "escavalier",
+        "ko_name": "슈바르고"
+    },
+    {
+        "poke_id": 590,
+        "eng_name": "foongus",
+        "ko_name": "깜놀버슬"
+    },
+    {
+        "poke_id": 591,
+        "eng_name": "amoonguss",
+        "ko_name": "뽀록나"
+    },
+    {
+        "poke_id": 592,
+        "eng_name": "frillish",
+        "ko_name": "탱그릴"
+    },
+    {
+        "poke_id": 593,
+        "eng_name": "jellicent",
+        "ko_name": "탱탱겔"
+    },
+    {
+        "poke_id": 594,
+        "eng_name": "alomomola",
+        "ko_name": "맘복치"
+    },
+    {
+        "poke_id": 595,
+        "eng_name": "joltik",
+        "ko_name": "파쪼옥"
+    },
+    {
+        "poke_id": 596,
+        "eng_name": "galvantula",
+        "ko_name": "전툴라"
+    },
+    {
+        "poke_id": 597,
+        "eng_name": "ferroseed",
+        "ko_name": "철시드"
+    },
+    {
+        "poke_id": 598,
+        "eng_name": "ferrothorn",
+        "ko_name": "너트령"
+    },
+    {
+        "poke_id": 599,
+        "eng_name": "klink",
+        "ko_name": "기어르"
+    },
+    {
+        "poke_id": 600,
+        "eng_name": "klang",
+        "ko_name": "기기어르"
+    },
+    {
+        "poke_id": 601,
+        "eng_name": "klinklang",
+        "ko_name": "기기기어르"
+    },
+    {
+        "poke_id": 602,
+        "eng_name": "tynamo",
+        "ko_name": "저리어"
+    },
+    {
+        "poke_id": 603,
+        "eng_name": "eelektrik",
+        "ko_name": "저리릴"
+    },
+    {
+        "poke_id": 604,
+        "eng_name": "eelektross",
+        "ko_name": "저리더프"
+    },
+    {
+        "poke_id": 605,
+        "eng_name": "elgyem",
+        "ko_name": "리그레"
+    },
+    {
+        "poke_id": 606,
+        "eng_name": "beheeyem",
+        "ko_name": "벰크"
+    },
+    {
+        "poke_id": 607,
+        "eng_name": "litwick",
+        "ko_name": "불켜미"
+    },
+    {
+        "poke_id": 608,
+        "eng_name": "lampent",
+        "ko_name": "램프라"
+    },
+    {
+        "poke_id": 609,
+        "eng_name": "chandelure",
+        "ko_name": "샹델라"
+    },
+    {
+        "poke_id": 610,
+        "eng_name": "axew",
+        "ko_name": "터검니"
+    },
+    {
+        "poke_id": 611,
+        "eng_name": "fraxure",
+        "ko_name": "액슨도"
+    },
+    {
+        "poke_id": 612,
+        "eng_name": "haxorus",
+        "ko_name": "액스라이즈"
+    },
+    {
+        "poke_id": 613,
+        "eng_name": "cubchoo",
+        "ko_name": "코고미"
+    },
+    {
+        "poke_id": 614,
+        "eng_name": "beartic",
+        "ko_name": "툰베어"
+    },
+    {
+        "poke_id": 615,
+        "eng_name": "cryogonal",
+        "ko_name": "프리지오"
+    },
+    {
+        "poke_id": 616,
+        "eng_name": "shelmet",
+        "ko_name": "쪼마리"
+    },
+    {
+        "poke_id": 617,
+        "eng_name": "accelgor",
+        "ko_name": "어지리더"
+    },
+    {
+        "poke_id": 618,
+        "eng_name": "stunfisk",
+        "ko_name": "메더"
+    },
+    {
+        "poke_id": 619,
+        "eng_name": "mienfoo",
+        "ko_name": "비조푸"
+    },
+    {
+        "poke_id": 620,
+        "eng_name": "mienshao",
+        "ko_name": "비조도"
+    },
+    {
+        "poke_id": 621,
+        "eng_name": "druddigon",
+        "ko_name": "크리만"
+    },
+    {
+        "poke_id": 622,
+        "eng_name": "golett",
+        "ko_name": "골비람"
+    },
+    {
+        "poke_id": 623,
+        "eng_name": "golurk",
+        "ko_name": "골루그"
+    },
+    {
+        "poke_id": 624,
+        "eng_name": "pawniard",
+        "ko_name": "자망칼"
+    },
+    {
+        "poke_id": 625,
+        "eng_name": "bisharp",
+        "ko_name": "절각참"
+    },
+    {
+        "poke_id": 626,
+        "eng_name": "bouffalant",
+        "ko_name": "버프론"
+    },
+    {
+        "poke_id": 627,
+        "eng_name": "rufflet",
+        "ko_name": "수리둥보"
+    },
+    {
+        "poke_id": 628,
+        "eng_name": "braviary",
+        "ko_name": "워글"
+    },
+    {
+        "poke_id": 629,
+        "eng_name": "vullaby",
+        "ko_name": "벌차이"
+    },
+    {
+        "poke_id": 630,
+        "eng_name": "mandibuzz",
+        "ko_name": "버랜지나"
+    },
+    {
+        "poke_id": 631,
+        "eng_name": "heatmor",
+        "ko_name": "앤티골"
+    },
+    {
+        "poke_id": 632,
+        "eng_name": "durant",
+        "ko_name": "아이앤트"
+    },
+    {
+        "poke_id": 633,
+        "eng_name": "deino",
+        "ko_name": "모노두"
+    },
+    {
+        "poke_id": 634,
+        "eng_name": "zweilous",
+        "ko_name": "디헤드"
+    },
+    {
+        "poke_id": 635,
+        "eng_name": "hydreigon",
+        "ko_name": "삼삼드래"
+    },
+    {
+        "poke_id": 636,
+        "eng_name": "larvesta",
+        "ko_name": "활화르바"
+    },
+    {
+        "poke_id": 637,
+        "eng_name": "volcarona",
+        "ko_name": "불카모스"
+    },
+    {
+        "poke_id": 638,
+        "eng_name": "cobalion",
+        "ko_name": "코바르온"
+    },
+    {
+        "poke_id": 639,
+        "eng_name": "terrakion",
+        "ko_name": "테라키온"
+    },
+    {
+        "poke_id": 640,
+        "eng_name": "virizion",
+        "ko_name": "비리디온"
+    },
+    {
+        "poke_id": 641,
+        "eng_name": "tornadus",
+        "ko_name": "토네로스"
+    },
+    {
+        "poke_id": 642,
+        "eng_name": "thundurus",
+        "ko_name": "볼트로스"
+    },
+    {
+        "poke_id": 643,
+        "eng_name": "reshiram",
+        "ko_name": "레시라무"
+    },
+    {
+        "poke_id": 644,
+        "eng_name": "zekrom",
+        "ko_name": "제크로무"
+    },
+    {
+        "poke_id": 645,
+        "eng_name": "landorus",
+        "ko_name": "랜드로스"
+    },
+    {
+        "poke_id": 646,
+        "eng_name": "kyurem",
+        "ko_name": "큐레무"
+    },
+    {
+        "poke_id": 647,
+        "eng_name": "keldeo",
+        "ko_name": "케르디오"
+    },
+    {
+        "poke_id": 648,
+        "eng_name": "meloetta",
+        "ko_name": "메로엣타"
+    },
+    {
+        "poke_id": 649,
+        "eng_name": "genesect",
+        "ko_name": "게노세크트"
+    },
+    {
+        "poke_id": 650,
+        "eng_name": "chespin",
+        "ko_name": "도치마론"
+    },
+    {
+        "poke_id": 651,
+        "eng_name": "quilladin",
+        "ko_name": "도치보구"
+    },
+    {
+        "poke_id": 652,
+        "eng_name": "chesnaught",
+        "ko_name": "브리가론"
+    },
+    {
+        "poke_id": 653,
+        "eng_name": "fennekin",
+        "ko_name": "푸호꼬"
+    },
+    {
+        "poke_id": 654,
+        "eng_name": "braixen",
+        "ko_name": "테르나"
+    },
+    {
+        "poke_id": 655,
+        "eng_name": "delphox",
+        "ko_name": "마폭시"
+    },
+    {
+        "poke_id": 656,
+        "eng_name": "froakie",
+        "ko_name": "개구마르"
+    },
+    {
+        "poke_id": 657,
+        "eng_name": "frogadier",
+        "ko_name": "개굴반장"
+    },
+    {
+        "poke_id": 658,
+        "eng_name": "greninja",
+        "ko_name": "개굴닌자"
+    },
+    {
+        "poke_id": 659,
+        "eng_name": "bunnelby",
+        "ko_name": "파르빗"
+    },
+    {
+        "poke_id": 660,
+        "eng_name": "diggersby",
+        "ko_name": "파르토"
+    },
+    {
+        "poke_id": 661,
+        "eng_name": "fletchling",
+        "ko_name": "화살꼬빈"
+    },
+    {
+        "poke_id": 662,
+        "eng_name": "fletchinder",
+        "ko_name": "불화살빈"
+    },
+    {
+        "poke_id": 663,
+        "eng_name": "talonflame",
+        "ko_name": "파이어로"
+    },
+    {
+        "poke_id": 664,
+        "eng_name": "scatterbug",
+        "ko_name": "분이벌레"
+    },
+    {
+        "poke_id": 665,
+        "eng_name": "spewpa",
+        "ko_name": "분떠도리"
+    },
+    {
+        "poke_id": 666,
+        "eng_name": "vivillon",
+        "ko_name": "비비용"
+    },
+    {
+        "poke_id": 667,
+        "eng_name": "litleo",
+        "ko_name": "레오꼬"
+    },
+    {
+        "poke_id": 668,
+        "eng_name": "pyroar",
+        "ko_name": "화염레오"
+    },
+    {
+        "poke_id": 669,
+        "eng_name": "flabebe",
+        "ko_name": "플라베베"
+    },
+    {
+        "poke_id": 670,
+        "eng_name": "floette",
+        "ko_name": "플라엣테"
+    },
+    {
+        "poke_id": 671,
+        "eng_name": "florges",
+        "ko_name": "플라제스"
+    },
+    {
+        "poke_id": 672,
+        "eng_name": "skiddo",
+        "ko_name": "메이클"
+    },
+    {
+        "poke_id": 673,
+        "eng_name": "gogoat",
+        "ko_name": "고고트"
+    },
+    {
+        "poke_id": 674,
+        "eng_name": "pancham",
+        "ko_name": "판짱"
+    },
+    {
+        "poke_id": 675,
+        "eng_name": "pangoro",
+        "ko_name": "부란다"
+    },
+    {
+        "poke_id": 676,
+        "eng_name": "furfrou",
+        "ko_name": "트리미앙"
+    },
+    {
+        "poke_id": 677,
+        "eng_name": "espurr",
+        "ko_name": "냐스퍼"
+    },
+    {
+        "poke_id": 678,
+        "eng_name": "meowstic",
+        "ko_name": "냐오닉스"
+    },
+    {
+        "poke_id": 679,
+        "eng_name": "honedge",
+        "ko_name": "단칼빙"
+    },
+    {
+        "poke_id": 680,
+        "eng_name": "doublade",
+        "ko_name": "쌍검킬"
+    },
+    {
+        "poke_id": 681,
+        "eng_name": "aegislash",
+        "ko_name": "킬가르도"
+    },
+    {
+        "poke_id": 682,
+        "eng_name": "spritzee",
+        "ko_name": "슈쁘"
+    },
+    {
+        "poke_id": 683,
+        "eng_name": "aromatisse",
+        "ko_name": "프레프티르"
+    },
+    {
+        "poke_id": 684,
+        "eng_name": "swirlix",
+        "ko_name": "나룸퍼프"
+    },
+    {
+        "poke_id": 685,
+        "eng_name": "slurpuff",
+        "ko_name": "나루림"
+    },
+    {
+        "poke_id": 686,
+        "eng_name": "inkay",
+        "ko_name": "오케이징"
+    },
+    {
+        "poke_id": 687,
+        "eng_name": "malamar",
+        "ko_name": "칼라마네로"
+    },
+    {
+        "poke_id": 688,
+        "eng_name": "binacle",
+        "ko_name": "거북손손"
+    },
+    {
+        "poke_id": 689,
+        "eng_name": "barbaracle",
+        "ko_name": "거북손데스"
+    },
+    {
+        "poke_id": 690,
+        "eng_name": "skrelp",
+        "ko_name": "수레기"
+    },
+    {
+        "poke_id": 691,
+        "eng_name": "dragalge",
+        "ko_name": "드래캄"
+    },
+    {
+        "poke_id": 692,
+        "eng_name": "clauncher",
+        "ko_name": "완철포"
+    },
+    {
+        "poke_id": 693,
+        "eng_name": "clawitzer",
+        "ko_name": "블로스터"
+    },
+    {
+        "poke_id": 694,
+        "eng_name": "helioptile",
+        "ko_name": "목도리키텔"
+    },
+    {
+        "poke_id": 695,
+        "eng_name": "heliolisk",
+        "ko_name": "일레도리자드"
+    },
+    {
+        "poke_id": 696,
+        "eng_name": "tyrunt",
+        "ko_name": "티고라스"
+    },
+    {
+        "poke_id": 697,
+        "eng_name": "tyrantrum",
+        "ko_name": "견고라스"
+    },
+    {
+        "poke_id": 698,
+        "eng_name": "amaura",
+        "ko_name": "아마루스"
+    },
+    {
+        "poke_id": 699,
+        "eng_name": "aurorus",
+        "ko_name": "아마루르가"
+    },
+    {
+        "poke_id": 700,
+        "eng_name": "sylveon",
+        "ko_name": "님피아"
+    },
+    {
+        "poke_id": 701,
+        "eng_name": "hawlucha",
+        "ko_name": "루차불"
+    },
+    {
+        "poke_id": 702,
+        "eng_name": "dedenne",
+        "ko_name": "데덴네"
+    },
+    {
+        "poke_id": 703,
+        "eng_name": "carbink",
+        "ko_name": "멜리시"
+    },
+    {
+        "poke_id": 704,
+        "eng_name": "goomy",
+        "ko_name": "미끄메라"
+    },
+    {
+        "poke_id": 705,
+        "eng_name": "sliggoo",
+        "ko_name": "미끄네일"
+    },
+    {
+        "poke_id": 706,
+        "eng_name": "goodra",
+        "ko_name": "미끄래곤"
+    },
+    {
+        "poke_id": 707,
+        "eng_name": "klefki",
+        "ko_name": "클레피"
+    },
+    {
+        "poke_id": 708,
+        "eng_name": "phantump",
+        "ko_name": "나목령"
+    },
+    {
+        "poke_id": 709,
+        "eng_name": "trevenant",
+        "ko_name": "대로트"
+    },
+    {
+        "poke_id": 710,
+        "eng_name": "pumpkaboo",
+        "ko_name": "호바귀"
+    },
+    {
+        "poke_id": 711,
+        "eng_name": "gourgeist",
+        "ko_name": "펌킨인"
+    },
+    {
+        "poke_id": 712,
+        "eng_name": "bergmite",
+        "ko_name": "꽁어름"
+    },
+    {
+        "poke_id": 713,
+        "eng_name": "avalugg",
+        "ko_name": "크레베이스"
+    },
+    {
+        "poke_id": 714,
+        "eng_name": "noibat",
+        "ko_name": "음뱃"
+    },
+    {
+        "poke_id": 715,
+        "eng_name": "noivern",
+        "ko_name": "음번"
+    },
+    {
+        "poke_id": 716,
+        "eng_name": "xerneas",
+        "ko_name": "제르네아스"
+    },
+    {
+        "poke_id": 717,
+        "eng_name": "yveltal",
+        "ko_name": "이벨타르"
+    },
+    {
+        "poke_id": 718,
+        "eng_name": "zygarde",
+        "ko_name": "지가르데"
+    },
+    {
+        "poke_id": 719,
+        "eng_name": "diancie",
+        "ko_name": "디안시"
+    },
+    {
+        "poke_id": 720,
+        "eng_name": "hoopa",
+        "ko_name": "후파"
+    },
+    {
+        "poke_id": 721,
+        "eng_name": "volcanion",
+        "ko_name": "볼케니온"
+    },
+    {
+        "poke_id": 722,
+        "eng_name": "rowlet",
+        "ko_name": "나몰빼미"
+    },
+    {
+        "poke_id": 723,
+        "eng_name": "dartrix",
+        "ko_name": "빼미스로우"
+    },
+    {
+        "poke_id": 724,
+        "eng_name": "decidueye",
+        "ko_name": "모크나이퍼"
+    },
+    {
+        "poke_id": 725,
+        "eng_name": "litten",
+        "ko_name": "냐오불"
+    },
+    {
+        "poke_id": 726,
+        "eng_name": "torracat",
+        "ko_name": "냐오히트"
+    },
+    {
+        "poke_id": 727,
+        "eng_name": "incineroar",
+        "ko_name": "어흥염"
+    },
+    {
+        "poke_id": 728,
+        "eng_name": "popplio",
+        "ko_name": "누리공"
+    },
+    {
+        "poke_id": 729,
+        "eng_name": "brionne",
+        "ko_name": "키요공"
+    },
+    {
+        "poke_id": 730,
+        "eng_name": "primarina",
+        "ko_name": "누리레느"
+    },
+    {
+        "poke_id": 731,
+        "eng_name": "pikipek",
+        "ko_name": "콕코구리"
+    },
+    {
+        "poke_id": 732,
+        "eng_name": "trumbeak",
+        "ko_name": "크라파"
+    },
+    {
+        "poke_id": 733,
+        "eng_name": "toucannon",
+        "ko_name": "왕큰부리"
+    },
+    {
+        "poke_id": 734,
+        "eng_name": "yungoos",
+        "ko_name": "영구스"
+    },
+    {
+        "poke_id": 735,
+        "eng_name": "gumshoos",
+        "ko_name": "형사구스"
+    },
+    {
+        "poke_id": 736,
+        "eng_name": "grubbin",
+        "ko_name": "턱지충이"
+    },
+    {
+        "poke_id": 737,
+        "eng_name": "charjabug",
+        "ko_name": "전지충이"
+    },
+    {
+        "poke_id": 738,
+        "eng_name": "vikavolt",
+        "ko_name": "투구뿌논"
+    },
+    {
+        "poke_id": 739,
+        "eng_name": "crabrawler",
+        "ko_name": "오기지게"
+    },
+    {
+        "poke_id": 740,
+        "eng_name": "crabominable",
+        "ko_name": "모단단게"
+    },
+    {
+        "poke_id": 741,
+        "eng_name": "oricorio",
+        "ko_name": "춤추새"
+    },
+    {
+        "poke_id": 742,
+        "eng_name": "cutiefly",
+        "ko_name": "에블리"
+    },
+    {
+        "poke_id": 743,
+        "eng_name": "ribombee",
+        "ko_name": "에리본"
+    },
+    {
+        "poke_id": 744,
+        "eng_name": "rockruff",
+        "ko_name": "암멍이"
+    },
+    {
+        "poke_id": 745,
+        "eng_name": "lycanroc",
+        "ko_name": "루가루암"
+    },
+    {
+        "poke_id": 746,
+        "eng_name": "wishiwashi",
+        "ko_name": "약어리"
+    },
+    {
+        "poke_id": 747,
+        "eng_name": "mareanie",
+        "ko_name": "시마사리"
+    },
+    {
+        "poke_id": 748,
+        "eng_name": "toxapex",
+        "ko_name": "더시마사리"
+    },
+    {
+        "poke_id": 749,
+        "eng_name": "mudbray",
+        "ko_name": "머드나기"
+    },
+    {
+        "poke_id": 750,
+        "eng_name": "mudsdale",
+        "ko_name": "만마드"
+    },
+    {
+        "poke_id": 751,
+        "eng_name": "dewpider",
+        "ko_name": "물거미"
+    },
+    {
+        "poke_id": 752,
+        "eng_name": "araquanid",
+        "ko_name": "깨비물거미"
+    },
+    {
+        "poke_id": 753,
+        "eng_name": "fomantis",
+        "ko_name": "짜랑랑"
+    },
+    {
+        "poke_id": 754,
+        "eng_name": "lurantis",
+        "ko_name": "라란티스"
+    },
+    {
+        "poke_id": 755,
+        "eng_name": "morelull",
+        "ko_name": "자마슈"
+    },
+    {
+        "poke_id": 756,
+        "eng_name": "shiinotic",
+        "ko_name": "마셰이드"
+    },
+    {
+        "poke_id": 757,
+        "eng_name": "salandit",
+        "ko_name": "야도뇽"
+    },
+    {
+        "poke_id": 758,
+        "eng_name": "salazzle",
+        "ko_name": "염뉴트"
+    },
+    {
+        "poke_id": 759,
+        "eng_name": "stufful",
+        "ko_name": "포곰곰"
+    },
+    {
+        "poke_id": 760,
+        "eng_name": "bewear",
+        "ko_name": "이븐곰"
+    },
+    {
+        "poke_id": 761,
+        "eng_name": "bounsweet",
+        "ko_name": "달콤아"
+    },
+    {
+        "poke_id": 762,
+        "eng_name": "steenee",
+        "ko_name": "달무리나"
+    },
+    {
+        "poke_id": 763,
+        "eng_name": "tsareena",
+        "ko_name": "달코퀸"
+    },
+    {
+        "poke_id": 764,
+        "eng_name": "comfey",
+        "ko_name": "큐아링"
+    },
+    {
+        "poke_id": 765,
+        "eng_name": "oranguru",
+        "ko_name": "하랑우탄"
+    },
+    {
+        "poke_id": 766,
+        "eng_name": "passimian",
+        "ko_name": "내던숭이"
+    },
+    {
+        "poke_id": 767,
+        "eng_name": "wimpod",
+        "ko_name": "꼬시레"
+    },
+    {
+        "poke_id": 768,
+        "eng_name": "golisopod",
+        "ko_name": "갑주무사"
+    },
+    {
+        "poke_id": 769,
+        "eng_name": "sandygast",
+        "ko_name": "모래꿍"
+    },
+    {
+        "poke_id": 770,
+        "eng_name": "palossand",
+        "ko_name": "모래성이당"
+    },
+    {
+        "poke_id": 771,
+        "eng_name": "pyukumuku",
+        "ko_name": "해무기"
+    },
+    {
+        "poke_id": 772,
+        "eng_name": "type-null",
+        "ko_name": "타입:널"
+    },
+    {
+        "poke_id": 773,
+        "eng_name": "silvally",
+        "ko_name": "실버디"
+    },
+    {
+        "poke_id": 774,
+        "eng_name": "minior",
+        "ko_name": "메테노"
+    },
+    {
+        "poke_id": 775,
+        "eng_name": "komala",
+        "ko_name": "자말라"
+    },
+    {
+        "poke_id": 776,
+        "eng_name": "turtonator",
+        "ko_name": "폭거북스"
+    },
+    {
+        "poke_id": 777,
+        "eng_name": "togedemaru",
+        "ko_name": "토게데마루"
+    },
+    {
+        "poke_id": 778,
+        "eng_name": "mimikyu",
+        "ko_name": "따라큐"
+    },
+    {
+        "poke_id": 779,
+        "eng_name": "bruxish",
+        "ko_name": "치갈기"
+    },
+    {
+        "poke_id": 780,
+        "eng_name": "drampa",
+        "ko_name": "할비롱"
+    },
+    {
+        "poke_id": 781,
+        "eng_name": "dhelmise",
+        "ko_name": "타타륜"
+    },
+    {
+        "poke_id": 782,
+        "eng_name": "jangmo-o",
+        "ko_name": "짜랑꼬"
+    },
+    {
+        "poke_id": 783,
+        "eng_name": "hakamo-o",
+        "ko_name": "짜랑고우"
+    },
+    {
+        "poke_id": 784,
+        "eng_name": "kommo-o",
+        "ko_name": "짜랑고우거"
+    },
+    {
+        "poke_id": 785,
+        "eng_name": "tapu-koko",
+        "ko_name": "카푸꼬꼬꼭"
+    },
+    {
+        "poke_id": 786,
+        "eng_name": "tapu-lele",
+        "ko_name": "카푸나비나"
+    },
+    {
+        "poke_id": 787,
+        "eng_name": "tapu-bulu",
+        "ko_name": "카푸브루루"
+    },
+    {
+        "poke_id": 788,
+        "eng_name": "tapu-fini",
+        "ko_name": "카푸느지느"
+    },
+    {
+        "poke_id": 789,
+        "eng_name": "cosmog",
+        "ko_name": "코스모그"
+    },
+    {
+        "poke_id": 790,
+        "eng_name": "cosmoem",
+        "ko_name": "코스모움"
+    },
+    {
+        "poke_id": 791,
+        "eng_name": "solgaleo",
+        "ko_name": "솔가레오"
+    },
+    {
+        "poke_id": 792,
+        "eng_name": "lunala",
+        "ko_name": "루나아라"
+    },
+    {
+        "poke_id": 793,
+        "eng_name": "nihilego",
+        "ko_name": "텅비드"
+    },
+    {
+        "poke_id": 794,
+        "eng_name": "buzzwole",
+        "ko_name": "매시붕"
+    },
+    {
+        "poke_id": 795,
+        "eng_name": "pheromosa",
+        "ko_name": "페로코체"
+    },
+    {
+        "poke_id": 796,
+        "eng_name": "xurkitree",
+        "ko_name": "전수목"
+    },
+    {
+        "poke_id": 797,
+        "eng_name": "celesteela",
+        "ko_name": "철화구야"
+    },
+    {
+        "poke_id": 798,
+        "eng_name": "kartana",
+        "ko_name": "종이신도"
+    },
+    {
+        "poke_id": 799,
+        "eng_name": "guzzlord",
+        "ko_name": "악식킹"
+    },
+    {
+        "poke_id": 800,
+        "eng_name": "necrozma",
+        "ko_name": "네크로즈마"
+    },
+    {
+        "poke_id": 801,
+        "eng_name": "magearna",
+        "ko_name": "마기아나"
+    },
+    {
+        "poke_id": 802,
+        "eng_name": "marshadow",
+        "ko_name": "마샤도"
+    },
+    {
+        "poke_id": 803,
+        "eng_name": "poipole",
+        "ko_name": "베베놈"
+    },
+    {
+        "poke_id": 804,
+        "eng_name": "naganadel",
+        "ko_name": "아고용"
+    },
+    {
+        "poke_id": 805,
+        "eng_name": "stakataka",
+        "ko_name": "차곡차곡"
+    },
+    {
+        "poke_id": 806,
+        "eng_name": "blacephalon",
+        "ko_name": "두파팡"
+    },
+    {
+        "poke_id": 807,
+        "eng_name": "zeraora",
+        "ko_name": "제라오라"
+    },
+    {
+        "poke_id": 808,
+        "eng_name": "meltan",
+        "ko_name": "멜탄"
+    },
+    {
+        "poke_id": 809,
+        "eng_name": "melmetal",
+        "ko_name": "멜메탈"
+    }
+]
