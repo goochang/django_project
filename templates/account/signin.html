@@ -1,5 +1,8 @@
 {% extends "base.html" %}
-
+{% load static %}
+{% block extrahead %}
+<link rel="stylesheet" type="text/css" href="{% static "css/account/sign.css" %}">
+{% endblock %}
 {% block content %}
 <div class="signContainer">
     <div class="signForm signinForm">

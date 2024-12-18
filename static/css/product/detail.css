@@ -28,7 +28,7 @@
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     padding: 20px;
-    background-color: #22B24B;
+    /* background-color: #22B24B; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,9 +36,13 @@
 .detailMainWrap .info_wrap .card_name .poke_types {
     width: auto;
     min-width: 50px;
+    min-height: 50px;
     max-width: 110px;
     display: flex;
     gap: 10px;
+}
+.detailMainWrap .info_wrap .card_name .poke_types div.icon{
+    display: none;
 }
 
 .detailMainWrap .info_wrap .card_type {
@@ -50,8 +54,21 @@
 }
 .detailMainWrap .info_wrap .card_abilities {
     padding: 20px;
+    display: none;
+    min-height: 100px;
+}
+
+.detailMainWrap .info_wrap .card_abilities .ability{
+    display: none;
 }
 
 .card_abilities span.title {
     font-size: 17px;
+}
+
+.detailMainWrap .info_wrap .card_flavor {
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    gap: 20px;
 }

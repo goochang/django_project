@@ -21,58 +21,36 @@ def detail_product(request, pk):
         with open(file_path, "r", encoding="utf-8") as file:
             mapping = json.load(file)
 
-        # english_name = mapping.get(product.name, None)
         result = list(filter(lambda x: x["ko_name"] == product_name, mapping))
 
         if result:
             english_name = result[0]["eng_name"]
             metadata["eng_name"] = english_name
 
-            url = f"https://pokeapi.co/api/v2/pokemon/{english_name}"
-            response = requests.get(url)
+            # url = f"https://pokeapi.co/api/v2/pokemon/{english_name}"
+            # response = requests.get(url)
 
-            if response.status_code == 200:
-                data = response.json()
-                metadata["poke_id"] = data["id"]
-                metadata["weight"] = data["weight"]
-                metadata["height"] = data["height"]
+            # if response.status_code == 200:
+            #     data = response.json()
+            #     metadata["poke_id"] = data["id"]
+            #     metadata["weight"] = data["weight"]
+            #     metadata["height"] = data["height"]
 
-                # POKETYPE = getattr(settings, "POKETYPE", None)
-                # poke_type = [
-                #     POKETYPE.get(_type["type"]["name"]) for _type in data["types"]
-                # ]
-                poke_type = [_type["type"]["name"] for _type in data["types"]]
+            #     # 포켓몬 타입
+            #     poke_type = [_type["type"]["name"] for _type in data["types"]]
 
-                metadata["poke_types"] = poke_type
-                if len(poke_type):
-                    metadata["main_type"] = poke_type[0]
+            #     metadata["poke_types"] = poke_type
+            #     if len(poke_type):
+            #         metadata["main_type"] = poke_type[0]
 
-                abilities = []
+            #     # 포켓몬 특성
+            #     for i in range(0, len(data["abilities"])):
+            #         ability = data["abilities"][i]["ability"]
+            #         url = ability["url"]
+            #         response = requests.get(url)
 
-                for ability in data["abilities"]:
-                    url = ability["ability"]["url"]
-                    response = requests.get(url)
-
-                    if response.status_code == 200:
-                        data = response.json()
-                        flavor_text = [
-                            flavor["flavor_text"]
-                            for flavor in data["flavor_text_entries"]
-                            if flavor["language"]["name"] == "ko"
-                            and flavor["version_group"]["name"] == "x-y"
-                        ]
-                        flavor_name = [
-                            poke_name["name"]
-                            for poke_name in data["names"]
-                            if poke_name["language"]["name"] == "ko"
-                        ]
-                        if len(flavor_text) and len(flavor_name):
-                            abilities.append(
-                                {"name": flavor_name[0], "content": flavor_text[0]}
-                            )
-
-                metadata["abilities"] = abilities
-                print(metadata)
+            #         metadata["ability" + str(i + 1)] = url
+            #     print(metadata)
 
         context = {"product": product, "meta": metadata}
 

@@ -2,7 +2,7 @@
 {% load static %}
 {% block extrahead %}
 <link rel="stylesheet" type="text/css" href="{% static "css/product/detail.css" %}">
-<link rel="stylesheet" type="text/css" href="{% static "css/product/poke_icon.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static "css/product/poke.css" %}">
 {% endblock %}
 {% block content %}
 <div class="detailContainer">
@@ -10,36 +10,55 @@
         <div class="img_wrap">
             <img src="/media/{{ product.photo }}" alt="Product 1">
         </div>
-        <div class="info_wrap {{ meta.main_type }}">
-            <div class="card_name">
+        <div class="info_wrap">
+            <div class="card_name card1">
                 <h2>{{ product.name }}</h2>
                 <div class="poke_types">
-                    {% if meta.poke_types  %}
+                    <div class="icon type1">
+                        <img src="" alt="타입" />
+                    </div>
+                    <div class="icon type2">
+                        <img src="" alt="타입" />
+                    </div>
+                    {% comment %} {% if meta.poke_types  %}
                         {% for poke_type in meta.poke_types %}
-                        <div class="icon {{ poke_type }}">
-                            <img src="{% get_static_prefix %}icons/{{poke_type}}.svg"/>
-                            {% comment %} <img src="icons/{{ poke_type }}.svg"/> {% endcomment %}
+                        <div class="icon dark">
+                            <img src="{% get_static_prefix %}icons/dark.svg"/>
                         </div>
                         {% endfor %}
                     {% else %}
                     <span>타입 </span>
-                    {% endif %}
+                    {% endif %} {% endcomment %}
                 </div>
             </div>
-            <div class="card_type">
+            <div class="card_type card2">
                 <span>카드 종류 : 기본 포켓몬</span>
             </div>
             <div class="card_abilities">
-                <span class="title"><b>{{ product.name }}</b>의 특성</span>
-                {% for ability in meta.abilities %}
                 <div>
-                    <span><b>{{ ability.name }}</b> : {{ ability.content }}</span>
+                    <span class="title"><b>{{ product.name }}</b>의 특성</span>
                 </div>
-                {% endfor %}
+                <div class="ability1 ability">
+                    <b></b> : <span></span>
+                </div>
+                <div class="ability2 ability">
+                    <b></b> : <span></span>
+                </div>
+                <div class="ability3 ability">
+                    <b></b> : <span></span>
+                </div>
+            </div>
+            <div class="card_flavor card1">
+                <span></span>
             </div>
         </div>
     </div>
-    <input type="hidden" name="poke_id" value="{{ meta.poke_id }}" />
+    <button name="getbtn">GETBTN</button>
+    <input type="hidden" name="poke_eng_name" value="{{ meta.eng_name }}" />
+    {% comment %} <input type="hidden" name="poke_id" value="{{ meta.poke_id }}" /> {% endcomment %}
+    {% comment %} <input type="hidden" name="ability1" value="{{ meta.ability1 }}" /> {% endcomment %}
+    {% comment %} <input type="hidden" name="ability2" value="{{ meta.ability2 }}" /> {% endcomment %}
+    {% comment %} <input type="hidden" name="ability3" value="{{ meta.ability3 }}" /> {% endcomment %}
     <a href="{% url 'index' %}">목록 보기</a>
 </div>
 

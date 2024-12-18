@@ -108,128 +108,128 @@
     box-shadow: 0 0 20px #539DDF;
 }
 /* wrap */
-.info_wrap.bug .card_name{
+.info_wrap.bug .card1{
     background-color: #5E6910;
 }
-.info_wrap.bug .card_type{
+.info_wrap.bug .card2{
     background-color: #91A119;
 }
 
-.info_wrap.dark .card_name{
+.info_wrap.dark .card1{
     background-color: #257A87;
 }
-.info_wrap.dark .card_type{
+.info_wrap.dark .card2{
     background-color: #11313A;
 }
 
-.info_wrap.dragon .card_name{
+.info_wrap.dragon .card1{
     background-color: #5060E1;
 }
-.info_wrap.dragon .card_type{
+.info_wrap.dragon .card2{
     background-color: #343E92;
 }
 
-.info_wrap.electric .card_name{
+.info_wrap.electric .card1{
     background-color: #FFD403;
 }
-.info_wrap.electric .card_type{
+.info_wrap.electric .card2{
     background-color: #F8BB06;
 }
 
-.info_wrap.fire .card_name{
+.info_wrap.fire .card1{
     background-color: #ED193A;
 }
-.info_wrap.fire .card_type{
+.info_wrap.fire .card2{
     background-color: #DA232A;
 }
 
-.info_wrap.fairy .card_name{
+.info_wrap.fairy .card1{
     background-color: #E64B8B;
 }
-.info_wrap.fairy .card_type{
+.info_wrap.fairy .card2{
     background-color: #D95D8C;
 }
 
-.info_wrap.fighting .card_name{
+.info_wrap.fighting .card1{
     background-color: #C3682E;
 }
-.info_wrap.fighting .card_type{
+.info_wrap.fighting .card2{
     background-color: #CA4513;
 }
 
-.info_wrap.flying .card_name{
+.info_wrap.flying .card1{
     background-color: #81B9EF;
 }
-.info_wrap.flying .card_type{
+.info_wrap.flying .card2{
     background-color: #54789B;
 }
 
-.info_wrap.ghost .card_name{
+.info_wrap.ghost .card1{
     background-color: #704170;
 }
-.info_wrap.ghost .card_type{
+.info_wrap.ghost .card2{
     background-color: #492A49;
 }
 
-.info_wrap.grass .card_name{
+.info_wrap.grass .card1{
     background-color: #1FA536;
 }
-.info_wrap.grass .card_type{
+.info_wrap.grass .card2{
     background-color: #22B24B;
 }
 
-.info_wrap.ground .card_name{
+.info_wrap.ground .card1{
     background-color: #915121;
 }
-.info_wrap.ground .card_type{
+.info_wrap.ground .card2{
     background-color: #5E3515;
 }
 
-.info_wrap.ice .card_name{
+.info_wrap.ice .card1{
     background-color: #3DCEF3;
 }
-.info_wrap.ice .card_type{
+.info_wrap.ice .card2{
     background-color: #28869E;
 }
 
-.info_wrap.normal .card_name{
+.info_wrap.normal .card1{
     background-color: #D6D5D8;
 }
-.info_wrap.normal .card_type{
+.info_wrap.normal .card2{
     background-color: #C1B6B1;
 }
 
-.info_wrap.poison .card_name{
+.info_wrap.poison .card1{
     background-color: #994dcf;
 }
-.info_wrap.poison .card_type{
+.info_wrap.poison .card2{
     background-color: #994dcf;
 }
 
-.info_wrap.psychic .card_name{
+.info_wrap.psychic .card1{
     background-color: #EF4179;
 }
-.info_wrap.psychic .card_type{
+.info_wrap.psychic .card2{
     background-color: #9B2A4F;
 }
 
-.info_wrap.rock .card_name{
+.info_wrap.rock .card1{
     background-color: #BF8232;
 }
-.info_wrap.rock .card_type{
+.info_wrap.rock .card2{
     background-color: #BF8232;
 }
 
-.info_wrap.steel .card_name{
+.info_wrap.steel .card1{
     background-color: #B6BAA7;
 }
-.info_wrap.steel .card_type{
+.info_wrap.steel .card2{
     background-color: #A09785;
 }
 
-.info_wrap.water .card_name{
+.info_wrap.water .card1{
     background-color: #00B2EB;
 }
-.info_wrap.water .card_type{
+.info_wrap.water .card2{
     background-color: #0786C8;
 }

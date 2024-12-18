@@ -23,6 +23,10 @@ ul {
 }
 main {
     height: calc(100vh - 100px);
+    z-index: 3;
+}
+header {
+    z-index: 4;
 }
 h1,h2,h3,h4,h5 {
     font-weight: bold;
@@ -46,83 +50,25 @@ h1,h2,h3,h4,h5 {
     max-width: 1280px;
     margin: 0 auto;
 }
-
-/* login */
-.signContainer {
-    height: calc(100vh - 100px);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.signForm {
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    width: 50vw;
-    padding: 100px 30px;
-    margin: 0 auto;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.signForm form {
-    display: flex;
-    /* align-items: center; */
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-}
-
-.signForm input[type="text"], .signForm input[type="password"] {
-    border: none;
-    padding: 10px;
-    border-bottom: 1px solid black;
-    min-width: 300px;
-}
-
-.signForm input[type="submit"]{
-    font-size: 17px;
-    font-weight: bold;
-    border-radius: 5px;
-    background-color: #ffc833;
-    color: #086aaf;
-    cursor: pointer;
-    padding: 5px;
-}
-
-.signForm input[type="file"] {
+/* loading */
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     display: none;
-}
-
-.signForm h2 {
-    margin-bottom: 50px;
-}
-.signForm .user_photo_wrap {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
-    gap: 20px;
-}
-.signForm .user_photo_wrap img{
+    background-color: black;
+    color: white;
+    opacity: 0.7;
     text-align: center;
-    width: 100%;
-    height: 100%;
-    border: 1px solid black;
-    border-radius: 50%;
-    object-fit: cover;
-    cursor: pointer;
 }
-.signForm .user_photo_wrap label#id_photo{
-    cursor: pointer;
+.loading.active{
+    display: flex;
 }
-.signForm .user_photo {
-    width: 150px;
-    height: 150px;
-}
-
 
 .card_wrap {
     display: flex;          /* Flexbox 활성화 */
