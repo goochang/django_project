@@ -14,7 +14,9 @@ body {
 }
 input, button {
     font-family: 'Galmuri11';
+    cursor: pointer;
 }
+
 a {
     text-decoration: none;
     color: black;

@@ -23,6 +23,7 @@ app_name = "products"
 urlpatterns = [
     path("<int:pk>/", p_views.detail_product, name="detail_product"),
     path("create_product/", p_views.create_product, name="create_product"),
+    path("wish/", p_views.wish_product, name="wish_product"),
     # path('create_product/', p_views.create_product, name="create_product"),
     # path('create_product_action/', p_views.create_product_action),
 ]
