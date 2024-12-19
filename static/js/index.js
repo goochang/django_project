@@ -144,9 +144,6 @@ $(document).ready(function() {
             headers:{
                 "X-CSRFToken": csrftoken
             },
-            data: {
-                product_id:
-            }
             method: 'POST',
             success: function(data){
                 console.log(data)
