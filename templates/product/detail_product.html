@@ -51,6 +51,12 @@
                 <button name="wishBtn" class="wishBtn  {% if meta.isWish %}active{% endif %}">
                     <span>{{ meta.wishCnt }}</span>
                 </button> 
+                {% else %}
+                <button name="editBtn" class="editBtn">
+                    <a href="{% url 'products:edit_product' pk=product.id %}">수정</a>
+                </button> 
+                <button name="deleBtn" class="deleBtn">삭제</button> 
+                {% endif %}
             </div>
         </div>
         <input type="hidden" name="poke_eng_name" value="{{ meta.eng_name }}" />

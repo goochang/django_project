@@ -6,15 +6,19 @@
 {% block content %}
 <div class="productEditWrap">
     <div class="imgWrap">
+        {% if product.photo %}
+        <img src="/media/{{ product.photo}}" alt="포켓몬 사진" >
+        {% else %}
         <img src="{% static "images/metamong.png" %}" alt="포켓몬 사진" >
+        {% endif %}
     </div>
     <div class="inputWrap">
-        <form action="{% url 'products:create_product' %}" method="post" enctype="multipart/form-data">
+        <form action="{% url 'products:edit_product' pk=product.id %}" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form.as_p }}
             
-            <input type="submit" value="등록하기">
-        </form>
+            <input type="submit" value="수정하기">
+        </form>  
     </div>
 </div>
 {% endblock content %}

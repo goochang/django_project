@@ -78,6 +78,47 @@ def create_product(request):
 
 
 @login_required
+def edit_product(request, pk):
+    product = Product.objects.get(pk=pk)
+
+    if request.user.id != product.author_id:
+        return redirect("index")
+
+    if request.method == "POST":
+        form = CreateForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            product = form.save(commit=False)
+            product.save()
+            return redirect("products:detail_product", pk=product.id)
+    else:
+        form = CreateForm(instance=product)
+
+    context = {"form": form, "product": product}
+    return render(request, "product/edit_product.html", context)
+
+
+@login_required
+def delete_product(request, pk):
+    get_req = request.META.get("HTTP_X_REQUESTED_WITH")
+    if request.method == "POST" and get_req == "XMLHttpRequest":
+        product = Product.objects.get(pk=pk)  # AJAX에서 전달한 데이터
+        if product and request.user.id == product.author_id:
+            product.delete()
+            return JsonResponse(
+                {
+                    "status": "success",
+                    "message": "Product delete",
+                }
+            )
+        else:
+            return JsonResponse(
+                {"status": "error", "message": "Invalid product request"}
+            )
+    else:
+        return JsonResponse({"status": "error", "message": "Invalid request"})
+
+
+@login_required
 def wish_product(request):
     get_req = request.META.get("HTTP_X_REQUESTED_WITH")
     if request.method == "POST" and get_req == "XMLHttpRequest":
