@@ -129,9 +129,9 @@ $(document).ready(function() {
                         name = name[name.length-1].name
                     }
                     
-                    $("div.card_abilities .ability"+ i + " b").text(name)
-                    $("div.card_abilities .ability"+ i + " span").text(flavor_text)
-                    $("div.card_abilities .ability"+ i).css("display", "block")
+                    $("div.card_abilities .ability"+ (i+1) + " b").text(name)
+                    $("div.card_abilities .ability"+ (i+1) + " span").text(flavor_text)
+                    $("div.card_abilities .ability"+ (i+1)).css("display", "block")
                 }
             }
         });

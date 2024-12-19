@@ -71,9 +71,17 @@ def mypage(request):
     user = request.user
     if user.is_authenticated:
         products = Product.objects.filter(author_id=user.id)
+        Follows = Follow.objects.filter(user=user, is_active=1)
+        Followings = Follow.objects.filter(follow=user, is_active=1)
+        meta = {
+            "product_cnt": products.count(),
+            "follow_cnt": Follows.count(),
+            "following_cnt": Followings.count(),
+        }
         context = {
             "user": user,
             "products": products,
+            "meta": meta,
         }
         return render(request, "account/mypage.html", context)
     else:
