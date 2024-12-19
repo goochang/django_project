@@ -3,7 +3,6 @@
 {% block extrahead %}
 <link rel="stylesheet" type="text/css" href="{% static "css/account/mypage.css" %}">
 {% endblock %}
-
 {% block content %}
 <div class="mypageContainer">
     <div class="mypage_wrap" id="wrap1">
@@ -38,31 +37,33 @@
         </div>
     </div>
     <div>
-        <div>
-            <ul class="menu">
-                <li><a href="#">게시물</a></li>
-                <li><a href="#">찜함</a></li>
-                <li><a href="#">...</a></li>
-            </ul>
+        <div class="tabWrap">
+            <div class="{% if tab == "product" %}active{% endif %}">
+                <a href="{% url 'accounts:mypage' %}">
+                게시글
+                </a>
+            </div>
+            <div class="{% if tab == "wish" %}active{% endif %}">
+                <a href="{% url 'accounts:mypage' tab="wish" %}">
+                찜함
+                </a>
+            </div>            
         </div>
-        <div>
-            <div class="card_wrap">
-                {% if products %}
-                {% for product in products %}
-                <div class="card">
-                    <a href="{% url 'products:detail_product' pk=product.id %}">
+        <div class="card_wrap">
+            {% if products %}
+            {% for product in products %}
+            <div class="card">
+                <a href="{% url 'products:detail_product' pk=product.id %}">
                     <img src="/media/{{ product.photo }}" alt="Product 3">
-                    </a>
-                </div>
-                {% endfor %}
-                {% else %}
-                <div>
-                    <h3>등록 된 카드가 없습니다.</h3>
-                </div>
-                {% endif %}
+                </a>
             </div>
+            {% endfor %} 
+
+            {% else %}
             <div>
+                <h3>등록 된 카드가 없습니다.</h3>
             </div>
+            {% endif %}
         </div>
     </div>
 </div>

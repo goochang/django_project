@@ -67,6 +67,9 @@
     display: none;
 }
 
+.card_abilities .ability_title {
+    margin-bottom: 10px;
+}
 .card_abilities span.title {
     font-size: 17px;
 }

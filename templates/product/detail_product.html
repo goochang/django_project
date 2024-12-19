@@ -3,6 +3,7 @@
 {% block extrahead %}
 <link rel="stylesheet" type="text/css" href="{% static "css/product/detail.css" %}">
 <link rel="stylesheet" type="text/css" href="{% static "css/product/poke.css" %}">
+<script src="{% static 'js/detail.js' %}"></script>
 {% endblock %}
 {% block content %}
 <div class="detailContainer">
@@ -27,7 +28,7 @@
                     <span>카드 종류 : 기본 포켓몬</span>
                 </div>
                 <div class="card_abilities">
-                    <div>
+                    <div class="ability_title">
                         <span class="title"><b>{{ product.name }}</b>의 특성</span>
                     </div>
                     <div class="ability1 ability">

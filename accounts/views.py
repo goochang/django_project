@@ -4,7 +4,7 @@ from django.contrib.auth import logout as auth_logout
 from django.contrib.auth.forms import AuthenticationForm
 from django.views.decorators.csrf import csrf_exempt
 from accounts.models import Account, Follow
-from products.models import Product
+from products.models import Product, Wish
 from .forms import SignupForm, SigninForm, EditAccountForm
 from django.contrib.auth import authenticate
 from django.contrib.auth.hashers import make_password  # 비밀번호 해싱
@@ -67,14 +67,23 @@ def signup(request):
         return render(request, "account/signup.html", {"form": form})
 
 
-def mypage(request):
+def mypage(request, tab=""):
     user = request.user
+
     if user.is_authenticated:
         products = Product.objects.filter(author_id=user.id)
+        product_cnt = len(products)
+
+        if tab == "wish":
+            wishes = Wish.objects.filter(user=request.user).select_related("product")
+            products = [wish.product for wish in wishes]
+        else:
+            tab = "product"
+
         Follows = Follow.objects.filter(user=user, is_active=1)
         Followings = Follow.objects.filter(follow=user, is_active=1)
         meta = {
-            "product_cnt": products.count(),
+            "product_cnt": product_cnt,
             "follow_cnt": Follows.count(),
             "following_cnt": Followings.count(),
         }
@@ -82,12 +91,14 @@ def mypage(request):
             "user": user,
             "products": products,
             "meta": meta,
+            "tab": tab,
         }
         return render(request, "account/mypage.html", context)
     else:
         redirect("index")
 
 
+@login_required
 def edit_account(request):
     _user = request.user
     context = {
