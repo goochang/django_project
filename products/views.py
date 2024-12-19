@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.views.decorators.csrf import csrf_exempt
-from products.models import Product
+from products.models import Product, Account
 from django.contrib.auth.decorators import login_required
 from .forms import CreateForm
 import json
@@ -10,7 +10,21 @@ from django.conf import settings
 
 
 def detail_product(request, pk):
-    product = Product.objects.get(pk=pk)
+    try:
+        product = Product.objects.get(pk=pk)
+    except Product.DoesNotExist:
+        product = None
+
+    if product is None:
+        return redirect("index")
+
+    try:
+        author = Account.objects.get(pk=product.author_id)
+    except Product.DoesNotExist:
+        author = None
+    if author is None:
+        return redirect("index")
+
     metadata = {}
 
     product_name = product.name.split(" ")[0]
@@ -27,32 +41,7 @@ def detail_product(request, pk):
             english_name = result[0]["eng_name"]
             metadata["eng_name"] = english_name
 
-            # url = f"https://pokeapi.co/api/v2/pokemon/{english_name}"
-            # response = requests.get(url)
-
-            # if response.status_code == 200:
-            #     data = response.json()
-            #     metadata["poke_id"] = data["id"]
-            #     metadata["weight"] = data["weight"]
-            #     metadata["height"] = data["height"]
-
-            #     # 포켓몬 타입
-            #     poke_type = [_type["type"]["name"] for _type in data["types"]]
-
-            #     metadata["poke_types"] = poke_type
-            #     if len(poke_type):
-            #         metadata["main_type"] = poke_type[0]
-
-            #     # 포켓몬 특성
-            #     for i in range(0, len(data["abilities"])):
-            #         ability = data["abilities"][i]["ability"]
-            #         url = ability["url"]
-            #         response = requests.get(url)
-
-            #         metadata["ability" + str(i + 1)] = url
-            #     print(metadata)
-
-        context = {"product": product, "meta": metadata}
+        context = {"product": product, "meta": metadata, "author": author}
 
     return render(request, "product/detail_product.html", context)
 
@@ -61,8 +50,6 @@ def detail_product(request, pk):
 def create_product(request):
     if request.method == "POST":
         form = CreateForm(request.POST, request.FILES)
-        print(request.POST)
-        print(request.FILES["photo"])
         if form.is_valid():
             product = form.save(commit=False)
             print(product)

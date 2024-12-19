@@ -12,7 +12,9 @@ body {
     margin: 0;
     font-family: 'Galmuri11';
 }
-
+input, button {
+    font-family: 'Galmuri11';
+}
 a {
     text-decoration: none;
     color: black;
@@ -22,7 +24,7 @@ ul {
     padding:0;
 }
 main {
-    height: calc(100vh - 100px);
+    min-height: calc(100vh - 150px);
     z-index: 3;
 }
 header {
@@ -68,6 +70,10 @@ h1,h2,h3,h4,h5 {
 }
 .loading.active{
     display: flex;
+}
+
+.product-list {
+    margin-bottom: 50px;
 }
 
 .card_wrap {

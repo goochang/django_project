@@ -10,51 +10,74 @@
         <div class="img_wrap">
             <img src="/media/{{ product.photo }}" alt="Product 1">
         </div>
-        <div class="info_wrap">
-            <div class="card_name card1">
-                <h2>{{ product.name }}</h2>
-                <div class="poke_types">
-                    <div class="icon type1">
-                        <img src="" alt="타입" />
-                    </div>
-                    <div class="icon type2">
-                        <img src="" alt="타입" />
-                    </div>
-                    {% comment %} {% if meta.poke_types  %}
-                        {% for poke_type in meta.poke_types %}
-                        <div class="icon dark">
-                            <img src="{% get_static_prefix %}icons/dark.svg"/>
+        <div class="infoWrap">
+            <div class="info_wrap">
+                <div class="card_name card1">
+                    <h2>{{ product.name }}</h2>
+                    <div class="poke_types">
+                        <div class="icon type1">
+                            <img src="" alt="타입" />
                         </div>
-                        {% endfor %}
-                    {% else %}
-                    <span>타입 </span>
-                    {% endif %} {% endcomment %}
+                        <div class="icon type2">
+                            <img src="" alt="타입" />
+                        </div>
+                    </div>
+                </div>
+                <div class="card_type card2">
+                    <span>카드 종류 : 기본 포켓몬</span>
+                </div>
+                <div class="card_abilities">
+                    <div>
+                        <span class="title"><b>{{ product.name }}</b>의 특성</span>
+                    </div>
+                    <div class="ability1 ability">
+                        <b></b> : <span></span>
+                    </div>
+                    <div class="ability2 ability">
+                        <b></b> : <span></span>
+                    </div>
+                    <div class="ability3 ability">
+                        <b></b> : <span></span>
+                    </div>
+                </div>
+                <div class="card_flavor card1">
+                    <span class="flavor"></span>
+                    <span class="genera"></span>
+                    <span class="weight"></span>
+                    <span class="height"></span>
                 </div>
             </div>
-            <div class="card_type card2">
-                <span>카드 종류 : 기본 포켓몬</span>
-            </div>
-            <div class="card_abilities">
-                <div>
-                    <span class="title"><b>{{ product.name }}</b>의 특성</span>
-                </div>
-                <div class="ability1 ability">
-                    <b></b> : <span></span>
-                </div>
-                <div class="ability2 ability">
-                    <b></b> : <span></span>
-                </div>
-                <div class="ability3 ability">
-                    <b></b> : <span></span>
-                </div>
-            </div>
-            <div class="card_flavor card1">
-                <span></span>
+            <div class="card_action">
+                <button name="wishBtn" class="wishBtn">
+                    <span>0</span>
+                </button> 
             </div>
         </div>
+        <input type="hidden" name="poke_eng_name" value="{{ meta.eng_name }}" />
     </div>
-    <input type="hidden" name="poke_eng_name" value="{{ meta.eng_name }}" />
-    <a href="{% url 'index' %}">목록 보기</a>
+    <div class="detailSubWrap">
+        <div class="author">
+            <div class="authorWrap">
+                <div class="author_img">
+                    {% if author %}
+                    <img src="/media/{{author.photo}}" />
+                    {% else %}
+                    <img src="/static/default.png" />
+                    {% endif %}
+                </div>
+                <div class="author_info">
+                    <div><b>{{ author.user_id }}</b></div>
+                    <div>{{ author.username }}</div>
+                </div>
+            </div>
+            <div class="followWrap">
+                <input type="button" name="follow" value="팔로우" />
+            </div>
+        </div>
+        <div class="listBtn">
+            <a href="{% url 'index' %}">목록 보기</a>
+        </div>
+    </div>
 </div>
 
 {% endblock content %}

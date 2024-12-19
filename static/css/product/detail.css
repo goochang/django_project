@@ -1,5 +1,5 @@
 .detailContainer {
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .detailMainWrap {
@@ -8,7 +8,7 @@
 }
 
 .detailMainWrap img {
-    width: 300px;
+    width: 400px;
     height: auto;
 }
 
@@ -20,10 +20,15 @@
     flex-direction: column;
     width: 100%;
 }
-.detailMainWrap .info_wrap > div{
+/* info_wrap */
+.detailMainWrap .infoWrap {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-
-.detailMainWrap .info_wrap .card_name {
+.detailMainWrap  .info_wrap .card_name {
     color: white;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -47,7 +52,6 @@
 
 .detailMainWrap .info_wrap .card_type {
     color: white;
-    /* background-color: #1FA536; */
     padding: 10px 20px;
     display: flex;
     gap: 20px;
@@ -68,7 +72,77 @@
 
 .detailMainWrap .info_wrap .card_flavor {
     color: white;
-    padding: 10px 20px;
+    padding: 20px 20px;
     display: flex;
     gap: 20px;
+    flex-direction: column;
+}
+
+.info_wrap.normal div > *{
+    color: black;
+}
+
+/* author */
+.detailSubWrap {
+    display: flex;
+    justify-content: space-between;
+}
+.detailSubWrap .author {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+.authorWrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 20px;
+}
+.authorWrap .author_img {
+    width: 70px;
+    height: 70px;
+}
+.authorWrap .author_img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.authorWrap .author_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.followWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.followWrap input[type=button] {
+    background-color: #ffcb08;
+    border: 1px solid black;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.listBtn {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+button.wishBtn{
+    border: 1px solid #bbb;
+    padding: 10px 20px;
+}
+button.wishBtn span{
+    display: inline-block;
+    padding-left: 35px;
+    color: #666;
+    line-height: 26px;
+    background: url(/static/images/ic_wish_off.svg) no-repeat left center / 26px auto;
+
 }

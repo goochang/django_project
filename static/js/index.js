@@ -32,10 +32,10 @@ $(document).ready(function() {
         console.log(currentVal.length);
     });
 
+    var poke_id, weight, height = 0;
     // 포켓몬 불러오기
     if($("input[name='poke_eng_name']").length){
         
-        var poke_id, weight, height = "";
         var poke_name = $("input[name='poke_eng_name']").val()
         
         $.ajax({
@@ -58,8 +58,8 @@ $(document).ready(function() {
                     for (let i = 0; i < types.length; i++) {
                         $(".info_wrap .poke_types .type" + (i+1)).addClass(types[i])
                         $(".info_wrap .poke_types .type" + (i+1) + " img").attr("src", "/static/icons/" + types[i] + ".svg")
+                        $(".info_wrap .poke_types .type" + (i+1)).css("display", "block")
                     }
-                    $(".detailMainWrap .info_wrap .card_name .poke_types div.icon").css("display", "block")
                 }
 
                 if(poke_id != ""){
@@ -95,13 +95,20 @@ $(document).ready(function() {
             url: "https://pokeapi.co/api/v2/pokemon-species/" + poke_id,
             method: 'GET',
             success: function(data){
+                console.log(data)
                 if(data.flavor_text_entries){
                     var flavor_text = data.flavor_text_entries.filter((info) => info.language.name == "ko")
                     if( flavor_text.length ){
                         flavor_text = flavor_text[flavor_text.length-1].flavor_text
                     }
-                    console.log(flavor_text);
-                    $("div.card_flavor span").text(flavor_text);
+                    var genera = data.genera.filter((info) => info.language.name == "ko")
+                    if( genera.length ){
+                        genera = genera[genera.length-1].genus
+                    }
+                    $("div.card_flavor span.flavor").text(flavor_text);
+                    $("div.card_flavor span.weight").text("몸무게 : " + Math.round(weight * 100) / 1000 + "kg");
+                    $("div.card_flavor span.height").text("키 : " + Math.round(height * 100) / 1000 + "m");
+                    $("div.card_flavor span.genera").text(genera);
                 }
             }
         });
