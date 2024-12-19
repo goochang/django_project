@@ -137,6 +137,8 @@ $(document).ready(function() {
         });
     }
 
+    var product_id = $("input[name='product_id']").val();
+
     $("button.followBtn").click(function(){
         var csrftoken = $("[name=csrfmiddlewaretoken]").val();
         $.ajax({
@@ -144,10 +146,35 @@ $(document).ready(function() {
             headers:{
                 "X-CSRFToken": csrftoken
             },
+            data: {
+                "product_id" : product_id,
+            },
             method: 'POST',
             success: function(data){
                 console.log(data)
+            }
+        })
+    });
                 
+    $("button.wishBtn").click(function(){
+        var csrftoken = $("[name=csrfmiddlewaretoken]").val();
+        $.ajax({
+            url: "/product/wish/",
+            headers:{
+                "X-CSRFToken": csrftoken
+            },
+            data: {
+                "product_id" : product_id,
+            },
+            method: 'POST',
+            success: function(data){
+                console.log(data)
+                $("button[name='wishBtn'] span").text(data.wishCnt)
+                if(data.wish.isActive){
+                    $("button[name='wishBtn']").addClass("active")
+                } else {
+                    $("button[name='wishBtn']").removeClass("active")
+                }
             }
         });
 

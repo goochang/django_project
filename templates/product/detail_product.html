@@ -48,12 +48,13 @@
                 </div>
             </div>
             <div class="card_action">
-                <button name="wishBtn" class="wishBtn">
-                    <span>0</span>
+                <button name="wishBtn" class="wishBtn  {% if meta.isWish %}active{% endif %}">
+                    <span>{{ meta.wishCnt }}</span>
                 </button> 
             </div>
         </div>
         <input type="hidden" name="poke_eng_name" value="{{ meta.eng_name }}" />
+        <input type="hidden" name="product_id" value="{{ product.id }}" />
     </div>
     <div class="detailSubWrap">
         <div class="author">
