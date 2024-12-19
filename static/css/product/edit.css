@@ -1,0 +1,11 @@
+.productEditWrap {
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+.productEditWrap div.imgWrap {
+    min-width: 400px;
+}

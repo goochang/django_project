@@ -11,6 +11,19 @@ $(document).ready(function() {
             reader.readAsDataURL(file);
         }
     });
+
+    $("div.productEditWrap input#id_photo").change(function(event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+
+            reader.onload = function(e) {
+                $(".productEditWrap .imgWrap img").attr("src", e.target.result).show();
+            };
+
+            reader.readAsDataURL(file);
+        }
+    });
     $("img#user_photo").click(function(event){
         $("input#id_photo").click();
     })
@@ -138,9 +151,9 @@ $(document).ready(function() {
     }
 
     var product_id = $("input[name='product_id']").val();
+    var csrftoken = $("[name=csrfmiddlewaretoken]").val();
 
     $("button.followBtn").click(function(){
-        var csrftoken = $("[name=csrfmiddlewaretoken]").val();
         $.ajax({
             url: "/account/follow/",
             headers:{
@@ -162,7 +175,6 @@ $(document).ready(function() {
     });
                 
     $("button.wishBtn").click(function(){
-        var csrftoken = $("[name=csrfmiddlewaretoken]").val();
         $.ajax({
             url: "/product/wish/",
             headers:{
@@ -182,7 +194,27 @@ $(document).ready(function() {
                 }
             }
         });
-
     });
+
+    $("div.card_action button.deleBtn").click(function(){
+        var result = confirm("정말 삭제하시겠습니까.");
+        if(result){
+            $.ajax({
+                url: "/product/"+product_id+"/delete/",
+                headers:{
+                    "X-CSRFToken": csrftoken
+                },
+                method: 'POST',
+                success: function(data){
+                    console.log(data)
+                    // location.href = "/"
+                },
+                error: function(data){
+                    console.log(data)
+
+                }
+            });
+        }
+    })
     
 });
