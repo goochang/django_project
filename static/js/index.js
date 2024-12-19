@@ -80,7 +80,7 @@ $(document).ready(function() {
                 }
 
                 // 포켓몬 특성 불러오기
-                for (let i = 1; i <= abilities.length; i++) {
+                for (let i = 0; i <= abilities.length; i++) {
                     var ability_url = abilities[i]["ability"]["url"];
 
                     if(ability_url !== ""){

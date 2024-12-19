@@ -48,6 +48,7 @@
                 </div>
             </div>
             <div class="card_action">
+                {% if request.user.id != product.author_id %}
                 <button name="wishBtn" class="wishBtn  {% if meta.isWish %}active{% endif %}">
                     <span>{{ meta.wishCnt }}</span>
                 </button> 
@@ -66,10 +67,10 @@
         <div class="author">
             <div class="authorWrap">
                 <div class="author_img">
-                    {% if author %}
+                    {% if author and author.photo != "" %}
                     <img src="/media/{{author.photo}}" />
                     {% else %}
-                    <img src="/static/default.png" />
+                    <img src="/static/images/default_profile.png" />
                     {% endif %}
                 </div>
                 <div class="author_info">
@@ -78,7 +79,13 @@
                 </div>
             </div>
             <div class="followWrap">
-                <input type="button" name="follow" value="팔로우" />
+                {% if request.user.id != product.author_id %}
+                {% if meta.isFollow == 1 %}
+                <button name="follow" class="followBtn" >팔로잉</button>
+                {% else %}
+                <button name="follow" class="followBtn" >팔로우</button>
+                {% endif %}
+                {% endif %}
             </div>
         </div>
         <div class="listBtn">
