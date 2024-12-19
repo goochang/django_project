@@ -152,6 +152,11 @@ $(document).ready(function() {
             method: 'POST',
             success: function(data){
                 console.log(data)
+                if(data.follow.isActive){
+                    $("button.followBtn").text("팔로잉")
+                } else{
+                    $("button.followBtn").text("팔로우")
+                }
             }
         })
     });

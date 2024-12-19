@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views.decorators.csrf import csrf_exempt
-from products.models import Product, Account, Wish
+from products.models import Product, Wish
+from accounts.models import Account, Follow
 from django.contrib.auth.decorators import login_required
 from .forms import CreateForm
 import json
@@ -21,11 +22,13 @@ def detail_product(request, pk):
         return redirect("index")
 
     try:
-        author = Account.objects.get(pk=product.author_id)
-    except Product.DoesNotExist:
+        author = Account.objects.get(id=product.author_id)
+    except Account.DoesNotExist:
         author = None
     if author is None:
         return redirect("index")
+
+    print(product.author_id, "w", author.photo == "", author.id)
 
     metadata = {}
     wishes = Wish.objects.filter(product=product, is_active=1)
@@ -37,8 +40,16 @@ def detail_product(request, pk):
     except:
         isWish = 0
         wishCnt = 0
+
+    try:
+        isFollow = Follow.objects.filter(
+            follow=product.author, user=request.user, is_active=1
+        ).count()
+    except:
+        isFollow = 0
     metadata["wishCnt"] = wishCnt
     metadata["isWish"] = isWish
+    metadata["isFollow"] = isFollow
 
     product_name = product.name.split(" ")[0]
     file_path = finders.find("pokemon.json")

@@ -27,11 +27,12 @@ class SigninForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         self.label_suffix = ""  # 콜론 제거
 
-    user_id = UsernameField(
+    user_id = forms.CharField(
+        label="",
+        strip=False,
         widget=forms.TextInput(
             attrs={"autofocus": True, "placeholder": "아이디를 입력해주세요"},
         ),
-        label="",
         error_messages={"required": "아이디를 입력해주세요"},
     )
     password = forms.CharField(

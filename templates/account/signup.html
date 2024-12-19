@@ -19,6 +19,9 @@
             <p>
                 <input type="text" id="user_id" name="user_id" required placeholder="아이디를 입력해주세요">
             </p>
+            <p>
+                <input type="text" id="username" name="username" required placeholder="닉네임을 입력해주세요">
+            </p>
             {% if form.user_id.errors %}
                 <div class="field-errors">
                     {% for error in form.user_id.errors %}

@@ -162,9 +162,14 @@ LOGGING = {
     },
     "loggers": {
         "django": {
-            "handlers": ["file"],  # 'file' : handler의 이름
+            "handlers": ["file"],
+            "level": "DEBUG",
             "propagate": True,
-            "level": "DEBUG",  # DEBUG 및 그 이상의 메시지를 file 핸들러에게 보내줍니다.
+        },
+        "django.template": {
+            "handlers": ["file"],
+            "level": "INFO",
+            "propagate": True,
         },
         "app_name": {  # Project에서 생성한 app의 이름
             "handlers": ["file"],  # 다른 app을 생성 후 해당 app에서도

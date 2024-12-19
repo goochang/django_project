@@ -55,8 +55,10 @@ def signup(request):
         if form.is_valid():
             user = form.save(commit=False)
             user.password = make_password(form.cleaned_data["password"])
+            user.username = request.POST.get("username")
             user.save()
             auth_login(request, user)
+            print(user)
             return redirect("index")
         else:
             return render(request, "account/signup.html", {"form": form}, status=400)
@@ -110,26 +112,36 @@ def follow(request):
     if request.method == "POST" and get_req == "XMLHttpRequest":
         user = request.user
         if user:
-            # 사용자와 연관된 위시리스트에 추가
-            follow, created = Follow.objects.get_or_create(user=user)
-            print(user, follow, created)
-            if created == False:
-                follow.is_active = 0 if follow.is_active == 1 else 1
-                follow.save()
-            exit()
+            product_id = request.POST.get("product_id")
+            product = Product.objects.get(pk=product_id)
+            if product:
+                follow_user = product.author
+                # 사용자와 연관된 위시리스트에 추가
+                follow, created = Follow.objects.get_or_create(
+                    user=user.id, follow=follow_user
+                )
+                print(request.user.id, user, follow, created)
+                if created == False:
+                    follow.is_active = 0 if follow.is_active == 1 else 1
+                    follow.save()
 
-            follows = Follow.objects.filter(user=user, follow=follow, is_active=1)
-            print(follows)
+                follows = Follow.objects.filter(
+                    user=user, follow=follow_user, is_active=1
+                )
 
-            return JsonResponse(
-                {
-                    "status": "success",
-                    "message": "Account added to followlist",
-                    "user": {"id": user.id},
-                    "follow": {"isActive": follow.is_active},
-                    "followCnt": follows.count(),
-                }
-            )
+                return JsonResponse(
+                    {
+                        "status": "success",
+                        "message": "Account added to followlist",
+                        "user": {"id": user.id},
+                        "follow": {"isActive": follow.is_active},
+                        "followCnt": follows.count(),
+                    }
+                )
+            else:
+                return JsonResponse(
+                    {"status": "error", "message": "Invalid account ID"}
+                )
         else:
             return JsonResponse({"status": "error", "message": "Invalid account ID"})
     return JsonResponse({"status": "error", "message": "Invalid request"})
