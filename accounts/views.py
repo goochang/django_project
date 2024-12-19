@@ -3,12 +3,15 @@ from django.contrib.auth import login as auth_login
 from django.contrib.auth import logout as auth_logout
 from django.contrib.auth.forms import AuthenticationForm
 from django.views.decorators.csrf import csrf_exempt
-from accounts.models import Account
+from accounts.models import Account, Follow
 from products.models import Product
 from .forms import SignupForm, SigninForm, EditAccountForm
 from django.contrib.auth import authenticate
 from django.contrib.auth.hashers import make_password  # 비밀번호 해싱
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import get_object_or_404  # 추가
+from django.http import JsonResponse
 
 
 def index(request):
@@ -99,3 +102,34 @@ def edit_account(request):
             return render(request, "account/edit_account.html", context)
         else:
             redirect("index")
+
+
+@login_required
+def follow(request):
+    get_req = request.META.get("HTTP_X_REQUESTED_WITH")
+    if request.method == "POST" and get_req == "XMLHttpRequest":
+        user = request.user
+        if user:
+            # 사용자와 연관된 위시리스트에 추가
+            follow, created = Follow.objects.get_or_create(user=user)
+            print(user, follow, created)
+            if created == False:
+                follow.is_active = 0 if follow.is_active == 1 else 1
+                follow.save()
+            exit()
+
+            follows = Follow.objects.filter(user=user, follow=follow, is_active=1)
+            print(follows)
+
+            return JsonResponse(
+                {
+                    "status": "success",
+                    "message": "Account added to followlist",
+                    "user": {"id": user.id},
+                    "follow": {"isActive": follow.is_active},
+                    "followCnt": follows.count(),
+                }
+            )
+        else:
+            return JsonResponse({"status": "error", "message": "Invalid account ID"})
+    return JsonResponse({"status": "error", "message": "Invalid request"})

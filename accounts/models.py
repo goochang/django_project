@@ -36,3 +36,20 @@ class Account(AbstractBaseUser):
             # 새 파일명: user_id.확장자
             self.photo.name = f"{self.id}.{ext}"
         super().save(*args, **kwargs)
+
+
+class Follow(models.Model):
+    user = models.ForeignKey(
+        Account, on_delete=models.CASCADE, related_name="followers"
+    )
+    follow = models.ForeignKey(
+        Account, on_delete=models.CASCADE, related_name="following"
+    )
+    is_active = models.BooleanField(default=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(fields=["user", "follow"], name="unique_follow")
+        ]
