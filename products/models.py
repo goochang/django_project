@@ -10,7 +10,7 @@ class Product(models.Model):
     )
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    photo = models.ImageField(upload_to="images/photo/", blank=True)
+    photo = models.ImageField(upload_to="images/photo/")
 
 
 class Wish(models.Model):

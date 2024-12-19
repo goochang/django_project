@@ -7,7 +7,8 @@
 
 }
 
-.detailMainWrap img {
+.detailMainWrap .img_wrap img {
+    min-width: 400px;
     width: 400px;
     height: auto;
 }
@@ -120,7 +121,7 @@
     justify-content: center;
     align-items: center;
 }
-.followWrap input[type=button] {
+.followWrap button {
     background-color: #ffcb08;
     border: 1px solid black;
     padding: 10px 15px;

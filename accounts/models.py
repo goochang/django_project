@@ -3,14 +3,14 @@ from django.contrib.auth.models import AbstractBaseUser
 
 
 class Account(AbstractBaseUser):
-    USERNAME_FIELD = "user_id"
+    USERNAME_FIELD = "username"
     REQUIRED_FIELDS = []
 
-    def __str__(self):
-        return self.user_id
+    # def __str__(self):
+    #     return self
 
     user_id = models.CharField(max_length=10)
-    username = models.CharField(max_length=10, blank=True, default="")
+    username = models.CharField(max_length=10, unique=True)
     introduce = models.CharField(max_length=20, blank=True, default="")
     created_at = models.DateTimeField(auto_now_add=True)
     last_login = models.DateTimeField(auto_now=True)
@@ -36,3 +36,20 @@ class Account(AbstractBaseUser):
             # 새 파일명: user_id.확장자
             self.photo.name = f"{self.id}.{ext}"
         super().save(*args, **kwargs)
+
+
+class Follow(models.Model):
+    user = models.ForeignKey(
+        Account, on_delete=models.CASCADE, related_name="followers"
+    )
+    follow = models.ForeignKey(
+        Account, on_delete=models.CASCADE, related_name="following"
+    )
+    is_active = models.BooleanField(default=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(fields=["user", "follow"], name="unique_follow")
+        ]
