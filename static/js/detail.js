@@ -1,49 +1,56 @@
 // 포켓몬 불러오기
 function poke_loading(){
     var poke_name = $("input[name='poke_eng_name']").val()
-    
-    $.ajax({
-        url: "https://pokeapi.co/api/v2/pokemon/" + poke_name,
-        method: 'GET',
-        beforeSend: function() {
-            $("div.loading").addClass("active");
-        },
-        success: function(data) {
-            var poke_id = data["id"];
-            var weight = data["weight"];
-            var height = data["height"];
-            var abilities = data["abilities"];
+    if(poke_name !== ""){
+        $.ajax({
+            url: "https://pokeapi.co/api/v2/pokemon/" + poke_name,
+            method: 'GET',
+            beforeSend: function() {
+                $("div.loading").addClass("active");
+            },
+            success: function(data) {
+                console.log(data)
+                var poke_id = data["id"];
+                var weight = data["weight"];
+                var height = data["height"];
+                var abilities = data["abilities"];
 
-            // 포켓몬 설명 불러오기
-            var types = data["types"].map((type) => type.type.name);
-            if(types.length > 0){
-                $(".detailMainWrap .info_wrap").addClass(types[0])
-                for (let i = 0; i < types.length; i++) {
-                    $(".info_wrap .poke_types .type" + (i+1)).addClass(types[i])
-                    $(".info_wrap .poke_types .type" + (i+1) + " img").attr("src", "/static/icons/" + types[i] + ".svg")
-                    $(".info_wrap .poke_types .type" + (i+1)).css("display", "block")
+                $("div.card_flavor span.weight").text("몸무게 : " + Math.round(weight * 100) / 1000 + "kg");
+                $("div.card_flavor span.height").text("키 : " + Math.round(height * 100) / 1000 + "m");
+                // 포켓몬 설명 불러오기
+                var types = data["types"].map((type) => type.type.name);
+                if(types.length > 0){
+                    $(".detailMainWrap .info_wrap").addClass(types[0])
+                    for (let i = 0; i < types.length; i++) {
+                        $(".info_wrap .poke_types .type" + (i+1)).addClass(types[i])
+                        $(".info_wrap .poke_types .type" + (i+1) + " img").attr("src", "/static/icons/" + types[i] + ".svg")
+                        $(".info_wrap .poke_types .type" + (i+1)).css("display", "block")
+                    }
                 }
-            }
+    
+                if(poke_id != ""){
+                    poke_flavor(poke_id);
+                }
 
-            if(poke_id != ""){
-                poke_flavor(poke_id, weight, height)
+                if(abilities.length > 0){
+                    fetchAbilities(abilities);
+                }
+    
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                console.log('요청 실패:', textStatus, errorThrown);
+                alert('오류가 발생했습니다: ' + textStatus);
+            },
+            complete: function() {
+                setTimeout(() => {
+                    $("div.loading").removeClass("active");                    
+                }, 1000);
             }
-
-            fetchAbilities(abilities)
-        },
-        error: function(jqXHR, textStatus, errorThrown) {
-            console.log('요청 실패:', textStatus, errorThrown);
-            alert('오류가 발생했습니다: ' + textStatus);
-        },
-        complete: function() {
-            setTimeout(() => {
-                $("div.loading").removeClass("active");                    
-            }, 1000);
-        }
-    });
+        });
+    }
 }
 // 포켓몬 설명 불러오기
-function poke_flavor(poke_id, weight, height){
+function poke_flavor(poke_id){
     $.ajax({
         url: "https://pokeapi.co/api/v2/pokemon-species/" + poke_id,
         method: 'GET',
@@ -54,13 +61,13 @@ function poke_flavor(poke_id, weight, height){
                 if( flavor_text.length ){
                     flavor_text = flavor_text[flavor_text.length-1].flavor_text
                 }
+                $("div.card_flavor span.flavor").text(flavor_text);
+            }
+            if(data.genera){
                 var genera = data.genera.filter((info) => info.language.name == "ko")
                 if( genera.length ){
                     genera = genera[genera.length-1].genus
                 }
-                $("div.card_flavor span.flavor").text(flavor_text);
-                $("div.card_flavor span.weight").text("몸무게 : " + Math.round(weight * 100) / 1000 + "kg");
-                $("div.card_flavor span.height").text("키 : " + Math.round(height * 100) / 1000 + "m");
                 $("div.card_flavor span.genera").text(genera);
             }
         }
@@ -92,6 +99,7 @@ function get_ability(_url, i){
         url: _url,
         method: 'GET',
         success: function(data){
+            console.log(data)
             if(data.flavor_text_entries){
                 var flavor_text = data.flavor_text_entries.filter((info) => info.language.name == "ko")
                 if( flavor_text.length ){

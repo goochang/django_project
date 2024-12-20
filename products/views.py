@@ -10,64 +10,45 @@ from django.contrib.staticfiles import finders
 from django.conf import settings
 from django.http import JsonResponse
 from django.shortcuts import get_object_or_404
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 def detail_product(request, pk):
-    try:
-        product = Product.objects.get(pk=pk)
-    except Product.DoesNotExist:
-        product = None
+    product = get_object_or_404(Product, pk=pk)
+    author = get_object_or_404(Account, id=product.author_id)
 
-    if product is None:
-        return redirect("index")
-
-    try:
-        author = Account.objects.get(id=product.author_id)
-    except Account.DoesNotExist:
-        author = None
-    if author is None:
-        return redirect("index")
-
-    print(product.author_id, "w", author.photo == "", author.id)
-
-    metadata = {}
     wishes = Wish.objects.filter(product=product, is_active=1)
-    try:
-        isWish = Wish.objects.filter(
-            product=product, user=request.user, is_active=1
-        ).count()
-        wishCnt = wishes.count()
-    except:
-        isWish = 0
-        wishCnt = 0
+    wishCnt = wishes.count()
+    isWish = wishes.filter(user=request.user).count()
 
-    try:
-        isFollow = Follow.objects.filter(
-            follow=product.author, user=request.user, is_active=1
-        ).count()
-    except:
-        isFollow = 0
-    metadata["wishCnt"] = wishCnt
-    metadata["isWish"] = isWish
-    metadata["isFollow"] = isFollow
+    isFollow = Follow.objects.filter(
+        follow=product.author, user=request.user, is_active=1
+    ).count()
+
+    metadata = {
+        "wishCnt": wishCnt,
+        "isWish": isWish,
+        "isFollow": isFollow,
+    }
 
     product_name = product.name.split(" ")[0]
     file_path = finders.find("pokemon.json")
 
-    # 파일 열기
     if file_path:
-        with open(file_path, "r", encoding="utf-8") as file:
-            mapping = json.load(file)
+        try:
+            with open(file_path, "r", encoding="utf-8") as file:
+                mapping = json.load(file)
+            result = next((x for x in mapping if x["ko_name"] == product_name), None)
+            if result:
+                metadata["eng_name"] = result["eng_name"]
+        except (FileNotFoundError, json.JSONDecodeError) as e:
+            logger.error(f"Error reading pokemon.json: {e}")
+    else:
+        logger.error("pokemon.json file not found.")
 
-        result = list(filter(lambda x: x["ko_name"] == product_name, mapping))
-
-        if result:
-            english_name = result[0]["eng_name"]
-            metadata["eng_name"] = english_name
-
-        context = {"product": product, "meta": metadata, "author": author}
-        print(metadata)
-
+    context = {"product": product, "meta": metadata, "author": author}
     return render(request, "product/detail_product.html", context)
 
 
