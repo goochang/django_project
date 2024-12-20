@@ -32,12 +32,8 @@ def signin(request):
             if user is not None:
                 auth_login(request, user)
                 return redirect("index")
-            else:
-                messages.error(request, "잘못된 로그인 정보입니다.")
-                return redirect(request.path)
-        else:
-            messages.error(request, "잘못된 로그인 정보입니다.")
-            return redirect(request.path)
+        messages.error(request, "잘못된 로그인 정보입니다.")
+        return redirect(request.path)
     else:
         form = SigninForm()
     context = {"form": form}
@@ -58,7 +54,6 @@ def signup(request):
             user.username = request.POST.get("username")
             user.save()
             auth_login(request, user)
-            print(user)
             return redirect("index")
         else:
             return render(request, "account/signup.html", {"form": form}, status=400)
@@ -110,10 +105,7 @@ def edit_account(request):
             user = form.save(commit=False)
             user.username = request.POST.get("username")
             user.introduce = request.POST.get("introduce")
-            if request.FILES.get("photo") is None:
-                user.save()
-            else:
-                user.save(isFile=True)
+            user.save()
 
             return redirect("accounts:mypage")
         else:

@@ -8,7 +8,7 @@ class SignupForm(forms.ModelForm):
 
     class Meta:
         model = Account
-        fields = ["user_id", "password", "photo"]
+        fields = ["user_id", "username", "password", "photo"]
 
     def clean_user_id(self):
         user_id = self.cleaned_data.get("user_id")
@@ -16,6 +16,13 @@ class SignupForm(forms.ModelForm):
             print("UserID already exist")
             raise forms.ValidationError("이미 사용중인 아이디 입니다.")
         return user_id
+
+    def clean_username(self):
+        username = self.cleaned_data.get("username")
+        if Account.objects.filter(username=username).exists():
+            print("UserName already exist")
+            raise forms.ValidationError("이미 사용중인 닉네임 입니다.")
+        return username
 
 
 class SigninForm(forms.ModelForm):

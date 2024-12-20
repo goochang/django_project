@@ -12,7 +12,6 @@
         <form action="{% url 'products:create_product' %}" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form.as_p }}
-            
             <input type="submit" value="등록하기">
         </form>
     </div>
