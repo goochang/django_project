@@ -176,7 +176,7 @@ $(document).ready(function() {
                 method: 'POST',
                 success: function(data){
                     console.log(data)
-                    // location.href = "/"
+                    location.href = "/"
                 },
                 error: function(data){
                     console.log(data)

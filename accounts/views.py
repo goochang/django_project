@@ -127,11 +127,10 @@ def follow(request):
             product = Product.objects.get(pk=product_id)
             if product:
                 follow_user = product.author
-                # 사용자와 연관된 위시리스트에 추가
+                # 팔로우 생성
                 follow, created = Follow.objects.get_or_create(
-                    user=user.id, follow=follow_user
+                    user=user, follow=follow_user
                 )
-                print(request.user.id, user, follow, created)
                 if created == False:
                     follow.is_active = 0 if follow.is_active == 1 else 1
                     follow.save()
