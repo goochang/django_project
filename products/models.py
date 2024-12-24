@@ -5,6 +5,7 @@ from django.conf import settings
 
 class Product(models.Model):
     name = models.CharField(max_length=10)
+    viewCnt = models.IntegerField(default=0)
     author = models.ForeignKey(
         settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="accounts"
     )

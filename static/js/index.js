@@ -49,5 +49,31 @@ $(document).ready(function() {
         oldVal = currentVal;
         console.log(currentVal.length);
     });
+
+    var profile_id = $("input[name='profile_id']").val();
+    var csrftoken = $("[name=csrfmiddlewaretoken]").val();
+
+    $("button.followBtn").click(function(){
+        $.ajax({
+            url: "/account/follow/",
+            headers:{
+                "X-CSRFToken": csrftoken
+            },
+            data: {
+                "profile_id" : profile_id,
+            },
+            method: 'POST',
+            success: function(data){
+                console.log(data)
+                if(data.follow.isActive){
+                    $("button.followBtn").text("팔로잉")
+                } else{
+                    $("button.followBtn").text("팔로우")
+                }
+
+                $(".user_info .menu .following").text("팔로잉 : " + data.followCnt)
+            }
+        })
+    });
     
 });

@@ -7,37 +7,50 @@
 <div class="mypageContainer">
     <div class="mypage_wrap" id="wrap1">
         <div class="user_photo">
-            {% if user.photo %}
-            <img src="/media/{{user.photo}}" />
+            {% if author.photo %}
+            <img src="/media/{{author.photo}}" />
             {% else %}
             <img src="/static/images/default_profile.png" />
             {% endif %}
         </div>
         <div class="user_info">
             <div>
-                {% if user.username %}
-                <span>닉네임 : {{ user.username }}</span>
+                {% if author.username %}
+                <span>닉네임 : {{ author.username }}</span>
                 {% else %}
                 <span>닉네임을 설정해주세요.</span>
                 {% endif %}
+                {% if tab != None %}
                 <a href="{% url 'accounts:edit_account' %}">
                     <button>편집하기</button>
                 </a>
+                {% else %}
+                {% if request.user.id != product.author_id %}
+                {% if meta.isFollow == 1 %}
+                <button name="follow" class="followBtn" >팔로잉</button>
+                {% else %}
+                <button name="follow" class="followBtn" >팔로우</button>
+                {% endif %}
+                {% endif %}
+
+                {% endif %}
             </div>
             <div>
                 <ul class="menu">
                     <li>게시글 : {{ meta.product_cnt }}</li>
                     <li>팔로우 : {{ meta.follow_cnt }}</li>
-                    <li>팔로잉 : {{ meta.following_cnt }}</li>
+                    <li class="following">팔로잉 : {{ meta.following_cnt }}</li>
                 </ul>
             </div>
-            <div>
-                <span>{{ user.introduce }}</span>
+            <div class="info3">
+                <span>{{ author.created_at | date:"가입일 : Y년 m월 d일" }}</span>
+                <span>{{ author.introduce }}</span>
             </div>
+            <input type="hidden" name="profile_id" value="{{ author.id }}" />
         </div>
     </div>
     <div>
-        <div class="tabWrap">
+        <div class="tabWrap {% if tab == None %}product_profile{% endif %}">
             <div class="{% if tab == "product" %}active{% endif %}">
                 <a href="{% url 'accounts:mypage' %}">
                 게시글
@@ -64,6 +77,7 @@
                 <h3>등록 된 카드가 없습니다.</h3>
             </div>
             {% endif %}
+            
         </div>
     </div>
 </div>

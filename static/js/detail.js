@@ -121,27 +121,6 @@ $(document).ready(function() {
     var product_id = $("input[name='product_id']").val();
     var csrftoken = $("[name=csrfmiddlewaretoken]").val();
     poke_loading();
-
-    $("button.followBtn").click(function(){
-        $.ajax({
-            url: "/account/follow/",
-            headers:{
-                "X-CSRFToken": csrftoken
-            },
-            data: {
-                "product_id" : product_id,
-            },
-            method: 'POST',
-            success: function(data){
-                console.log(data)
-                if(data.follow.isActive){
-                    $("button.followBtn").text("팔로잉")
-                } else{
-                    $("button.followBtn").text("팔로우")
-                }
-            }
-        })
-    });
                 
     $("button.wishBtn").click(function(){
         $.ajax({

@@ -9,3 +9,13 @@
     width: 100%;
     height: auto;
 }
+
+.btn_wrap button {
+    height: 30px;
+    border: 1px solid black;
+    padding: 0 12px;
+    border-radius: 15px;
+    background-color: #2e3033;
+    color: #fff;
+    font-weight: 500;
+}

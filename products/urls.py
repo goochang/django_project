@@ -22,6 +22,7 @@ app_name = "products"
 
 urlpatterns = [
     path("<int:pk>/", p_views.detail_product, name="detail_product"),
+    path("<int:pk>/profile/", p_views.user_profile, name="user_profile"),
     path("<int:pk>/delete/", p_views.delete_product, name="delete_product"),
     path("<int:pk>/edit/", p_views.edit_product, name="edit_product"),
     path("create_product/", p_views.create_product, name="create_product"),

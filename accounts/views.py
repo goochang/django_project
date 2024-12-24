@@ -83,7 +83,7 @@ def mypage(request, tab=""):
             "following_cnt": Followings.count(),
         }
         context = {
-            "user": user,
+            "author": user,
             "products": products,
             "meta": meta,
             "tab": tab,
@@ -123,21 +123,18 @@ def follow(request):
     if request.method == "POST" and get_req == "XMLHttpRequest":
         user = request.user
         if user:
-            product_id = request.POST.get("product_id")
-            product = Product.objects.get(pk=product_id)
-            if product:
-                follow_user = product.author
+            profile_id = request.POST.get("profile_id")
+            account = Account.objects.get(pk=profile_id)
+            if account:
                 # 팔로우 생성
                 follow, created = Follow.objects.get_or_create(
-                    user=user, follow=follow_user
+                    user=user, follow=account
                 )
                 if created == False:
                     follow.is_active = 0 if follow.is_active == 1 else 1
                     follow.save()
 
-                follows = Follow.objects.filter(
-                    user=user, follow=follow_user, is_active=1
-                )
+                follows = Follow.objects.filter(user=user, follow=account, is_active=1)
 
                 return JsonResponse(
                     {

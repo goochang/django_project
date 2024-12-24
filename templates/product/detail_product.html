@@ -49,6 +49,9 @@
                 </div>
             </div>
             <div class="card_action">
+                <button name="wishBtn" disabled class="viewBtn">
+                    <span>조회 수 {{ meta.viewCnt }}</span>
+                </button> 
                 {% if request.user.id != product.author_id %}
                 <button name="wishBtn" class="wishBtn  {% if meta.isWish %}active{% endif %}">
                     <span>{{ meta.wishCnt }}</span>
@@ -63,10 +66,12 @@
         </div>
         <input type="hidden" name="poke_eng_name" value="{{ meta.eng_name }}" />
         <input type="hidden" name="product_id" value="{{ product.id }}" />
+        <input type="hidden" name="profile_id" value="{{ product.author_id }}" />
     </div>
     <div class="detailSubWrap">
         <div class="author">
             <div class="authorWrap">
+                <a href="./profile">
                 <div class="author_img">
                     {% if author and author.photo != "" %}
                     <img src="/media/{{author.photo}}" />
@@ -78,6 +83,7 @@
                     <div><b>{{ author.user_id }}</b></div>
                     <div>{{ author.username }}</div>
                 </div>
+                </a>
             </div>
             <div class="followWrap">
                 {% if request.user.id != product.author_id %}

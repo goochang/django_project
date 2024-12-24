@@ -23,8 +23,10 @@
 
 }
 .mypageContainer .user_photo {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    min-width: 100px;
+    height: 200px;
+    min-height: 100px;
 }
 .mypageContainer .user_photo img{
     width: 100%;
@@ -38,6 +40,17 @@ input#id_photo {
     display: none;
 }
 
+.mypageContainer .mypage_wrap .user_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.mypageContainer .mypage_wrap .user_info .info3 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
 .mypageContainer .mypage_wrap .user_info .info_wrap {
     display: flex;
     margin-bottom: 10px;
@@ -73,6 +86,12 @@ input#id_photo {
     display: flex;
     margin: 20px;
     gap: 20px;
+}
+.tabWrap.product_profile{
+    display: none;
+}
+.tabWrap.product_profile+.card_wrap{
+    margin-top: 20px;
 }
 .tabWrap > div{
     padding: 5px 10px;

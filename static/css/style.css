@@ -98,3 +98,12 @@ h1,h2,h3,h4,h5 {
     height: auto;    /* 비율 유지 */
     display: block;  /* 이미지가 블록 요소처럼 동작 */
 }
+
+/* profile */
+.followBtn {
+    background-color: #ffcb08;
+    border: 1px solid black;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}

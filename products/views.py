@@ -27,8 +27,12 @@ def detail_product(request, pk):
         follow=product.author, user=request.user, is_active=1
     ).count()
 
+    product.viewCnt += 1
+    product.save()
+
     metadata = {
         "wishCnt": wishCnt,
+        "viewCnt": product.viewCnt,
         "isWish": isWish,
         "isFollow": isFollow,
     }
@@ -142,3 +146,34 @@ def wish_product(request):
         else:
             return JsonResponse({"status": "error", "message": "Invalid product ID"})
     return JsonResponse({"status": "error", "message": "Invalid request"})
+
+
+def user_profile(request, pk):
+    product = get_object_or_404(Product, pk=pk)
+    author = get_object_or_404(Account, id=product.author_id)
+
+    if product and author:
+        products = Product.objects.filter(author_id=author.id)
+        product_cnt = len(products)
+
+        Follows = Follow.objects.filter(user=author, is_active=1)
+        Followings = Follow.objects.filter(follow=author, is_active=1)
+        isFollow = Follow.objects.filter(
+            follow=author, user=request.user, is_active=1
+        ).count()
+
+        meta = {
+            "product_cnt": product_cnt,
+            "follow_cnt": Follows.count(),
+            "following_cnt": Followings.count(),
+            "isFollow": isFollow,
+        }
+        context = {
+            "author": author,
+            "products": products,
+            "meta": meta,
+        }
+        print(meta)
+        return render(request, "account/mypage.html", context)
+    else:
+        redirect("index")
