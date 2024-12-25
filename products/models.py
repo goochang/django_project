@@ -2,6 +2,8 @@ from django.db import models
 from accounts.models import Account
 from django.conf import settings
 
+from products.utils import OverwriteStorage, rename_imagefile_to_pid
+
 
 class Product(models.Model):
     name = models.CharField(max_length=10)
@@ -11,7 +13,9 @@ class Product(models.Model):
     )
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    photo = models.ImageField(upload_to="images/photo/")
+    photo = models.ImageField(
+        upload_to=rename_imagefile_to_pid, storage=OverwriteStorage()
+    )
 
 
 class Wish(models.Model):

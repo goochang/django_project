@@ -31,6 +31,10 @@ $(document).ready(function() {
     $("img#user_photo").click(function(event){
         $("input#id_photo").click();
     })
+    // 이미지 영역 클릭시 input file 활성화
+    $("div.productEditWrap div.imgWrap").click(function(event){
+        $("input#id_photo").click();
+    })
 
     // 자기소개 입력 길이 제한
     oldVal = ""

@@ -1,6 +1,9 @@
 import os
+from django.apps import apps
 from django.core.files.storage import FileSystemStorage
 from django.conf import settings
+
+# from products.models import Product
 
 
 class OverwriteStorage(FileSystemStorage):
@@ -14,12 +17,17 @@ class OverwriteStorage(FileSystemStorage):
         return name
 
 
-def rename_imagefile_to_uid(instance, filename):
-    upload_to = "images/profile/"
+def rename_imagefile_to_pid(instance, filename):
+    upload_to = "images/product/"
     ext = filename.split(".")[-1]
 
-    if instance.user_id:
-        uid = instance.user_id
-        filename = "{}.{}".format(uid, ext)
+    Product = apps.get_model("products", "Product")  # '앱 이름', '모델 이름'
 
+    if instance.id:
+        uid = instance.id
+    else:  # 새상품 등록
+        uid = Product.objects.latest("id")
+        uid = int(uid.id) + 1
+
+    filename = "{}.{}".format(uid, ext)
     return os.path.join(upload_to, filename)

@@ -6,7 +6,7 @@ class CreateForm(forms.ModelForm):
 
     class Meta:
         model = Product
-        fields = "__all__"
+        fields = ["name", "photo"]
         exclude = ["author"]
         labels = {
             "name": "카드 이름",

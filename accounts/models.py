@@ -1,20 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser
 import os
-from accounts.utils import rename_imagefile_to_uid
-from django.core.files.storage import FileSystemStorage
-from django.conf import settings
-
-
-class OverwriteStorage(FileSystemStorage):
-    """
-    file 같은 이름 존재시 overwrite
-    """
-
-    def get_available_name(self, name, max_length=20):
-        if self.exists(name):
-            os.remove(os.path.join(settings.MEDIA_ROOT, name))
-        return name
+from accounts.utils import OverwriteStorage, rename_imagefile_to_uid
 
 
 class Account(AbstractBaseUser):

@@ -9,6 +9,7 @@
 .productEditWrap div.imgWrap {
     min-width: 400px;
     width: 400px;
+    cursor: pointer;
 }
 .productEditWrap div.imgWrap img {
     width: 100%;
