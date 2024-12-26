@@ -73,11 +73,18 @@ def mypage(request, tab=""):
     user = request.user
 
     if user.is_authenticated:
-        products = Product.objects.filter(author_id=user.id)
+        products = (
+            Product.objects.filter(author_id=user.id).order_by("-created_at").all()
+        )
         product_cnt = len(products)
 
         if tab == "wish":
-            wishes = Wish.objects.filter(user=request.user).select_related("product")
+            wishes = (
+                Wish.objects.filter(user=request.user)
+                .select_related("product")
+                .order_by("-updated_at")
+                .all()
+            )
             products = [wish.product for wish in wishes]
         else:
             tab = "product"
