@@ -152,5 +152,17 @@
     color: #666;
     line-height: 26px;
     background: url(/static/images/ic_wish_off.svg) no-repeat left center / 26px auto;
-
+}
+.hashtags {
+    display: flex;
+    gap: 10px;
+    padding: 20px 0px;
+}
+.hashtags span {
+    border: none;
+    border-radius: 5px;
+    background-color: red;
+    padding: 5px 10px;
+    color: #fff;
+    text-align: center;
 }

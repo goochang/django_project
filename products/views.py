@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.views.decorators.csrf import csrf_exempt
-from products.models import Product, Wish
+from products.models import Product, Wish, HashTag
 from accounts.models import Account, Follow
 from django.contrib.auth.decorators import login_required
 from .forms import CreateForm
@@ -27,8 +27,11 @@ def detail_product(request, pk):
         follow=product.author, user=request.user, is_active=1
     ).count()
 
+    # 조회수
     product.viewCnt += 1
     product.save()
+
+    hashtags = product.hashtags.all()
 
     metadata = {
         "wishCnt": wishCnt,
@@ -52,7 +55,34 @@ def detail_product(request, pk):
     else:
         logger.error("pokemon.json file not found.")
 
-    context = {"product": product, "meta": metadata, "author": author}
+    poke_type = [
+        "bug",
+        "dark",
+        "dragon",
+        "eletric",
+        "fairy",
+        "fighting",
+        "fire",
+        "flying",
+        "ghost",
+        "grass",
+        "ground",
+        "ice",
+        "normal",
+        "poison",
+        "psychic",
+        "rock",
+        "steel",
+        "water",
+    ]
+
+    context = {
+        "product": product,
+        "meta": metadata,
+        "author": author,
+        "hashtags": hashtags,
+        "poke_type": poke_type,
+    }
     return render(request, "product/detail_product.html", context)
 
 
@@ -60,12 +90,23 @@ def detail_product(request, pk):
 def create_product(request):
     if request.method == "POST":
         form = CreateForm(request.POST, request.FILES)
-        if form.is_valid():
+        print(request.POST.get("hashtags").split("|"))
+        if form.is_valid() and request.user:
             product = form.save(commit=False)
             print(product)
             product.author = request.user
             product.save()
+
+            hashtags = request.POST.get("hashtags")
+            if hashtags != "":
+                for hash_text in hashtags.split("|").pop(0):
+                    hashtag, created = HashTag.objects.get_or_create(name=hash_text)
+                    if created:
+                        product.hashtags.add(hashtag)
+
             return redirect("products:detail_product", pk=product.id)
+
+        print(form.errors.items())
     else:
         form = CreateForm()
 

@@ -233,3 +233,75 @@
 .info_wrap.water .card2{
     background-color: #0786C8;
 }
+/* tag */
+.hashtags span.bug{
+    background-color: #91A119;
+}
+
+.hashtags span.dark{
+    background-color: #11313A;
+}
+
+.hashtags span.dragon{
+    background-color: #343E92;
+}
+
+.hashtags span.electric{
+    background-color: #F8BB06;
+}
+
+.hashtags span.fire{
+    background-color: #DA232A;
+}
+
+.hashtags span.fairy{
+    background-color: #D95D8C;
+}
+
+.hashtags span.fighting{
+    background-color: #CA4513;
+}
+
+.hashtags span.flying{
+    background-color: #54789B;
+}
+
+.hashtags span.ghost{
+    background-color: #492A49;
+}
+
+.hashtags span.grass{
+    background-color: #22B24B;
+}
+
+.hashtags span.ground{
+    background-color: #5E3515;
+}
+
+.hashtags span.ice{
+    background-color: #28869E;
+}
+
+.hashtags span.normal{
+    background-color: #C1B6B1;
+}
+
+.hashtags span.poison{
+    background-color: #994dcf;
+}
+
+.hashtags span.psychic{
+    background-color: #9B2A4F;
+}
+
+.hashtags span.rock{
+    background-color: #BF8232;
+}
+
+.hashtags span.steel{
+    background-color: #A09785;
+}
+
+.hashtags span.water{
+    background-color: #0786C8;
+}

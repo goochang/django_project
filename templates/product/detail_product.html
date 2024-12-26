@@ -47,6 +47,11 @@
                     <span class="weight"></span>
                     <span class="height"></span>
                 </div>
+                <div class="hashtags">
+                    {% for hashtag in hashtags %}
+                        <span class={{ poke_type|random}}>#{{ hashtag.name }}</span> <!-- 해시태그의 name 속성 출력 -->
+                    {% endfor %}
+                </div>
             </div>
             <div class="card_action">
                 <button name="viewBtn" disabled class="viewBtn">

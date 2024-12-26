@@ -15,3 +15,25 @@
     width: 100%;
     height: auto;
 }
+
+
+.productEditWrap .hashtags {
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.productEditWrap .hashtags > div{
+    display: inline-block;
+}
+.productEditWrap .hashtags > div span{
+    margin: 5px;
+}
+
+.productEditWrap .hashtags input {
+    border: none;
+    outline: none;
+}
+.productEditWrap .input_error {
+    color: red;
+}
