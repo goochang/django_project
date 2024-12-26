@@ -16,6 +16,9 @@ input, button {
     font-family: 'Galmuri11';
     cursor: pointer;
 }
+input[type=text]{
+    cursor: auto;
+}
 
 a {
     text-decoration: none;
@@ -83,8 +86,12 @@ h1,h2,h3,h4,h5 {
     flex-wrap: wrap;        /* 줄바꿈 허용 */
     justify-content: left; /* 카드 전체 가운데 정렬 */
     gap: 20px;              /* 카드 간격 */
+    min-height: 50vh;
 }
-
+.card_wrap.empty {
+    align-items: center;
+    justify-content: center;
+}
 /* 카드 스타일 */
 .card_wrap .card {
     flex: 1 1 calc(20% - 20px); /* 너비 20% - 간격을 고려 */

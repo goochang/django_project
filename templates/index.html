@@ -14,10 +14,10 @@
 <section class="product-list">
     <div class="container">
         <div class="btn_wrap">
-            <button>최신</button>
-            <button>인기</button>
+            <button class="sort_btn {% if sort == "recent" or sort == None %}active{% endif %}" value="recent">최신</button>
+            <button class="sort_btn {% if sort == "hot" %}active{% endif %}" value="hot">인기</button>
         </div>
-        <div class="card_wrap">
+        <div class="card_wrap {% if products|length == 0 %}empty{% endif %}">
             {% if products %}
             {% for product in products %}
             <div class="card">
@@ -27,7 +27,7 @@
             </div>
             {% endfor %}
             {% else %}
-            <div>
+            <div class="empty_card">
                 <h3>등록된 카드가 없습니다.</h3>
             </div>
             {% endif %}

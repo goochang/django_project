@@ -79,5 +79,11 @@ $(document).ready(function() {
             }
         })
     });
+
+    $("div.btn_wrap button.sort_btn").click(function(e){
+        sort = $(e.target).val()
+        location.href = "?sort="+sort
+
+    })
     
 });

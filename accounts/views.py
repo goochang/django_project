@@ -12,12 +12,19 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404  # 추가
 from django.http import JsonResponse
+from django.db.models import Count
 
 
 def index(request):
-    products = Product.objects.all()
+    sort = request.GET.get("sort")
+    products = Product.objects.order_by("-created_at").all()
+    if sort == "hot":
+        products = products.annotate(wish_count=Count("product")).order_by(
+            "-wish_count", "-created_at"
+        )
     context = {
         "products": products,
+        "sort": sort,
     }
     return render(request, "index.html", context)
 
