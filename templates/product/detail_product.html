@@ -49,14 +49,13 @@
                 </div>
             </div>
             <div class="card_action">
-                <button name="wishBtn" disabled class="viewBtn">
+                <button name="viewBtn" disabled class="viewBtn">
                     <span>조회 수 {{ meta.viewCnt }}</span>
                 </button> 
-                {% if request.user.id != product.author_id %}
-                <button name="wishBtn" class="wishBtn  {% if meta.isWish %}active{% endif %}">
+                <button name="wishBtn"{% if request.user.id == product.author_id %}disabled{% endif %} class="wishBtn  {% if meta.isWish %}active{% endif %}">
                     <span>{{ meta.wishCnt }}</span>
                 </button> 
-                {% else %}
+                {% if request.user.id == product.author_id %}
                 <button name="editBtn" class="editBtn">
                     <a href="{% url 'products:edit_product' pk=product.id %}">수정</a>
                 </button> 

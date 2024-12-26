@@ -5,6 +5,13 @@ from django.conf import settings
 from products.utils import OverwriteStorage, rename_imagefile_to_pid
 
 
+class HashTag(models.Model):
+    name = models.CharField(max_length=20, unique=True)
+
+    def __str__(self):
+        return self.name
+
+
 class Product(models.Model):
     name = models.CharField(max_length=10)
     viewCnt = models.IntegerField(default=0)
@@ -15,6 +22,9 @@ class Product(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     photo = models.ImageField(
         upload_to=rename_imagefile_to_pid, storage=OverwriteStorage()
+    )
+    hashtags = models.ManyToManyField(
+        HashTag, through="ProductHashtag", related_name="products"
     )
 
 
@@ -29,8 +39,18 @@ class Wish(models.Model):
 
     class Meta:
         constraints = [
+            models.UniqueConstraint(fields=["product", "user"], name="unique_wish")
+        ]
+
+
+class ProductHashtag(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    hashtag = models.ForeignKey(HashTag, on_delete=models.CASCADE)
+
+    class Meta:
+        constraints = [
             models.UniqueConstraint(
-                fields=["product_id", "user_id"], name="unique_wish"
+                fields=["product", "hashtag"], name="unique_product_hashtag"
             )
         ]
 
