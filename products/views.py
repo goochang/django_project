@@ -25,13 +25,13 @@ def detail_product(request, pk):
     wishCnt = wishes.count()
 
     user = request.user
-    if user.id:
+    if user.id:  # 로그인시
         isWish = wishes.filter(user=request.user).count()
 
         isFollow = Follow.objects.filter(
             follow=product.author, user=request.user, is_active=1
         ).count()
-    else:
+    else:  # 비로그인시
         isWish = 0
         isFollow = 0
 
@@ -51,7 +51,7 @@ def detail_product(request, pk):
     product_name = product.name.split(" ")[0]
     file_path = finders.find("pokemon.json")
 
-    if file_path:
+    if file_path:  # 포켓몬 번호
         try:
             with open(file_path, "r", encoding="utf-8") as file:
                 mapping = json.load(file)
@@ -98,14 +98,13 @@ def detail_product(request, pk):
 def create_product(request):
     if request.method == "POST":
         form = CreateForm(request.POST, request.FILES)
-        print(request.POST.get("hashtags").split("|"))
         if form.is_valid() and request.user:
             product = form.save(commit=False)
-            print(product)
             product.author = request.user
             product.save()
 
             hashtags = request.POST.get("hashtags")
+            # 해시태그 저장
             if hashtags != "":
                 for hash_text in hashtags.split("|"):
                     hashtag, created = HashTag.objects.get_or_create(name=hash_text)
@@ -113,7 +112,6 @@ def create_product(request):
 
             return redirect("products:detail_product", pk=product.id)
 
-        print(form.errors.items())
     else:
         form = CreateForm()
 
@@ -135,27 +133,23 @@ def edit_product(request, pk):
             product.save()
 
             hashtags = product.hashtags.all()
-            print(hashtags)
             new_hashtags = request.POST.get("hashtags").split("|")
 
             for hashtag in hashtags:
                 # 기존 해시태그 중 요청 해시태그에 있는 경우 요청 값 제거
                 if hashtag.name in new_hashtags:
-                    print("in", hashtag)
                     new_hashtags.remove(hashtag.name)
-                else:  # 기존 해시태그 중 요청 해시태그에 없는 경우 삭제
-                    print("delete", hashtag)
+                # 기존 해시태그 중 요청 해시태그에 없는 경우 삭제
+                else:
                     product.hashtags.remove(hashtag)
 
-            # hashtags = request.POST.get("hashtags")
-            print(new_hashtags)
+            # 추가할 해시태그
             if len(new_hashtags) > 0 and new_hashtags[0] != "":
                 for hash_text in new_hashtags:
                     hashtag, created = HashTag.objects.get_or_create(name=hash_text)
                     product.hashtags.add(hashtag)
             return redirect("products:detail_product", pk=product.id)
 
-        print(form.errors.items())
     else:
         form = CreateForm(instance=product)
     hashtags = product.hashtags.all()
@@ -203,13 +197,12 @@ def wish_product(request):
             wish, created = Wish.objects.get_or_create(
                 user=request.user, product=product
             )
-            print(product, wish, created)
+            # 기존 찜 상태 반전
             if created == False:
                 wish.is_active = 0 if wish.is_active == 1 else 1
                 wish.save()
 
             wishes = Wish.objects.filter(product=product, is_active=1)
-            print(wishes)
 
             return JsonResponse(
                 {
@@ -250,7 +243,6 @@ def user_profile(request, pk):
             "products": products,
             "meta": meta,
         }
-        print(meta)
         return render(request, "account/mypage.html", context)
     else:
         redirect("index")
@@ -264,13 +256,10 @@ def search(request):
             "-wish_count", "-created_at"
         )
 
-    # queryset = Product.objects.all()
-
     # 요청에서 검색 파라미터 가져오기
     search = request.GET.get("search", None)
-    print(search)
 
-    # 검색 필터링 적용 (title, author)
+    # 검색 필터링 적용 (product name, author username, hashtags name)
     if search:
         products = products.filter(
             Q(name__icontains=search)

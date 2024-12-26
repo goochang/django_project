@@ -13,14 +13,12 @@ class SignupForm(forms.ModelForm):
     def clean_user_id(self):
         user_id = self.cleaned_data.get("user_id")
         if Account.objects.filter(user_id=user_id).exists():
-            print("UserID already exist")
             raise forms.ValidationError("이미 사용중인 아이디 입니다.")
         return user_id
 
     def clean_username(self):
         username = self.cleaned_data.get("username")
         if Account.objects.filter(username=username).exists():
-            print("UserName already exist")
             raise forms.ValidationError("이미 사용중인 닉네임 입니다.")
         return username
 

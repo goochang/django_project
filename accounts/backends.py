@@ -9,9 +9,7 @@ class AuthBackend(ModelBackend):
             user_id = kwargs.get(user_model.USERNAME_FIELD)
         try:
             user = user_model.objects.get(user_id=user_id)
-            print("authenticate", password)
             if user.check_password(password):  # check valid password
                 return user  # return user to be authenticate
         except user_model.DoesNotExist:  # no matching user exists
-            print("except 1")
             return None

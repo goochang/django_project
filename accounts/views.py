@@ -17,7 +17,9 @@ from django.db.models import Count
 
 def index(request):
     sort = request.GET.get("sort")
+    # 최신순
     products = Product.objects.order_by("-created_at").all()
+    # 인기순
     if sort == "hot":
         products = products.annotate(wish_count=Count("product")).order_by(
             "-wish_count", "-created_at"
@@ -73,11 +75,13 @@ def mypage(request, tab=""):
     user = request.user
 
     if user.is_authenticated:
+        # 등록한 상품
         products = (
             Product.objects.filter(author_id=user.id).order_by("-created_at").all()
         )
         product_cnt = len(products)
 
+        # 찜한 상품
         if tab == "wish":
             wishes = (
                 Wish.objects.filter(user=request.user)

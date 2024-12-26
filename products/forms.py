@@ -20,16 +20,3 @@ class CreateForm(forms.ModelForm):
             "name": "카드 이름",
             "photo": "카드 사진",
         }
-
-    # def save(self, commit=True):
-    #     product = super().save(commit=False)
-
-    #     # 쉼표로 구분된 해시태그 입력 처리
-    #     hashtags_data = self.cleaned_data["hashtags"]
-    #     print("save", hashtags_data)
-
-    # def clean_username(self):
-    #     username = self.cleaned_data.get("username")
-    #     if Account.objects.filter(username=username).exists():
-    #         raise forms.ValidationError("Username already exists.")
-    #     return username
