@@ -5,6 +5,12 @@ $(document).ready(function() {
         console.log(e.keyCode)
         if(e.keyCode == 32){
             e.preventDefault();
+
+            var regExp = /[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]/gi
+            if(regExp.test(val)){
+                $(".input_error").text("특수문자를 사용할 수 없습니다.")
+                return;
+            }
             if(val !== ""){
                 val_list = $("div.hashtags_wrap span").map((_, el) => $(el).text()).get()
                 console.log(val_list)
@@ -17,7 +23,11 @@ $(document).ready(function() {
                     $(".input_error").text("")
 
                     hashtags_input = $("input[name='hashtags']").val()
-                    $("input[name='hashtags']").val(hashtags_input+"|"+val)
+                    if(val_list.length == 0){
+                        $("input[name='hashtags']").val(val)
+                    } else {
+                        $("input[name='hashtags']").val(hashtags_input+"|"+val)
+                    }
                 } else{ // 해시태그 입력 실패
                     $(".input_error").text("이미 등록된 해시태그입니다.")
                 }
@@ -39,7 +49,12 @@ $(document).ready(function() {
             }
 
         }
-    })
+    });
+
+    $("div.hashtags").click(function(e){
+        $("div.hashtags_input input").focus()
+
+    });
     
     
 });

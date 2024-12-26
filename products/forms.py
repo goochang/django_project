@@ -9,6 +9,7 @@ class CreateForm(forms.ModelForm):
         widget=forms.TextInput(
             attrs={"placeholder": "스페이스바로 구분하여 해시태그 입력"}
         ),
+        required=False,
     )
 
     class Meta:

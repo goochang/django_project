@@ -10,6 +10,8 @@ from django.contrib.staticfiles import finders
 from django.conf import settings
 from django.http import JsonResponse
 from django.shortcuts import get_object_or_404
+from django.db.models import Q
+from django.db.models import Count
 import logging
 
 logger = logging.getLogger(__name__)
@@ -21,11 +23,17 @@ def detail_product(request, pk):
 
     wishes = Wish.objects.filter(product=product, is_active=1)
     wishCnt = wishes.count()
-    isWish = wishes.filter(user=request.user).count()
 
-    isFollow = Follow.objects.filter(
-        follow=product.author, user=request.user, is_active=1
-    ).count()
+    user = request.user
+    if user.id:
+        isWish = wishes.filter(user=request.user).count()
+
+        isFollow = Follow.objects.filter(
+            follow=product.author, user=request.user, is_active=1
+        ).count()
+    else:
+        isWish = 0
+        isFollow = 0
 
     # 조회수
     product.viewCnt += 1
@@ -99,10 +107,9 @@ def create_product(request):
 
             hashtags = request.POST.get("hashtags")
             if hashtags != "":
-                for hash_text in hashtags.split("|").pop(0):
+                for hash_text in hashtags.split("|"):
                     hashtag, created = HashTag.objects.get_or_create(name=hash_text)
-                    if created:
-                        product.hashtags.add(hashtag)
+                    product.hashtags.add(hashtag)
 
             return redirect("products:detail_product", pk=product.id)
 
@@ -126,11 +133,40 @@ def edit_product(request, pk):
         if form.is_valid():
             product = form.save(commit=False)
             product.save()
+
+            hashtags = product.hashtags.all()
+            print(hashtags)
+            new_hashtags = request.POST.get("hashtags").split("|")
+
+            for hashtag in hashtags:
+                # 기존 해시태그 중 요청 해시태그에 있는 경우 요청 값 제거
+                if hashtag.name in new_hashtags:
+                    print("in", hashtag)
+                    new_hashtags.remove(hashtag.name)
+                else:  # 기존 해시태그 중 요청 해시태그에 없는 경우 삭제
+                    print("delete", hashtag)
+                    product.hashtags.remove(hashtag)
+
+            # hashtags = request.POST.get("hashtags")
+            print(new_hashtags)
+            if len(new_hashtags) > 0 and new_hashtags[0] != "":
+                for hash_text in new_hashtags:
+                    hashtag, created = HashTag.objects.get_or_create(name=hash_text)
+                    product.hashtags.add(hashtag)
             return redirect("products:detail_product", pk=product.id)
+
+        print(form.errors.items())
     else:
         form = CreateForm(instance=product)
+    hashtags = product.hashtags.all()
+    hashtags_txt = "|".join([hashtag.name for hashtag in hashtags])
 
-    context = {"form": form, "product": product}
+    context = {
+        "form": form,
+        "product": product,
+        "hashtags": hashtags,
+        "hashtags_txt": hashtags_txt,
+    }
     return render(request, "product/edit_product.html", context)
 
 
@@ -218,3 +254,33 @@ def user_profile(request, pk):
         return render(request, "account/mypage.html", context)
     else:
         redirect("index")
+
+
+def search(request):
+    sort = request.GET.get("sort")
+    products = Product.objects.distinct().order_by("-created_at").all()
+    if sort == "hot":
+        products = products.annotate(wish_count=Count("product")).order_by(
+            "-wish_count", "-created_at"
+        )
+
+    # queryset = Product.objects.all()
+
+    # 요청에서 검색 파라미터 가져오기
+    search = request.GET.get("search", None)
+    print(search)
+
+    # 검색 필터링 적용 (title, author)
+    if search:
+        products = products.filter(
+            Q(name__icontains=search)
+            | Q(author__username__icontains=search)
+            | Q(hashtags__name__icontains=search)
+        )
+
+    context = {
+        "products": products,
+        "sort": sort,
+        "search": search,
+    }
+    return render(request, "product/search_product.html", context)

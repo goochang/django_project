@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extrahead %}
+{% comment %} <link rel="stylesheet" type="text/css" href="{% static "css/index.css" %}"> {% endcomment %}
+<link rel="stylesheet" type="text/css" href="{% static "css/product/search.css" %}">
+{% endblock %}
+
+{% block content %}
+<section class="search">
+    <div>
+        <h1>카드 검색</h1>
+    </div>
+    <div>
+        <form method="get" action="{% url 'search' %}">
+            <input type="text" name="search" autofocus value="{% if search %}{{ search }}{% endif %}" placeholder="카드 검색(포켓몬 이름 혹은 회원명 해시태그를 입력해주세요)">
+            <button type="submit">검색</button>
+        </form>
+    </div>
+</section>
+
+<section class="product-list">
+    <div class="container">
+        <div class="btn_wrap">
+            <button class="sort_btn {% if sort == "recent" or sort == None %}active{% endif %}" value="recent">최신</button>
+            <button class="sort_btn {% if sort == "hot" %}active{% endif %}" value="hot">인기</button>
+        </div>
+        <div class="card_wrap {% if products|length == 0 %}empty{% endif %}">
+            {% if products %}
+            {% for product in products %}
+            <div class="card">
+                <a href="{% url 'products:detail_product' pk=product.id %}">
+                <img src="/media/{{ product.photo }}" alt="Product 3">
+                </a>
+            </div>
+            {% endfor %}
+            {% else %}
+            <div class="empty_card">
+                <h3>등록된 카드가 없습니다.</h3>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% comment %} 
+<ul>
+    {% for product in products %}
+        <li>
+            <div>
+                <a href="{% url 'products:detail_product' pk=product.id %}">상품 보기</a>
+            </div>
+            <div>상품 ID : {{ product.id }}</div>
+            <div>상품 가격 : {{ product.price }}</div>
+            <div>상품 타입 : {{ product.type }}</div>
+            <br>
+        </li>
+    {% endfor %}
+</ul> {% endcomment %}
+{% endblock content %}

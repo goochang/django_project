@@ -90,13 +90,13 @@
                 </a>
             </div>
             <div class="followWrap">
-                {% if request.user.id != product.author_id %}
+            {% if request.user.id is not None and request.user.id != product.author_id %}
                 {% if meta.isFollow == 1 %}
                 <button name="follow" class="followBtn" >팔로잉</button>
                 {% else %}
                 <button name="follow" class="followBtn" >팔로우</button>
                 {% endif %}
-                {% endif %}
+            {% endif %}
             </div>
         </div>
         <div class="listBtn">

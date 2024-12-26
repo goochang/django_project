@@ -164,5 +164,9 @@ $(document).ready(function() {
             });
         }
     });
+
+    $("button[name='editBtn']").click(function(e){
+        location.href = "/product/"+product_id+"/edit/";
+    });
     
 });

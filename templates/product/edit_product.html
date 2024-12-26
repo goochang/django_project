@@ -2,6 +2,7 @@
 {% load static %}
 {% block extrahead %}
 <link rel="stylesheet" type="text/css" href="{% static "css/product/edit.css" %}">
+<script src="{% static 'js/edit.js' %}"></script>
 {% endblock %}
 {% block content %}
 <div class="productEditWrap">
@@ -15,7 +16,31 @@
     <div class="inputWrap">
         <form action="{% url 'products:edit_product' pk=product.id %}" method="post" enctype="multipart/form-data">
             {% csrf_token %}
-            {{ form.as_p }}
+            <p>
+                <label for="id_name">카드 이름:</label>
+                <input type="text" name="name" value="{{product.name}}" maxlength="10" required id="id_name">
+            </p>
+            <p>
+                {% comment %} <label for="id_photo">카드 사진:</label> {% endcomment %}
+                <p>기존 이미지 : {{product.photo}} </p>
+                <p>변경 이미지 : <input type="file" name="photo" accept="image/*" id="id_photo">
+                </p>
+            </p>
+            <p>
+                <label for="id_hashtags_input">해시태그:</label>
+                <div class="hashtags">
+                    <div class="hashtags_wrap">
+                    {% for hashtag in hashtags %}
+                        <span>#{{ hashtag.name }}</span> 
+                    {% endfor %}
+                    </div>
+                    <div class="hashtags_input">
+                        <input type="text" placeholder="해시태그 입력" id="id_hashtags_input">
+                    </div>
+                    <input type="hidden" name="hashtags" value="{{hashtags_txt}}">
+                </div>
+                <p class="input_error"></p>
+            </p>
             
             <input type="submit" value="수정하기">
         </form>  

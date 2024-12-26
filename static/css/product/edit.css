@@ -11,21 +11,23 @@
     width: 400px;
     cursor: pointer;
 }
+
 .productEditWrap div.imgWrap img {
     width: 100%;
     height: auto;
 }
 
-
 .productEditWrap .hashtags {
     border: 1px solid black;
     padding: 5px;
     border-radius: 3px;
+    cursor: pointer;
 }
 
 .productEditWrap .hashtags > div{
     display: inline-block;
 }
+
 .productEditWrap .hashtags > div span{
     margin: 5px;
 }

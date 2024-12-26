@@ -82,7 +82,15 @@ $(document).ready(function() {
 
     $("div.btn_wrap button.sort_btn").click(function(e){
         sort = $(e.target).val()
-        location.href = "?sort="+sort
+        // 현재 URL에서 기존 쿼리 파라미터를 가져옵니다.
+        const urlParams = new URLSearchParams(window.location.search);
+
+        // 'query' 파라미터는 이미 URL에 존재하므로 'sort'만 추가합니다.
+        urlParams.set('sort', sort);
+
+        // 새 URL로 페이지 이동
+        window.location.search = urlParams.toString();
+        // location.href = "?sort="+sort
 
     })
     

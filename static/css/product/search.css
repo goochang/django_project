@@ -1,0 +1,32 @@
+
+section.search {
+    width: 80%;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+}
+
+section.search h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+section.search form {
+    display: flex;
+}
+section.search form input{
+    border: 5px #484848 solid;
+    padding: 10px;
+    width: calc(100% - 100px);
+    outline: none;
+}
+section.search form button{
+    width: 100px;
+    border: none;
+    background-color: #484848;
+    color: #fff;
+    font-size: 20px;
+}

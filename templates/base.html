@@ -20,12 +20,9 @@
                     <a href="/" class="logo">
                         <img src="{% static "images/card_main_logo.png" %}" alt="MyShop">
                     </a>
-                    {% comment %} <ul class="menu">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Products</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul> {% endcomment %}
+                    <ul class="menu">
+                        <li><a href="/search">카드검색</a></li>
+                    </ul>
                     <div class="nav_auth">
                         {% if request.user.is_authenticated %}
                         <div class="user_photo">
